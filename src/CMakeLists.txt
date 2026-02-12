@@ -14,6 +14,23 @@ add_executable (KifuwaraperyR
 #endif()
 
 
+# 出力ディレクトリを CMAKE_BINARY_DIR の直下に固定（src/ の下じゃなく）
+# これで .exe と config.toml が out\build\x64-debug\KifuwaraperyR.exe みたいになる
+set_target_properties(KifuwaraperyR PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
+    RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_BINARY_DIR}"
+    RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}"
+)
+
+# 設定ファイルをビルド出力ディレクトリにコピーする
+add_custom_command(TARGET KifuwaraperyR POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            ${CMAKE_SOURCE_DIR}/config.toml
+            ${CMAKE_BINARY_DIR}/config.toml
+    COMMENT "Copying config.toml to output directory"
+)
+
+
 # TODO: テストを追加し、必要な場合は、ターゲットをインストールします。
 
 

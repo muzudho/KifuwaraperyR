@@ -1,0 +1,27 @@
+# アプリケーション全体
+[app]
+name = "MyCoolApp"
+version = "1.2.3"
+debug = true
+
+# ログ設定を一つの親テーブルにまとめる
+[logging]
+level = "info"          # 全体のデフォルトレベル
+pattern = "[%Y-%m-%d %H:%M:%S.%e] [%^%l%$] %v"
+async = true
+queue_size = 8192
+
+  # ファイル出力のサブ設定
+  [logging.file]
+  enabled = true
+  path = "logs/myapp.log"
+  max_size_mb = 5
+  max_files = 5
+  daily_rotation = false
+  rotation_hour = 0       # dailyの場合に使う
+
+  # コンソール出力のサブ設定
+  [logging.console]
+  enabled = true
+  color = true
+  level = "warn"          # コンソールはwarn以上だけ表示とか
