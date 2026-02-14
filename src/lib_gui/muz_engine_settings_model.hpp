@@ -101,8 +101,8 @@ public:
 		std::vector<std::string> keys;
 		keys.reserve(this->m_map.size());  // パフォーマンスのため（任意）
 
-		for (const auto& pair : this->m_map) {
-			keys.push_back(pair.first);
+		for (const auto& [key, _] : this->m_map) {
+			keys.push_back(key);
 		}
 
 		return keys;
