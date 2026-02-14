@@ -1,4 +1,4 @@
-#include "logging_setup.h"
+#include "logging_setup.hpp"
 #include <cstdio>    // printf を使うために必要
 #include <filesystem>
 #include <iostream>  // 追加: std::cerr を使うために必要

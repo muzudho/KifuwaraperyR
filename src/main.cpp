@@ -2,8 +2,8 @@
 //      アプリケーションのエントリ ポイントを定義します。
 //
 
-#include "main.h"
-#include "app_layer/logging_setup.h"
+#include "main.hpp"
+#include "app_layer/logging_setup.hpp"
 #include <cstdio>    // printf を使うために必要
 #include <filesystem>
 #include <format>    // C++20～
