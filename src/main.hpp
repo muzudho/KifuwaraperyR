@@ -4,5 +4,5 @@
 
 #pragma once
 #include <iostream>
-#include "../src/game_engine.hpp"
+#include "../src/muz_game_engine_service.hpp"
 // プログラムに必要なヘッダーをここに追加してください。

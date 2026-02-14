@@ -1,4 +1,6 @@
 #include "../src/muz_game_engine_service.hpp"
+#include "../src/lib_gui/muz_engine_settings_initialize_service.hpp"
+
 
 using namespace std;
 
@@ -12,18 +14,18 @@ using namespace std;
 /// <summary>
 /// 生成
 /// </summary>
-GameEngineShogi::GameEngineShogi()
+MuzGameEngineService::MuzGameEngineService()
 {
-    this->m_ourCarriage = std::unique_ptr<GameEngineStorageOurCarriage>(new GameEngineStorageOurCarriage);
+    this->m_pGameEngineStore = std::unique_ptr<MuzGameEngineStorageModel>(new MuzGameEngineStorageModel);
 }
 
 
 /// <summary>
 /// 破棄。
 /// </summary>
-GameEngineShogi::~GameEngineShogi()
+MuzGameEngineService::~MuzGameEngineService()
 {
-    this->m_ourCarriage.reset();
+    this->m_pGameEngineStore.reset();
 }
 
 
@@ -35,9 +37,54 @@ GameEngineShogi::~GameEngineShogi()
 /// <summary>
 /// 最初の設定
 /// </summary>
-void GameEngineShogi::initialize_10a()
+void MuzGameEngineService::initialize_10a()
 {
     cout << "[game_engine] initialize." << endl;
+
+
+    cout << "(^q^) 2.9 . エンジン設定！" << endl;
+    MuzEngineSettingsInitializeService engineSettingsInitialize;
+    engineSettingsInitialize.initialize_10a510b_engineOptions(
+        594,    // TODO: Move::m_MAX_LEGAL_MOVES,
+        32601,  // TODO: SweetnessInfinite,
+        32600,  // TODO: SweetnessMate0Ply,
+        64,     // TODO: g_MaxThreads,
+        &this->m_pGameEngineStore->m_engineOptionCollection,
+        // onHashSizeChanged:
+        [this](auto opt)
+        {
+            // TODO: this->m_pGameEngineStore.get()->m_tt.setSize(opt);
+        },
+        // onHashCleared:
+        [this](auto opt)
+        {
+            // TODO: this->m_pGameEngineStore.get()->m_tt.Clear();
+        },
+        // onEvalDirChanged:
+        [this](auto opt)
+        {
+            // TODO: std::unique_ptr<KkKkpKppStorage1>(new KkKkpKppStorage1)->initialize_10a600b(opt, true);
+        },
+        // onMaxThreadsPerSplitPointChanged:
+        [this](auto opt)
+        {
+            // TODO: this->m_pGameEngineStore.get()->m_pub.ReadUSIOptions(this->m_pGameEngineStore.get());
+        },
+        // onThreadsChanged:
+        [this](auto opt)
+        {
+            // TODO: this->m_pGameEngineStore.get()->m_pub.ReadUSIOptions(this->m_pGameEngineStore.get());
+        },
+        // getCpuCoreCount:
+        [this]()
+        {
+            // 論理的なコア数の取得
+            // todo: boost::thread::physical_concurrency() を使うこと。
+            // std::thread::hardware_concurrency() は 0 を返す可能性がある。
+            // 
+            // TODO: return std::max(static_cast<int>(std::thread::hardware_concurrency() / 2), 1);
+            return 1;   // とりあえず1で固定
+        });
 }
 
 
@@ -46,7 +93,7 @@ void GameEngineShogi::initialize_10a()
 /// </summary>
 /// <param name="argc"></param>
 /// <param name="argv"></param>
-void GameEngineShogi::body_50a(int argc, char* argv[])
+void MuzGameEngineService::body_50a(int argc, char* argv[])
 {
     cout << "[game_engine] body." << endl;
 }
@@ -55,7 +102,7 @@ void GameEngineShogi::body_50a(int argc, char* argv[])
 /// <summary>
 /// 事後処理
 /// </summary>
-void GameEngineShogi::finalize_90a()
+void MuzGameEngineService::finalize_90a()
 {
     cout << "[game_engine] finalize." << endl;
 }

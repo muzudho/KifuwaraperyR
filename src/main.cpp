@@ -69,10 +69,10 @@ int main(int argc, char* argv[])
         // ゲームエンジンの実行
 
 
-        GameEngineShogi gameEngine;
-        gameEngine.initialize_10a();
-        gameEngine.body_50a(argc, argv);
-        gameEngine.finalize_90a();
+        MuzGameEngineService gameEngineSvc;
+        gameEngineSvc.initialize_10a();
+        gameEngineSvc.body_50a(argc, argv);
+        gameEngineSvc.finalize_90a();
     }
     catch (const spdlog::spdlog_ex& ex) {
         std::cerr << "spdlog init failed: " << ex.what() << std::endl;

@@ -7,7 +7,17 @@
 add_executable (KifuwaraperyR
     "main.cpp" "main.hpp"
     "layer_app/logging_setup.cpp" "layer_app/logging_setup.hpp"
-    "layer_game_engine/game_engine_storage.cpp" "layer_game_engine/game_engine_storage.hpp"
+    # 📁 layer_game_engine
+    "layer_game_engine/muz_game_engine_storage_model.cpp" "layer_game_engine/muz_game_engine_storage_model.hpp"
+    # 📁 lib_gui
+    "lib_gui/i_muz_engine_optionable_model.cpp" "lib_gui/i_muz_engine_optionable_model.hpp"
+    "lib_gui/muz_engine_option_button_model.cpp" "lib_gui/muz_engine_option_button_model.hpp"
+    "lib_gui/muz_engine_option_checkbox_model.cpp" "lib_gui/muz_engine_option_checkbox_model.hpp"
+    "lib_gui/muz_engine_option_spinbox_model.cpp" "lib_gui/muz_engine_option_spinbox_model.hpp"
+    "lib_gui/muz_engine_option_textbox_model.cpp" "lib_gui/muz_engine_option_textbox_model.hpp"
+    "lib_gui/muz_engine_settings_initialize_service.cpp" "lib_gui/muz_engine_settings_initialize_service.hpp"
+    "lib_gui/muz_engine_settings_model.cpp" "lib_gui/muz_engine_settings_model.hpp"
+    #
     "muz_game_engine_service.cpp" "muz_game_engine_service.hpp")
 
 
