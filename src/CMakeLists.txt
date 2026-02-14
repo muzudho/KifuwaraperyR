@@ -8,7 +8,7 @@ add_executable (KifuwaraperyR
     "main.cpp" "main.hpp"
     "layer_app/logging_setup.cpp" "layer_app/logging_setup.hpp"
     "layer_game_engine/game_engine_storage.cpp" "layer_game_engine/game_engine_storage.hpp"
-    "game_engine.cpp" "game_engine.hpp")
+    "muz_game_engine_service.cpp" "muz_game_engine_service.hpp")
 
 
 #if (CMAKE_VERSION VERSION_GREATER 3.12)

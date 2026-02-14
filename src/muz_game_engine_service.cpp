@@ -1,4 +1,4 @@
-#include "../src/game_engine.hpp"
+#include "../src/muz_game_engine_service.hpp"
 
 using namespace std;
 
