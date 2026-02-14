@@ -5,8 +5,8 @@
 
 # ソースをこのプロジェクトの実行可能ファイルに追加します。
 add_executable (KifuwaraperyR
-	"KifuwaraperyR.cpp"
-	"KifuwaraperyR.h")
+	"main.cpp"
+	"main.h")
 
 
 #if (CMAKE_VERSION VERSION_GREATER 3.12)

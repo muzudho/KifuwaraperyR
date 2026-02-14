@@ -1,7 +1,7 @@
-﻿// KifuwaraperyR.cpp : アプリケーションのエントリ ポイントを定義します。
+﻿// main.cpp : アプリケーションのエントリ ポイントを定義します。
 //
 
-#include "KifuwaraperyR.h"
+#include "main.h"
 #include <cstdio>    // printf を使うために必要
 #include <filesystem>
 #include <format>    // C++20～
