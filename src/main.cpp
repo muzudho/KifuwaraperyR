@@ -64,6 +64,15 @@ int main(int argc, char* argv[])
         spdlog::set_pattern("[%Y-%m-%d %H:%M:%S.%e] [%^%l%$] %v");  // 時刻＋色付きレベル
 
         spdlog::info("むずでょ、今日も元気か？？（＾ω＾）");
+
+
+        // ゲームエンジンの実行
+
+
+        GameEngineShogi gameEngine;
+        gameEngine.initialize_10a();
+        gameEngine.body_50a(argc, argv);
+        gameEngine.finalize_90a();
     }
     catch (const spdlog::spdlog_ex& ex) {
         std::cerr << "spdlog init failed: " << ex.what() << std::endl;

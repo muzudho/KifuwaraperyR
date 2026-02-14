@@ -6,7 +6,9 @@
 # 実行ファイルにコンパイルするソースファイルを全部羅列してください。
 add_executable (KifuwaraperyR
     "main.cpp" "main.hpp"
-    "app_layer/logging_setup.cpp" "app_layer/logging_setup.hpp")
+    "app_layer/logging_setup.cpp" "app_layer/logging_setup.hpp"
+    "game_engine_layer/game_engine_storage.cpp" "game_engine_layer/game_engine_storage.hpp"
+    "game_engine.cpp" "game_engine.hpp")
 
 
 #if (CMAKE_VERSION VERSION_GREATER 3.12)
