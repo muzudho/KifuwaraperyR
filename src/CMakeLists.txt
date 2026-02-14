@@ -6,8 +6,8 @@
 # 実行ファイルにコンパイルするソースファイルを全部羅列してください。
 add_executable (KifuwaraperyR
     "main.cpp" "main.hpp"
-    "app_layer/logging_setup.cpp" "app_layer/logging_setup.hpp"
-    "game_engine_layer/game_engine_storage.cpp" "game_engine_layer/game_engine_storage.hpp"
+    "layer_app/logging_setup.cpp" "layer_app/logging_setup.hpp"
+    "layer_game_engine/game_engine_storage.cpp" "layer_game_engine/game_engine_storage.hpp"
     "game_engine.cpp" "game_engine.hpp")
 
 

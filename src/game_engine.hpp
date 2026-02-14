@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <memory> // 追加: unique_ptrのため
-#include "../src/game_engine_layer/game_engine_storage.hpp"
+#include "../src/layer_game_engine/game_engine_storage.hpp"
 
 
 /// <summary>
