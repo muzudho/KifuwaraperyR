@@ -3,10 +3,10 @@
 #
 
 
-# 実行ファイルに追加するファイルを全部羅列してください。
+# 実行ファイルにコンパイルするソースファイルを全部羅列してください。
 add_executable (KifuwaraperyR
     "main.cpp" "main.h"
-    "logging_setup.cpp" "logging_setup.h")
+    "app_layer/logging_setup.cpp" "app_layer/logging_setup.h")
 
 
 #if (CMAKE_VERSION VERSION_GREATER 3.12)
