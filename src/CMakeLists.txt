@@ -3,10 +3,10 @@
 #
 
 
-# ソースをこのプロジェクトの実行可能ファイルに追加します。
+# 実行ファイルに追加するファイルを全部羅列してください。
 add_executable (KifuwaraperyR
-	"main.cpp"
-	"main.h")
+    "main.cpp" "main.h"
+    "logging_setup.cpp" "logging_setup.h")
 
 
 #if (CMAKE_VERSION VERSION_GREATER 3.12)
@@ -32,6 +32,10 @@ add_custom_command(TARGET KifuwaraperyR POST_BUILD
 
 
 # TODO: テストを追加し、必要な場合は、ターゲットをインストールします。
+
+
+# ビルドディレクトリのパスを表示してみる
+message(STATUS "CMAKE_BINARY_DIR はここだぜ: ${CMAKE_BINARY_DIR}")
 
 
 # ［モジュール読込］
