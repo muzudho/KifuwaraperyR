@@ -1,26 +1,36 @@
 #pragma once
-#include "i_muz_engine_optionable_model.hpp"
+#include "muz_engine_option_abstract_model.hpp"
 
 
 /// <summary>
 /// エンジン・オプション　＞　スピンボックス
 /// </summary>
-class MuzEngineOptionSpinboxModel : public IMuzEngineOptionableModel
+class MuzEngineOptionSpinboxModel : public MuzEngineOptionAbstractModel
 {
 
 
 public:
 
 
+    // ========================================
+    // 生成／破棄
+    // ========================================
+
+
     /// <summary>
-    /// スピンボックス用
+    /// 生成☆（＾ｑ＾）
     /// </summary>
     /// <returns></returns>
     MuzEngineOptionSpinboxModel(
         const int   v,
         const int min,
         const int max,
-        std::function<void(const IMuzEngineOptionableModel&)> onChanged = nullptr);
+        std::function<void(const MuzEngineOptionAbstractModel&)> onChanged = nullptr);
+
+
+    // ========================================
+    // 生成／破棄
+    // ========================================
 
 
     /// <summary>
@@ -28,7 +38,18 @@ public:
     /// </summary>
     /// <param name="v"></param>
     /// <returns></returns>
-    IMuzEngineOptionableModel& operator = (const std::string& v);
+    MuzEngineOptionAbstractModel& operator = (const std::string& v);
 
+
+    // ========================================
+    // その他のメソッド
+    // ========================================
+
+
+    /// <summary>
+    /// USIコード化☆（＾～＾）
+    /// </summary>
+    /// <returns></returns>
+    std::string ToUSICode() const;// override;
 };
 

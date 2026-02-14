@@ -10,7 +10,7 @@ add_executable (KifuwaraperyR
     # 📁 layer_game_engine
     "layer_game_engine/muz_game_engine_storage_model.cpp" "layer_game_engine/muz_game_engine_storage_model.hpp"
     # 📁 lib_gui
-    "lib_gui/i_muz_engine_optionable_model.cpp" "lib_gui/i_muz_engine_optionable_model.hpp"
+    "lib_gui/muz_engine_option_abstract_model.cpp" "lib_gui/muz_engine_option_abstract_model.hpp"
     "lib_gui/muz_engine_option_button_model.cpp" "lib_gui/muz_engine_option_button_model.hpp"
     "lib_gui/muz_engine_option_checkbox_model.cpp" "lib_gui/muz_engine_option_checkbox_model.hpp"
     "lib_gui/muz_engine_option_spinbox_model.cpp" "lib_gui/muz_engine_option_spinbox_model.hpp"

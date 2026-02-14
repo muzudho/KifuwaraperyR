@@ -1,6 +1,11 @@
 ﻿#include "muz_engine_settings_model.hpp"
 
 
+// ========================================
+// 演算子
+// ========================================
+
+
 /// <summary>
 /// ２つの文字列の並び順の比較☆（＾～＾）
 /// </summary>
@@ -20,33 +25,31 @@ bool MuzCaseInsensitiveLessModel::operator () (const std::string& s1, const std:
 
 
 /// <summary>
+/// 演算子
+/// </summary>
+/// <param name="os"></param>
+/// <param name="engineSettings"></param>
+/// <returns></returns>
+std::ostream& operator << (std::ostream& os, const MuzEngineSettingsModel& engineSettings) {
+	for (auto key : engineSettings.GetAllOptionKeys()) {
+		const MuzEngineOptionAbstractModel& option = engineSettings.GetOptionByKey(key);
+		os << "\noption name " << key << " " << option.ToUSICode();
+	}
+	return os;
+}
+
+
+// ========================================
+// メソッド
+// ========================================
+
+
+/// <summary>
 /// エンジン・オプションを登録するぜ☆（＾～＾）
 /// </summary>
 /// <param name="key"></param>
 /// <param name="option"></param>
-void MuzEngineSettingsModel::Put(const std::string key, IMuzEngineOptionableModel option)
+void MuzEngineSettingsModel::Put(const std::string key, MuzEngineOptionAbstractModel option)
 {
 	(this->m_map)[key] = option;
-}
-
-
-/// <summary>
-/// 
-/// </summary>
-/// <param name="os"></param>
-/// <param name="engineOptionCollection"></param>
-/// <returns></returns>
-std::ostream& operator << (std::ostream& os, const MuzEngineSettingsModel& engineOptionCollection) {
-	for (auto& elem : engineOptionCollection.m_map) {
-		const IMuzEngineOptionableModel& o = elem.second;
-		os << "\noption name " << elem.first << " type " << o.GetType();
-		if (o.GetType() != "button") {
-			os << " default " << o.GetDefaultValue();
-		}
-
-		if (o.GetType() == "spin") {
-			os << " min " << o.GetMin() << " max " << o.GetMax();
-		}
-	}
-	return os;
 }

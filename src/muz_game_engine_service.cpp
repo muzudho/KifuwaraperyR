@@ -49,7 +49,7 @@ void MuzGameEngineService::initialize_10a()
         32601,  // TODO: SweetnessInfinite,
         32600,  // TODO: SweetnessMate0Ply,
         64,     // TODO: g_MaxThreads,
-        &this->m_pGameEngineStore->m_engineOptionCollection,
+        &this->m_pGameEngineStore->m_engineSettings,
         // onHashSizeChanged:
         [this](auto opt)
         {

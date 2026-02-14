@@ -5,6 +5,11 @@
 #include "muz_engine_settings_initialize_service.hpp"
 
 
+// ========================================
+// イベントハンドラ
+// ========================================
+
+
 /// <summary>
 /// USIエンジン・オプションに既定値を入れるぜ☆
 /// </summary>
@@ -16,11 +21,11 @@ void MuzEngineSettingsInitializeService::initialize_10a510b_engineOptions(
 	int sweetnessMate0Ply,
 	int maxThreads,
 	MuzEngineSettingsModel* pMap,
-	std::function<void(const IMuzEngineOptionableModel&)> onHashSizeChanged,
-	std::function<void(const IMuzEngineOptionableModel&)> onHashCleared,
-	std::function<void(const IMuzEngineOptionableModel&)> onEvalDirChanged,
-	std::function<void(const IMuzEngineOptionableModel&)> onMaxThreadsPerSplitPointChanged,
-	std::function<void(const IMuzEngineOptionableModel&)> onThreadsChanged,
+	std::function<void(const MuzEngineOptionAbstractModel&)> onHashSizeChanged,
+	std::function<void(const MuzEngineOptionAbstractModel&)> onHashCleared,
+	std::function<void(const MuzEngineOptionAbstractModel&)> onEvalDirChanged,
+	std::function<void(const MuzEngineOptionAbstractModel&)> onMaxThreadsPerSplitPointChanged,
+	std::function<void(const MuzEngineOptionAbstractModel&)> onThreadsChanged,
 	std::function<int()> getCPUCoreCount)
 {
 	// ハッシュサイズ
@@ -98,6 +103,6 @@ void MuzEngineSettingsInitializeService::initialize_10a510b_engineOptions(
 	pMap->Put("Use_Sleeping_Threads"		, MuzEngineOptionCheckboxModel(false));
 
 #if defined BISHOP_IN_DANGER
-	(*this)["Danger_Demerit_Score"] = MuzEngineOptionModel(700, SHRT_MIN, SHRT_MAX);
+	(*this)["Danger_Demerit_Score"] = MuzEngineOptionSpinboxModel(700, SHRT_MIN, SHRT_MAX);
 #endif
 }

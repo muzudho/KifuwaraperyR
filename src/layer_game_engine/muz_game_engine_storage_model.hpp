@@ -23,9 +23,9 @@ public:
 
 
 	/// <summary>
-	/// USIオプションのコレクション
+	/// USIエンジン設定
 	/// </summary>
-	MuzEngineSettingsModel	m_engineOptionCollection;
+	MuzEngineSettingsModel	m_engineSettings;
 
 
 };

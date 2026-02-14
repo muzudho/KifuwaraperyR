@@ -1,9 +1,14 @@
 #include "muz_engine_option_spinbox_model.hpp"
 
 
+// ========================================
+// 生成／破棄
+// ========================================
+
+
 /// <summary>
 ///     <pre>
-/// 生成
+/// 生成☆（＾～＾）
 ///     </pre>
 /// </summary>
 /// <param name="v"></param>
@@ -15,10 +20,15 @@ MuzEngineOptionSpinboxModel::MuzEngineOptionSpinboxModel(
     const int v,
     const int min,
     const int max,
-    std::function<void(const IMuzEngineOptionableModel&)> onChanged)
-    : IMuzEngineOptionableModel(v, min, max, onChanged)
+    std::function<void(const MuzEngineOptionAbstractModel&)> onChanged)
+    : MuzEngineOptionAbstractModel(v, min, max, onChanged)
 {
 }
+
+
+// ========================================
+// 生成／破棄
+// ========================================
 
 
 /// <summary>
@@ -26,7 +36,7 @@ MuzEngineOptionSpinboxModel::MuzEngineOptionSpinboxModel(
 /// </summary>
 /// <param name="newValue"></param>
 /// <returns></returns>
-IMuzEngineOptionableModel& MuzEngineOptionSpinboxModel::operator = (const std::string& newValue)
+MuzEngineOptionAbstractModel& MuzEngineOptionSpinboxModel::operator = (const std::string& newValue)
 {
 	//assert(!m_type_.empty());
 
@@ -47,4 +57,27 @@ IMuzEngineOptionableModel& MuzEngineOptionSpinboxModel::operator = (const std::s
 	}
 
 	return *this;
+}
+
+
+// ========================================
+// その他のメソッド
+// ========================================
+
+
+/// <summary>
+/// USIコード化☆（＾～＾）
+/// </summary>
+/// <returns></returns>
+std::string MuzEngineOptionSpinboxModel::ToUSICode() const
+{
+
+#if __cplusplus >= 202002L
+	return std::format("type {} default {} min {} max {}", this->GetType(), this->GetDefaultValue(), this->GetMin(), this->GetMax());
+#else
+	std::ostringstream oss;
+	oss << "type " << this->GetType() << " default " << this->GetDefaultValue() << " min " << this->GetMin() << " max " << this->GetMax();
+	return oss.str();
+#endif
+
 }
