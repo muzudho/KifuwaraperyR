@@ -11,21 +11,19 @@
 
 using namespace std;
 
+
 int main()
 {
     namespace fs = std::filesystem;
 
     try {
-        fs::path cwd = fs::current_path();  // これで現在のパスを取る
 
-        // 文字列で表示（一番シンプル）
-        std::cout << "現在のカレントディレクトリ: " << cwd.string() << std::endl;
 
-        // もっと綺麗に（Windowsならバックスラッシュ、Unixならスラッシュ）
-        std::cout << "native形式: " << cwd.make_preferred().string() << std::endl;
+        // ワーキング・ディレクトリー表示（スラッシュで統一）
 
-        // スラッシュ統一で表示したい場合
-        std::cout << "generic形式: " << cwd.generic_string() << std::endl;
+
+        fs::path cwd = fs::current_path();
+        std::cout << "[main] working_directory = " << cwd.generic_string() << std::endl;
 
 
         // ロギングの設定

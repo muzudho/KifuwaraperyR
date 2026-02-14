@@ -36,14 +36,8 @@ bool logging_setup(const std::string& config_path)
 
 
     std::string default_log_level_str = logging["level"].value_or("info");
-    //spdlog::level::level_enum default_log_level = spdlog::level::from_str(default_log_level_str);
-    cout << "[logging] default_log_level_str = " << default_log_level_str << endl;
-
     std::string default_pattern_str = logging["pattern"].value_or("[%Y-%m-%d %H:%M:%S.%e] [%^%l%$] [thread %t] %v");
-    cout << "[logging] default_pattern_str = " << default_pattern_str << endl;
-
     auto queue_size = logging["queue_size"].value_or<std::int64_t>(8192); // 既定値：8192 Bytes
-    cout << "[logging] queue_size = " << queue_size << " bytes" << endl;
 
     // 最初に1回だけ: スレッドプール初期化（キューサイズ8192、バックグラウンドスレッド1個がデフォルトで十分）
     spdlog::init_thread_pool(queue_size, 1);  // キュー8192個、バックエンドスレッド1つ（増やしてもOK）
@@ -54,10 +48,9 @@ bool logging_setup(const std::string& config_path)
 
     std::string console_level_str = logging["console"]["level"].value_or(default_log_level_str);
     spdlog::level::level_enum console_log_level = spdlog::level::from_str(console_level_str);
-    cout << "[logging] console_log_level = " << console_log_level << endl;
+    cout << "[logging > console] level = " << console_level_str << endl;
 
     auto console_sink = std::make_shared<spdlog::sinks::stdout_color_sink_mt>();
-    //console_sink->set_level(spdlog::level::info);  // コンソールはinfo以上だけとか
     console_sink->set_level(console_log_level);  // コンソールはinfo以上だけとか
 
 
@@ -66,21 +59,17 @@ bool logging_setup(const std::string& config_path)
 
     // ベースファイル名（フォルダは事前に作っとけ、またはspdlog 1.5+なら自動作成）
     std::string path_str = logging["file"]["path"].value_or("logs/myapp.log");
-    cout << "[logging] path_str = " << path_str << endl;
-
+    
     std::string file_log_level_str = logging["file"]["level"].value_or(default_log_level_str);
     spdlog::level::level_enum file_log_level = spdlog::level::from_str(file_log_level_str);
-    cout << "[logging] file_log_level_str = " << file_log_level_str << endl;
+    cout << "[logging > file] level = " << file_log_level_str << ", path = " << path_str << endl;
 
     // ローテーション設定: ファイル名, 最大サイズ(バイト), 最大ファイル数
     // 例: 5MB超えたら回転、最大3ファイル残す（rotating.txt → rotating.txt.1 → rotating.txt.2 → 古いのは消える）
     //auto max_size = 1024 * 1024 * 5;    // 5MBで回転
     auto max_size_mb = logging["file"]["max_size_mb"].value_or<std::int64_t>(5); // 既定値：5MB
     auto max_size = max_size_mb * 1024 * 1024;    // 指定のMBで回転
-    cout << "[logging] max_size_mb = " << max_size_mb << endl;
-
     auto max_files = logging["file"]["max_files"].value_or<std::int64_t>(5);   // 最大何ファイル残すか。既定値：5
-    cout << "[logging] max_files = " << max_files << endl;
 
     // rotating sinkを作成（_mt じゃなくて _st でもOK、async_loggerがスレッド安全にするから）
     // （_mt = multi-threaded）
@@ -90,7 +79,6 @@ bool logging_setup(const std::string& config_path)
         max_files
     );
     // ログレベルを設定（trace〜critical全部出すならtraceに）
-    //file_sink->set_level(spdlog::level::trace);  // trace, info, warn とか
     file_sink->set_level(file_log_level);
 
 
