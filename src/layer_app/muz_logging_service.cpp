@@ -1,19 +1,34 @@
-#include "logging_setup.hpp"
-#include <cstdio>    // printf を使うために必要
-#include <filesystem>
-#include <iostream>  // 追加: std::cerr を使うために必要
-#include <memory>
-#include <spdlog/async.h>                       // async用
-#include <spdlog/fmt/ostr.h>                    // 必要に応じて（カスタム型とか使うとき）
-#include <spdlog/sinks/rotating_file_sink.h>    // これ必須！（ログファイルをローテーションするなら）
-#include <spdlog/sinks/stdout_color_sinks.h>    // これも必須！（コンソールに色付きで出すなら）
-#include <spdlog/spdlog.h>
-#include <toml++/toml.hpp>
-using std::cout;
-using std::endl;
+#include "muz_logging_service.hpp"
 
 
-bool logging_setup(const std::string& config_path)
+// ========================================
+// 生成／破棄
+// ========================================
+
+
+MuzLoggingService::MuzLoggingService()
+{
+    this->default_logger = MuzDefaultLoggerModel();
+}
+
+
+// ========================================
+// アクセッサ
+// ========================================
+
+
+const MuzDefaultLoggerModel* MuzLoggingService::get_default() const
+{
+    return &this->default_logger;
+}
+
+
+// ========================================
+// メソッド
+// ========================================
+
+
+bool MuzLoggingService::setup(const std::string& config_path)
 {
     // プロジェクトルートからconfig.tomlを読む（CMAKE_SOURCE_DIRはCMakeで定義される）
     // もしくは std::filesystem::current_path() で実行時カレントから
@@ -59,7 +74,7 @@ bool logging_setup(const std::string& config_path)
 
     // ベースファイル名（フォルダは事前に作っとけ、またはspdlog 1.5+なら自動作成）
     std::string path_str = logging["file"]["path"].value_or("logs/myapp.log");
-    
+
     std::string file_log_level_str = logging["file"]["level"].value_or(default_log_level_str);
     spdlog::level::level_enum file_log_level = spdlog::level::from_str(file_log_level_str);
     cout << "[logging > file] level = " << file_log_level_str << ", path = " << path_str << endl;
@@ -110,7 +125,7 @@ bool logging_setup(const std::string& config_path)
 }
 
 
-void logging_shutdown()
+void MuzLoggingService::shutdown()
 {
     spdlog::shutdown();
 }

@@ -5,8 +5,11 @@
 
 # 実行ファイルにコンパイルするソースファイルを全部羅列してください。
 add_executable (KifuwaraperyR
+    # 📁 src
     "main.cpp" "main.hpp"
-    "layer_app/logging_setup.cpp" "layer_app/logging_setup.hpp"
+    # 📁 src/layer_app
+    "layer_app/muz_default_logger_model.cpp" "layer_app/muz_default_logger_model.hpp"
+    "layer_app/muz_logging_service.cpp" "layer_app/muz_logging_service.hpp"
     # 📁 layer_game_engine
     "layer_game_engine/muz_game_engine_storage_model.cpp" "layer_game_engine/muz_game_engine_storage_model.hpp"
     # 📁 lib_gui
@@ -68,7 +71,7 @@ FetchContent_Declare(
     GIT_TAG        v1.17.0
 )
 FetchContent_MakeAvailable(spdlog)
-target_link_libraries(CMakeProject1Cpp PRIVATE spdlog::spdlog)
+target_link_libraries(KifuwaraperyR PRIVATE spdlog::spdlog)
 
 
 # モジュール読込　＞　tomlplusplus　-　設定ファイルパーサー
@@ -82,7 +85,7 @@ FetchContent_Declare(
     # GIT_TAG master とかでもOKだけど、タグ固定が安全
 )
 FetchContent_MakeAvailable(tomlplusplus)
-target_link_libraries(CMakeProject1Cpp PRIVATE tomlplusplus::tomlplusplus)
+target_link_libraries(KifuwaraperyR PRIVATE tomlplusplus::tomlplusplus)
 
 
 # ========================================

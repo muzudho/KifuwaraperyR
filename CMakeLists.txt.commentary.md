@@ -29,10 +29,10 @@ endif()
 ## project
 
 ```cmake
-project ("CMakeProject1Cpp")
+project ("KifuwaraperyR")
 ```
 
-👆 ここでは、プロジェクトの名前を "CMakeProject1Cpp" に設定しています。  
+👆 ここでは、プロジェクトの名前を "KifuwaraperyR" に設定しています。  
 
 
 ## add_subdirectory
