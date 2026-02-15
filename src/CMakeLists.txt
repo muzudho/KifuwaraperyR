@@ -50,24 +50,29 @@ add_custom_command(TARGET KifuwaraperyR POST_BUILD
 message(STATUS "CMAKE_BINARY_DIR はここだぜ: ${CMAKE_BINARY_DIR}")
 
 
-# ［モジュール読込］
+# ========================================
+# モジュール読込
+# ========================================
 
 
 include(FetchContent)
 
 
-# ［モジュール読込　＞　spdlog］ - ロギング
+# モジュール読込　＞　spdlog　-　ロギング
+# ----------------------------------------
 
 
 FetchContent_Declare(
     spdlog
     GIT_REPOSITORY https://github.com/gabime/spdlog.git
-    GIT_TAG        v1.15.0
+    GIT_TAG        v1.17.0
 )
 FetchContent_MakeAvailable(spdlog)
+target_link_libraries(CMakeProject1Cpp PRIVATE spdlog::spdlog)
 
 
-# ［モジュール読込　＞　tomlplusplus］ - 設定ファイルパーサー
+# モジュール読込　＞　tomlplusplus　-　設定ファイルパーサー
+# ----------------------------------------
 
 
 FetchContent_Declare(
@@ -77,9 +82,12 @@ FetchContent_Declare(
     # GIT_TAG master とかでもOKだけど、タグ固定が安全
 )
 FetchContent_MakeAvailable(tomlplusplus)
+target_link_libraries(CMakeProject1Cpp PRIVATE tomlplusplus::tomlplusplus)
 
 
-# ［モジュール読込］ - ここまで
+# ========================================
+# その他の設定
+# ========================================
 
 
 # C++標準の最低限必要なバージョンを設定（必要なら）
@@ -92,16 +100,3 @@ message(STATUS "CXX_STANDARD property: ${std}")
 
 # 警告とか追加（オプション）
 #target_compile_options(KifuwaraperyR PRIVATE -Wall -Wextra -Wpedantic)
-
-
-# ［リンク］
-
-
-# ［リンク　＞　spdlog］
-target_link_libraries(KifuwaraperyR PRIVATE spdlog::spdlog)
-
-# ［リンク　＞　tomlplusplus］
-target_link_libraries(KifuwaraperyR PRIVATE tomlplusplus::tomlplusplus)
-
-
-# ［リンク］ - ここまで

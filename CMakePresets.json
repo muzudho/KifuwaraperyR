@@ -56,6 +56,16 @@
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
             }
+        },
+        {
+            "name": "clang-windows",
+            "displayName": "Windows - Clang-cl",
+            "generator": "Visual Studio 18 2026",
+            "toolset": "ClangCL",
+            "binaryDir": "${sourceDir}/build/clang",
+            "cacheVariables": {
+                "CMAKE_CXX_COMPILER": "clang-cl"
+            }
         }
     ]
 }
