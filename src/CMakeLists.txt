@@ -23,6 +23,17 @@ add_executable (KifuwaraperyR
     "lib_gui/muz_engine_option_textbox_model.cpp" "lib_gui/muz_engine_option_textbox_model.hpp"
     "lib_gui/muz_engine_settings_initialize_service.cpp" "lib_gui/muz_engine_settings_initialize_service.hpp"
     "lib_gui/muz_engine_settings_model.cpp" "lib_gui/muz_engine_settings_model.hpp"
+    # 📁 lib_shogi
+    "lib_shogi/shogi_model.cpp" "lib_shogi/shogi_model.hpp"
+    # 📁 lib_toybox_base
+    "lib_toybox_base/color.hpp"
+    "lib_toybox_base/hand.hpp"
+    "lib_toybox_base/hand_piece.hpp"
+    "lib_toybox_base/muz_position_base_model.cpp" "lib_toybox_base/muz_position_base_model.hpp"
+    "lib_toybox_base/piece.hpp"
+    "lib_toybox_base/piece_type.hpp"
+    "lib_toybox_base/ply.hpp"
+    "lib_toybox_base/square.hpp"
     #
     "muz_game_engine_service.cpp" "muz_game_engine_service.hpp")
 
