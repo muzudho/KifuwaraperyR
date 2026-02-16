@@ -56,4 +56,4 @@ enum Square {
 	W_hand_rook = W_hand_bishop + 2,
 	SquareHandNum = W_hand_rook + 3
 };
-OverloadEnumOperators(Square);
+//OverloadEnumOperators(Square);

@@ -17,7 +17,7 @@ enum Color {
 	/// </summary>
 	Null
 };
-OverloadEnumOperators(Color);
+//OverloadEnumOperators(Color);
 
 
 /// <summary>

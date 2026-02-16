@@ -47,7 +47,7 @@ enum Piece {
 	N30_WDragon,
 	N31_PieceNone // PieceNone = 31  これを 32 にした方が多重配列のときに有利か。
 };
-OverloadEnumOperators(Piece);
+//OverloadEnumOperators(Piece);
 
 
 /// <summary>

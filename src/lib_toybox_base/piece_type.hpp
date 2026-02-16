@@ -41,7 +41,7 @@ enum PieceType {
 	/// </summary>
 	N16_GoldHorseDragon
 };
-OverloadEnumOperators(PieceType);
+//OverloadEnumOperators(PieceType);
 
 
 /// <summary>

@@ -50,7 +50,7 @@ enum HandPiece {
 	/// </summary>
 	HandPieceNum
 };
-OverloadEnumOperators(HandPiece);
+//OverloadEnumOperators(HandPiece);
 
 
 /// <summary>
