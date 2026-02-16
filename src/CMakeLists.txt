@@ -7,11 +7,11 @@
 add_executable (KifuwaraperyR
     # 📁 src
     "main.cpp" "main.hpp"
-    # 📁 src/layer_app
-    "layer_app/muz_default_logger_model.cpp" "layer_app/muz_default_logger_model.hpp"
-    "layer_app/muz_logging_service.cpp" "layer_app/muz_logging_service.hpp"
-    # 📁 layer_game_engine
-    "layer_game_engine/muz_game_engine_storage_model.cpp" "layer_game_engine/muz_game_engine_storage_model.hpp"
+    # 📁 src/concept_app
+    "concept_app/muz_default_logger_model.cpp" "concept_app/muz_default_logger_model.hpp"
+    "concept_app/muz_logging_service.cpp" "concept_app/muz_logging_service.hpp"
+    # 📁 concept_game_engine
+    "concept_game_engine/muz_game_engine_storage_model.cpp" "concept_game_engine/muz_game_engine_storage_model.hpp"
     # 📁 lib_cpp
     "lib_cpp/int.hpp"
     "lib_cpp/overload_enum_operators.hpp"
