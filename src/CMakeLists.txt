@@ -24,7 +24,7 @@ add_executable (KifuwaraperyR
     "lib_gui/muz_engine_settings_initialize_service.cpp" "lib_gui/muz_engine_settings_initialize_service.hpp"
     "lib_gui/muz_engine_settings_model.cpp" "lib_gui/muz_engine_settings_model.hpp"
     # 📁 lib_shogi
-    "lib_shogi/shogi_model.cpp" "lib_shogi/shogi_model.hpp"
+    "lib_shogi/muz_shogi_model.cpp" "lib_shogi/muz_shogi_model.hpp"
     # 📁 lib_toybox_base
     "lib_toybox_base/color.hpp"
     "lib_toybox_base/hand.hpp"

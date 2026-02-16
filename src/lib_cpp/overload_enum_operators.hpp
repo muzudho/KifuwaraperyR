@@ -36,6 +36,7 @@
 // +=, -=, *=, /=, +, -, *, /, 単項 -, 前置 ++, 前置 --, 後置 ++, 後置 -- を定義しています。
 
 
+//* TODO
 // ヘルパー（C++23なら std::to_underlying が標準で使える）
 template <typename Enum>
 constexpr auto to_underlying(Enum e) noexcept
@@ -137,3 +138,4 @@ constexpr E operator--(E& e, int) noexcept {
 	--e;
 	return old;
 }
+// */

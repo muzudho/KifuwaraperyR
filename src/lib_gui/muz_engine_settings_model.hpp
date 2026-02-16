@@ -36,7 +36,7 @@ public:
 	/// オプションのマップ☆（＾～＾）
 	/// </summary>
 	std::map<std::string, MuzEngineOptionAbstractModel, MuzCaseInsensitiveLessModel> m_map;
-	std::map<std::string, std::unique_ptr<MuzEngineOptionAbstractModel>, MuzCaseInsensitiveLessModel> m_mapUnique;
+	std::map<std::string, std::unique_ptr<MuzEngineOptionAbstractModel>, MuzCaseInsensitiveLessModel> m_mapUnique; // XXX: 勉強中
 
 
 	// ========================================
@@ -88,7 +88,7 @@ public:
         return this->m_map.find(key)->second;
 		//return this->m_map.at(key);	// 例外を投げる
     }
-	// TODO:
+	// XXX: 勉強中
 	MuzEngineOptionAbstractModel& GetOptionUniqueByKey(const std::string& key) const
 	{
 		auto it = this->m_mapUnique.find(key);
