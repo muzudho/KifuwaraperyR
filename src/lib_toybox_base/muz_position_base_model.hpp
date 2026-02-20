@@ -85,6 +85,7 @@ protected:
 	/// <returns></returns>
 	Piece GetPiece(const Square sq) const;
 
+	void SetPiece(const Piece piece, const Square sq);
 
 	/// <summary>
 	/// 持ち駒
@@ -97,6 +98,10 @@ protected:
 		return this->m_hand_[CLR];
 	}
 	Hand GetHand(const Color c) const;
+
+	void SetHand(const HandPiece hp, const Color c, const int num);
+
+	void SetHand(const Piece piece, const int num);
 
 
 	// ========================================

@@ -50,6 +50,19 @@ Piece MuzPositionBaseModel::GetPiece(const Square sq) const
 }
 
 
+void MuzPositionBaseModel::SetPiece(const Piece piece, const Square sq)
+{
+	const Color c = ConvPiece::TO_COLOR10(piece);
+	const PieceType pt = ConvPiece::TO_PIECE_TYPE10(piece);
+
+	this->m_piece_[sq] = piece;
+
+	g_setMaskBb.AddBit(&this->m_BB_ByPiecetype_[pt], sq);
+	g_setMaskBb.AddBit(&this->m_BB_ByColor_[c], sq);
+	g_setMaskBb.AddBit(&this->m_BB_ByPiecetype_[PieceType::N00_Occupied], sq);
+}
+
+
 /// <summary>
 /// 
 /// </summary>
@@ -58,6 +71,32 @@ Piece MuzPositionBaseModel::GetPiece(const Square sq) const
 Hand MuzPositionBaseModel::GetHand(const Color c) const
 {
 	return this->m_hand_[c];
+}
+
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="hp"></param>
+/// <param name="c"></param>
+/// <param name="num"></param>
+void MuzPositionBaseModel::SetHand(const HandPiece hp, const Color c, const int num)
+{
+	this->m_hand_[c].OrEqual(num, hp);
+}
+
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="piece"></param>
+/// <param name="num"></param>
+void MuzPositionBaseModel::SetHand(const Piece piece, const int num)
+{
+	const Color c = ConvPiece::TO_COLOR10(piece);
+	const PieceType pt = ConvPiece::TO_PIECE_TYPE10(piece);
+	const HandPiece hp = ConvHandPiece::FromPieceType(pt);
+	this->SetHand(hp, c, num);
 }
 
 
