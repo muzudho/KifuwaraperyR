@@ -6,9 +6,11 @@
 
 #include "char_to_piece_usi.hpp"
 #include "color.hpp"
+#include "file.hpp"
+#include "hand.hpp"
 #include "ply.hpp"
 #include "piece.hpp"
-#include "hand.hpp"
+#include "rank.hpp"
 #include "square.hpp"
 #include "square_delta.hpp"
 #include <charconv>       // std::from_chars
