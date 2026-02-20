@@ -15,7 +15,7 @@
 #include "n2_char_to_piece_usi.hpp"
 #include "n2_hand_ope.hpp"
 #include "n2_piece_ope.hpp"
-#include "n2_square_ope.hpp"
+#include "n3_square_ope.hpp"
 #include <charconv>       // std::from_chars
 #include <iostream>
 #include <map>

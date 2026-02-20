@@ -1,6 +1,7 @@
 #pragma once
 
 #include "n1_piece.hpp"
+#include <map>
 
 /// <summary>
 /// 

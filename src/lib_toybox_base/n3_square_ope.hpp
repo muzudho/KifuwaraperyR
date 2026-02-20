@@ -7,9 +7,10 @@
 #pragma once
 
 #include "n1_color.hpp"
-#include "n1_file.hpp"
-#include "n1_rank.hpp"
-#include "n1_square.hpp"
+#include "n2_file_ope.hpp"
+#include "n2_rank_ope.hpp"
+#include "n2_squares.hpp"
+#include <string>
 
 /// <summary>
 /// マス番号の操作
