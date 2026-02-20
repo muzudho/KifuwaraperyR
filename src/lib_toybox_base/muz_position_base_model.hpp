@@ -11,8 +11,8 @@
 #include "n1_square_delta.hpp"
 #include "n2_char_to_piece_usi.hpp"
 #include "n2_hand_ope.hpp"
-#include "n2_hand_piece_ope.hpp"
 #include "n2_piece_ope.hpp"
+#include "n3_hand_piece_ope.hpp"
 #include "n3_square_ope.hpp"
 #include <iostream>
 #include <map>
@@ -85,7 +85,7 @@ protected:
 	/// </summary>
 	/// <param name="sq"></param>
 	/// <returns></returns>
-	Piece GetPiece(const Square sq) const;
+	Piece GetPiece(const Square sq);
 
 	void SetPiece(const Piece piece, const Square sq);
 

@@ -44,7 +44,7 @@ Color MuzPositionBaseModel::GetTurn()
 /// </summary>
 /// <param name="sq"></param>
 /// <returns></returns>
-Piece MuzPositionBaseModel::GetPiece(const Square sq) const
+Piece MuzPositionBaseModel::GetPiece(const Square sq)
 {
 	return this->m_piece_[sq];
 }

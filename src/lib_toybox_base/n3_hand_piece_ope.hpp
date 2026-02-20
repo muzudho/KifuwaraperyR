@@ -1,6 +1,7 @@
 #pragma once
 
 #include "n1_hand_piece.hpp"
+#include "n2_piece_types.hpp"
 #include <string>
 
 namespace {
