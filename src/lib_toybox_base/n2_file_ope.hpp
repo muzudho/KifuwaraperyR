@@ -1,42 +1,12 @@
-﻿//
-// 筋
-// 
-//		- 列とも。
+//
+// 📄 筋の操作
+//
+//		- 循環参照を避けるため。
 //
 
 #pragma once
 
-#include "square.hpp"
-
-/// <summary>
-/// 筋の定数
-/// </summary>
-enum File {
-	/// <summary>
-	/// ９筋目か☆（＾～＾）？
-	/// </summary>
-	FileI,
-	
-	FileH, FileG, FileF, FileE, FileD, FileC, FileB,
-	
-	/// <summary>
-	/// １筋目か☆（＾～＾）？
-	/// </summary>
-	FileA,
-	
-	/// <summary>
-	/// 列挙型の終端
-	/// </summary>
-	FileNum,
-
-	FileNoLeftNum = FileD
-};
-
-/// <summary>
-/// 
-/// </summary>
-extern const File g_squareToFile[SquareNum];
-
+#include "n1_file.hpp"
 
 /// <summary>
 /// 筋の操作

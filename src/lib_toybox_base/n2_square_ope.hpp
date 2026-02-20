@@ -6,12 +6,10 @@
 
 #pragma once
 
-#include "color.hpp"
-#include "square.hpp"
-#include "square_delta.hpp"
-#include "file.hpp"
-#include "rank.hpp"
-#include <string>
+#include "n1_color.hpp"
+#include "n1_file.hpp"
+#include "n1_rank.hpp"
+#include "n1_square.hpp"
 
 /// <summary>
 /// マス番号の操作

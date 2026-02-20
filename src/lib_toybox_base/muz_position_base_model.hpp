@@ -4,21 +4,25 @@
 
 #pragma once
 
-#include "char_to_piece_usi.hpp"
-#include "color.hpp"
-#include "file.hpp"
-#include "hand.hpp"
-#include "ply.hpp"
-#include "piece.hpp"
-#include "rank.hpp"
-#include "square.hpp"
-#include "square_delta.hpp"
-#include "square_ope.hpp"
+#include "../../src/lib_cpp/int.hpp"
+#include "n1_color.hpp"
+#include "n1_file.hpp"
+#include "n1_hand_piece.hpp"
+#include "n1_piece_type.hpp"
+#include "n1_ply.hpp"
+#include "n1_rank.hpp"
+#include "n1_square_delta.hpp"
+#include "n2_char_to_piece_usi.hpp"
+#include "n2_hand_ope.hpp"
+#include "n2_piece_ope.hpp"
+#include "n2_square_ope.hpp"
 #include <charconv>       // std::from_chars
-#include <ranges>         // C++20 ranges
-#include <string_view>
-#include <optional>
 #include <iostream>
+#include <map>
+#include <optional>
+#include <ranges>         // C++20 ranges
+#include <string>
+#include <string_view>
 
 class MuzPositionBaseModel
 {

@@ -1,12 +1,12 @@
 #pragma once
 
-#include "piece.hpp"
-#include <map>
+#include "n1_piece.hpp"
 
 /// <summary>
 /// 
 /// </summary>
-class CharToPieceUSI : public std::map<char, Piece> {
+class CharToPieceUSI : public std::map<char, Piece>
+{
 
 public:
 
@@ -14,7 +14,8 @@ public:
     /// <summary>
     /// 
     /// </summary>
-    CharToPieceUSI() {
+    CharToPieceUSI()
+    {
         (*this)['P'] = N01_BPawn;   (*this)['p'] = N17_WPawn;
         (*this)['L'] = N02_BLance;  (*this)['l'] = N18_WLance;
         (*this)['N'] = N03_BKnight; (*this)['n'] = N19_WKnight;
