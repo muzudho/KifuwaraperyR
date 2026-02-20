@@ -62,19 +62,19 @@ public:
 
 	/// <summary>
 	///		<pre>
-	/// 2つの Hand 型変数の、同じ種類の駒の数を比較する必要があるため、
+	/// 2つの MuzHandModel 型変数の、同じ種類の駒の数を比較する必要があるため、
 	/// bool じゃなくて、u32 型でそのまま返す。
 	///		</pre>
 	/// </summary>
 	/// <param name="hand"></param>
 	/// <returns></returns>
-	static u32 Exists_HPawn(const Hand& hand) { return hand.Value() & m_HPawnMask; }
-	static u32 Exists_HLance(const Hand& hand) { return hand.Value() & m_HLanceMask; }
-	static u32 Exists_HKnight(const Hand& hand) { return hand.Value() & m_HKnightMask; }
-	static u32 Exists_HSilver(const Hand& hand) { return hand.Value() & m_HSilverMask; }
-	static u32 Exists_HGold(const Hand& hand) { return hand.Value() & m_HGoldMask; }
-	static u32 Exists_HBishop(const Hand& hand) { return hand.Value() & m_HBishopMask; }
-	static u32 Exists_HRook(const Hand& hand) { return hand.Value() & m_HRookMask; }
+	static u32 Exists_HPawn(const MuzHandModel& hand) { return hand.Value() & m_HPawnMask; }
+	static u32 Exists_HLance(const MuzHandModel& hand) { return hand.Value() & m_HLanceMask; }
+	static u32 Exists_HKnight(const MuzHandModel& hand) { return hand.Value() & m_HKnightMask; }
+	static u32 Exists_HSilver(const MuzHandModel& hand) { return hand.Value() & m_HSilverMask; }
+	static u32 Exists_HGold(const MuzHandModel& hand) { return hand.Value() & m_HGoldMask; }
+	static u32 Exists_HBishop(const MuzHandModel& hand) { return hand.Value() & m_HBishopMask; }
+	static u32 Exists_HRook(const MuzHandModel& hand) { return hand.Value() & m_HRookMask; }
 
 
 	/// <summary>
@@ -90,15 +90,15 @@ public:
 	/// </summary>
 	/// <param name="hand"></param>
 	/// <returns></returns>
-	static u32 ExceptPawnExists(const Hand& hand);
+	static u32 ExceptPawnExists(const MuzHandModel& hand);
 
 	void PlusOne(const HandPiece handPiece);
 
 	void MinusOne(const HandPiece handPiece);
 
-	bool operator == (const Hand rhs) const;
+	bool operator == (const MuzHandModel rhs) const;
 
-	bool operator != (const Hand rhs) const;
+	bool operator != (const MuzHandModel rhs) const;
 
 
 	/// <summary>
@@ -108,7 +108,7 @@ public:
 	/// </summary>
 	/// <param name="ref"></param>
 	/// <returns></returns>
-	bool IsEqualOrSuperior(const Hand ref) const;
+	bool IsEqualOrSuperior(const MuzHandModel ref) const;
 
 
 private:
