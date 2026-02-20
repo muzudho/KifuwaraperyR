@@ -5,9 +5,9 @@
 #pragma once
 
 #include "../../src/lib_cpp/int.hpp"
+#include "muz_position_n1_model.hpp"
 #include "n1_hand_piece.hpp"
 #include "n1_piece_type.hpp"
-#include "n1_ply.hpp"
 #include "n1_square_delta.hpp"
 #include "n2_char_to_piece_usi.hpp"
 #include "n2_hand_ope.hpp"
@@ -21,37 +21,11 @@
 #include <string>
 #include <string_view>
 
-class MuzPositionBaseModel
+class MuzPositionBaseModel : public MuzPositionN1Model
 {
 
 
 protected:
-
-
-	// ========================================
-	// フィールド
-	// ========================================
-
-
-	/// <summary>
-	/// 何手目か。時間管理に使用する
-	/// </summary>
-	Ply m_gamePly_;
-
-	/// <summary>
-	/// 手番
-	/// </summary>
-	Color m_turn_;
-
-	/// <summary>
-	/// 各マスの駒
-	/// </summary>
-	Piece m_piece_[SquareNum];
-
-	/// <summary>
-	/// 先後対局者別の手駒
-	/// </summary>
-	Hand m_hand_[g_COLOR_NUM];
 
 
 	// ========================================

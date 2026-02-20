@@ -21,7 +21,7 @@ add_executable (KifuwaraperyR
     # 📁 lib_shogi
     "lib_shogi/muz_shogi_model.cpp"
     # 📁 lib_toybox_base
-    "lib_toybox_base/muz_position_base_model.cpp"
+    #"lib_toybox_base/muz_position_base_model.cpp"
     # 📁 src
     "main.cpp"
     "muz_game_engine_service.cpp")

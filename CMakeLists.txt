@@ -7,6 +7,11 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+# Clang-cl 対応を強化したい場合
+if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wno-microsoft-cast -Wno-reserved-identifier)
+endif()
+
 # サポートされている場合は、MSVC コンパイラのホット リロードを有効にします。
 if (POLICY CMP0141)
   cmake_policy(SET CMP0141 NEW)
