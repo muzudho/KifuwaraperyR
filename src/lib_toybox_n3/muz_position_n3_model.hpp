@@ -13,6 +13,11 @@ protected:
 	// 主要メソッド
 	// ========================================
 
+	// TODO: void Set(std::string_view sfen);
+
 	bool ParseBoard(std::string_view board_str);
 
+	// TODO: bool ParseTurn(std::string_view turn_str);
+	// TODO: bool ParseHand(std::string_view hand_str);
+	// TODO: int ParsePly(std::string_view ply_str);
 };
