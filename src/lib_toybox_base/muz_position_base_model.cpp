@@ -57,9 +57,10 @@ void MuzPositionBaseModel::SetPiece(const Piece piece, const Square sq)
 
 	this->m_piece_[sq] = piece;
 
-	g_setMaskBb.AddBit(&this->m_BB_ByPiecetype_[pt], sq);
-	g_setMaskBb.AddBit(&this->m_BB_ByColor_[c], sq);
-	g_setMaskBb.AddBit(&this->m_BB_ByPiecetype_[PieceType::N00_Occupied], sq);
+    // TODO: 駒の配置を表すビットボードを更新
+	//g_setMaskBb.AddBit(&this->m_BB_ByPiecetype_[pt], sq);
+	//g_setMaskBb.AddBit(&this->m_BB_ByColor_[c], sq);
+	//g_setMaskBb.AddBit(&this->m_BB_ByPiecetype_[PieceType::N00_Occupied], sq);
 }
 
 

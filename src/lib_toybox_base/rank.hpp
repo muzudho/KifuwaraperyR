@@ -33,7 +33,7 @@ enum Rank {
 /// <summary>
 /// 
 /// </summary>
-extern const Rank g_squareToRank[SquareNum];
+extern const Rank g_squareToRank[Square::SquareNum];
 
 
 /// <summary>
@@ -58,7 +58,7 @@ public:
 	/// </summary>
 	/// <param name="r"></param>
 	/// <returns></returns>
-	static inline constexpr Rank INVERSE10(const Rank r) { return RankNum - 1 - r; }
+	static inline constexpr Rank INVERSE10(const Rank r) { return (Rank)(RankNum - 1 - r); }
 
 
 	/// <summary>

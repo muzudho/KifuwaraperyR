@@ -13,6 +13,7 @@
 #include "rank.hpp"
 #include "square.hpp"
 #include "square_delta.hpp"
+#include "square_ope.hpp"
 #include <charconv>       // std::from_chars
 #include <ranges>         // C++20 ranges
 #include <string_view>

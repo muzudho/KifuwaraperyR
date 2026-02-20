@@ -4,7 +4,8 @@
 
 #pragma once
 
-#include "../../src/lib_cpp/overload_enum_operators.hpp"
+#include "color.hpp"
+#include "piece_type.hpp"
 
 /// <summary>
 ///		<pre>
@@ -277,7 +278,7 @@ public:
 	/// <param name="p"></param>
 	/// <returns></returns>
 	static inline Color TO_COLOR10(const Piece p) {
-		assert(p != N00_Empty);
+		//assert(p != N00_Empty);
 		return static_cast<Color>(p >> 4);//ビット演算を使うぜ☆（＾ｑ＾）
 		//return g_CONV_PIECE_TO_COLOR10[p];//暗算表を使うぜ☆（＾ｑ＾）
 	}

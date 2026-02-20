@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "../../src/lib_toybox_base/square.hpp"
+#include "square.hpp"
 
 /// <summary>
 /// 筋の定数
@@ -52,7 +52,7 @@ public:
 	/// </summary>
 	/// <param name="f"></param>
 	/// <returns></returns>
-	static inline constexpr File INVERSE10(const File f) { return FileNum - 1 - f; }
+	static inline constexpr File INVERSE10(const File f) { return (File)(FileNum - 1 - f); }
 
 
 	/// <summary>
