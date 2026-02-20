@@ -24,6 +24,7 @@ add_executable (KifuwaraperyR
     "lib_toybox_n1/muz_hand_n1_model.cpp"
     "lib_toybox_n1/muz_position_n1_model.cpp"
     # 📁 lib_toybox_n2
+    "lib_toybox_n2/char_to_piece_usi.cpp"
     "lib_toybox_n2/muz_position_n2_model.cpp"
     "lib_toybox_n2/piece_types.cpp"
     # 📁 lib_toybox_n3
