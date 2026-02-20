@@ -29,19 +29,7 @@ void MuzPositionBaseModel::SetPiece(const Piece piece, const Square sq)
 /// <returns></returns>
 MuzHandModel MuzPositionBaseModel::GetHand(const Color c) const
 {
-	return this->m_hand_[c];
-}
-
-
-/// <summary>
-/// 
-/// </summary>
-/// <param name="hp"></param>
-/// <param name="c"></param>
-/// <param name="num"></param>
-void MuzPositionBaseModel::SetHand(const HandPiece hp, const Color c, const int num)
-{
-	this->m_hand_[c].OrEqual(num, hp);
+	return this->m_hand_models_[c];
 }
 
 
@@ -56,6 +44,18 @@ void MuzPositionBaseModel::SetHand(const Piece piece, const int num)
 	const PieceType pt = ConvPiece::TO_PIECE_TYPE10(piece);
 	const HandPiece hp = ConvHandPiece::FromPieceType(pt);
 	this->SetHand(hp, c, num);
+}
+
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="hp"></param>
+/// <param name="c"></param>
+/// <param name="num"></param>
+void MuzPositionBaseModel::SetHand(const HandPiece hp, const Color c, const int num)
+{
+	this->m_hand_models_[c].OrEqual(num, hp);
 }
 
 
@@ -235,7 +235,7 @@ bool MuzPositionBaseModel::ParseHand(std::string_view hand_str)
 	// 持ち駒
 	for (int digits = 0; ss.get(token) && token != ' '; ) {
 		if (token == '-') {
-			memset(m_hand_, 0, sizeof(m_hand_));
+			memset(m_hand_models_, 0, sizeof(m_hand_models_));
 		}
 		else if (isdigit(token)) {
 			digits = digits * 10 + token - '0';
@@ -255,7 +255,7 @@ bool MuzPositionBaseModel::ParseHand(std::string_view hand_str)
 
 	if (hand_str == "-")
 	{
-		std::fill(std::begin(m_hand_), std::end(m_hand_), 0);
+		std::fill(std::begin(m_hand_models_), std::end(m_hand_models_), 0);
 		return true;
 	}
 
