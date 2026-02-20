@@ -5,18 +5,15 @@
 #pragma once
 
 #include "../../src/lib_cpp/int.hpp"
-#include "n1_color.hpp"
-#include "n1_file.hpp"
 #include "n1_hand_piece.hpp"
 #include "n1_piece_type.hpp"
 #include "n1_ply.hpp"
-#include "n1_rank.hpp"
 #include "n1_square_delta.hpp"
 #include "n2_char_to_piece_usi.hpp"
 #include "n2_hand_ope.hpp"
 #include "n2_piece_ope.hpp"
 #include "n3_square_ope.hpp"
-#include <charconv>       // std::from_chars
+//#include <charconv>       // std::from_chars	MSVC用か。Clang と相性が悪い。
 #include <iostream>
 #include <map>
 #include <optional>
@@ -122,5 +119,5 @@ protected:
 	bool ParseBoard(std::string_view board_str);
 	bool ParseTurn(std::string_view turn_str);
 	bool ParseHand(std::string_view hand_str);
-	std::optional<int> ParsePly(std::string_view ply_str);
+	int ParsePly(std::string_view ply_str);
 };

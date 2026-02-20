@@ -325,7 +325,7 @@ bool MuzPositionBaseModel::ParseHand(std::string_view hand_str)
 	return count == 0;
 }
 
-std::optional<int> MuzPositionBaseModel::ParsePly(std::string_view ply_str)
+int MuzPositionBaseModel::ParsePly(std::string_view ply_str)
 {
 
 	/*
@@ -338,7 +338,7 @@ std::optional<int> MuzPositionBaseModel::ParsePly(std::string_view ply_str)
 	auto [ptr, ec] = std::from_chars(ply_str.data(), ply_str.data() + ply_str.size(), value);
 
 	if (ec != std::errc{} || ptr != ply_str.data() + ply_str.size())
-		return std::nullopt;
+		return -1;
 
 	// 元のロジックを再現
 	return std::max(2 * (value - 1), 0) + static_cast<int>(m_turn_ == Color::White);
