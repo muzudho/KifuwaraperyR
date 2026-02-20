@@ -1,8 +1,8 @@
 #pragma once
 
-#include "n1_file.hpp"
-#include "n1_rank.hpp"
-#include "n1_square.hpp"
+#include "../lib_toybox_n1/file.hpp"
+#include "../lib_toybox_n1/rank.hpp"
+#include "../lib_toybox_n1/square.hpp"
 
 /// <summary>
 /// 

@@ -26,9 +26,11 @@ add_executable (KifuwaraperyR
     # 📁 lib_toybox_n2
     "lib_toybox_n2/muz_position_n2_model.cpp"
     "lib_toybox_n2/piece_types.cpp"
+    # 📁 lib_toybox_n3
+    "lib_toybox_n3/muz_position_n3_model.cpp"
     # 📁 src
     "main.cpp"
-    "muz_game_engine_service.cpp" "lib_toybox_n1/muz_position_n1_model.cpp" "lib_toybox_n1/muz_hand_n1_model.cpp" "lib_toybox_n2/muz_position_n2_model.cpp")
+    "muz_game_engine_service.cpp" "lib_toybox_n1/muz_position_n1_model.cpp" "lib_toybox_n1/muz_hand_n1_model.cpp" "lib_toybox_n2/muz_position_n2_model.cpp" "lib_toybox_n3/muz_position_n3_model.cpp")
 
 
 #if (CMAKE_VERSION VERSION_GREATER 3.12)

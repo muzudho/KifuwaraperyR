@@ -1,6 +1,6 @@
 #pragma once
 
-#include "n1_piece.hpp"
+#include "../lib_toybox_n1/piece.hpp"
 #include <map>
 
 /// <summary>

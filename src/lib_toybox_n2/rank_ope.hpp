@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "n1_rank.hpp"
+#include "../lib_toybox_n1/rank.hpp"
 
 /// <summary>
 /// 段の操作

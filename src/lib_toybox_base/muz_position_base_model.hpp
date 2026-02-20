@@ -46,7 +46,7 @@ protected:
 	/// </summary>
 	/// <param name="sfen"></param>
 	void Set(std::string_view sfen);
-	bool ParseBoard(std::string_view board_str);
+
 	bool ParseTurn(std::string_view turn_str);
 	bool ParseHand(std::string_view hand_str);
 	int ParsePly(std::string_view ply_str);

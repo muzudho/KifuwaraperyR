@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "n1_file.hpp"
+#include "../lib_toybox_n1/file.hpp"
 
 /// <summary>
 /// 筋の操作
