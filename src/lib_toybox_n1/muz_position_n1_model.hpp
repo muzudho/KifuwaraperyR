@@ -40,10 +40,34 @@ protected:
 
 
 	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="ply"></param>
+	void SetStartPosPly(const Ply ply);
+
+
+	/// <summary>
 	/// 何手目か
 	/// </summary>
 	/// <returns></returns>
 	Ply GetGamePly();
+
+
+	/// <summary>
+	/// 次の手番
+	/// </summary>
+	/// <returns></returns>
+	Color GetTurn();
+
+
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="sq"></param>
+	/// <returns></returns>
+	Piece GetPiece(const Square sq);
+
+	void SetPiece(const Piece piece, const Square sq);
 
 
 };
