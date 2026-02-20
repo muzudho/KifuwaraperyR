@@ -51,32 +51,32 @@ void MuzGameEngineService::initialize_10a()
         64,     // TODO: g_MaxThreads,
         &this->m_pGameEngineStore->m_engineSettings,
         // onHashSizeChanged:
-        [this](auto opt)
+        [](auto opt)    // [this](auto opt)
         {
             // TODO: this->m_pGameEngineStore.get()->m_tt.setSize(opt);
         },
         // onHashCleared:
-        [this](auto opt)
+        [](auto opt)    // [this](auto opt)
         {
             // TODO: this->m_pGameEngineStore.get()->m_tt.Clear();
         },
         // onEvalDirChanged:
-        [this](auto opt)
+        [](auto opt)    // [this](auto opt)
         {
             // TODO: std::unique_ptr<KkKkpKppStorage1>(new KkKkpKppStorage1)->initialize_10a600b(opt, true);
         },
         // onMaxThreadsPerSplitPointChanged:
-        [this](auto opt)
+        [](auto opt)    // [this](auto opt)
         {
             // TODO: this->m_pGameEngineStore.get()->m_pub.ReadUSIOptions(this->m_pGameEngineStore.get());
         },
         // onThreadsChanged:
-        [this](auto opt)
+        [](auto opt)    // [this](auto opt)
         {
             // TODO: this->m_pGameEngineStore.get()->m_pub.ReadUSIOptions(this->m_pGameEngineStore.get());
         },
         // getCpuCoreCount:
-        [this]()
+        []()    // [this]()
         {
             // 論理的なコア数の取得
             // todo: boost::thread::physical_concurrency() を使うこと。
