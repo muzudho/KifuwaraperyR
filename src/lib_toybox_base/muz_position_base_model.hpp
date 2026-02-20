@@ -5,7 +5,7 @@
 #pragma once
 
 #include "../../src/lib_cpp/int.hpp"
-#include "muz_position_n1_model.hpp"
+#include "../lib_toybox_v1/muz_position_n1_model.hpp"
 #include "n1_hand_piece.hpp"
 #include "n1_piece_type.hpp"
 #include "n1_square_delta.hpp"
@@ -29,15 +29,19 @@ protected:
 
 
 	// ========================================
-	// アクセッサ
+	// フィールド
 	// ========================================
 
 
 	/// <summary>
-	/// 何手目か
+	/// 先後対局者別の手駒
 	/// </summary>
-	/// <returns></returns>
-	Ply GetGamePly();
+	Hand m_hand_[g_COLOR_NUM];
+
+
+	// ========================================
+	// アクセッサ
+	// ========================================
 
 
 	/// <summary>

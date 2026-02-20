@@ -10,16 +10,6 @@
 
 
 /// <summary>
-/// 何手目か
-/// </summary>
-/// <returns></returns>
-Ply MuzPositionBaseModel::GetGamePly()
-{
-	return this->m_gamePly_;
-}
-
-
-/// <summary>
 /// 
 /// </summary>
 /// <param name="ply"></param>

@@ -1,9 +1,10 @@
 #pragma once
 
-#include "n1_ply.hpp"
-#include "n1_color.hpp"
-#include "n1_piece.hpp"
-#include "n1_hand_piece.hpp"
+#include "ply.hpp"
+#include "color.hpp"
+#include "piece.hpp"
+#include "square.hpp"
+#include "hand_piece.hpp"
 
 class MuzPositionN1Model
 {
@@ -32,10 +33,17 @@ protected:
 	/// </summary>
 	Piece m_piece_[SquareNum];
 
+
+	// ========================================
+	// アクセッサ
+	// ========================================
+
+
 	/// <summary>
-	/// 先後対局者別の手駒
+	/// 何手目か
 	/// </summary>
-	Hand m_hand_[g_COLOR_NUM];
+	/// <returns></returns>
+	Ply GetGamePly();
 
 
 };
