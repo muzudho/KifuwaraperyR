@@ -1,7 +1,10 @@
 //
 // 📄 局面の状態を表すクラス
 //
+
 #pragma once
+
+#include "char_to_piece_usi.hpp"
 #include "color.hpp"
 #include "ply.hpp"
 #include "piece.hpp"
@@ -109,4 +112,3 @@ protected:
 	bool ParseHand(std::string_view hand_str);
 	std::optional<int> ParsePly(std::string_view ply_str);
 };
-

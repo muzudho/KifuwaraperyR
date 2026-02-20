@@ -1,7 +1,9 @@
 ﻿//
 // 📄 マス
 //
+
 #pragma once
+
 #include "../../src/lib_cpp/overload_enum_operators.hpp"
 
 /// <summary>
@@ -56,4 +58,3 @@ enum Square
 	W_hand_rook = W_hand_bishop + 2,
 	SquareHandNum = W_hand_rook + 3
 };
-//OverloadEnumOperators(Square);

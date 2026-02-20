@@ -1,7 +1,9 @@
 ﻿//
 // 📄 駒種類
 //
+
 #pragma once
+
 #include "../../src/lib_cpp/overload_enum_operators.hpp"
 
 /// <summary>
@@ -41,8 +43,6 @@ enum PieceType
 	/// </summary>
 	N16_GoldHorseDragon
 };
-//OverloadEnumOperators(PieceType);
-
 
 /// <summary>
 /// TODO: 列挙型のサイズは、列挙型の外に出したいぜ☆（＾ｑ＾）

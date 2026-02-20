@@ -1,7 +1,9 @@
 ﻿//
 // 📄 持ち駒
 //
+
 #pragma once
+
 #include "piece_type.hpp"
 
 /// <summary>
@@ -50,8 +52,6 @@ enum HandPiece
 	/// </summary>
 	HandPieceNum
 };
-//OverloadEnumOperators(HandPiece);
-
 
 /// <summary>
 /// 

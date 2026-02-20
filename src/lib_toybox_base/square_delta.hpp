@@ -3,6 +3,7 @@
 //
 
 #pragma once
+
 #include "../../src/lib_cpp/overload_enum_operators.hpp"
 
 /// <summary>
@@ -20,4 +21,3 @@ enum SquareDelta
 	DeltaSW = DeltaS + DeltaW,
 	DeltaNW = DeltaN + DeltaW
 };
-//OverloadEnumOperators(SquareDelta);

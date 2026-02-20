@@ -1,7 +1,9 @@
 ﻿//
 // 📄 駒
 //
+
 #pragma once
+
 #include "../../src/lib_cpp/overload_enum_operators.hpp"
 
 /// <summary>
@@ -47,8 +49,6 @@ enum Piece
 	N30_WDragon,
 	N31_PieceNone // PieceNone = 31  これを 32 にした方が多重配列のときに有利か。
 };
-//OverloadEnumOperators(Piece);
-
 
 /// <summary>
 /// 列挙型の主に使う要素の数

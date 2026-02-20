@@ -1,7 +1,9 @@
 ﻿//
 // 📄 持ち駒
 //
+
 #pragma once
+
 #include "../../src/lib_cpp/int.hpp"
 #include "hand_piece.hpp"
 
