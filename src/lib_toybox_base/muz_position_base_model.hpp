@@ -29,38 +29,11 @@ protected:
 
 
 	// ========================================
-	// フィールド
-	// ========================================
-
-
-	/// <summary>
-	/// 先後対局者別の手駒
-	/// </summary>
-	MuzHandModel m_hand_models_[g_COLOR_NUM];
-
-
-	// ========================================
 	// アクセッサ
 	// ========================================
 
 
 	void SetPiece(const Piece piece, const Square sq);
-
-	/// <summary>
-	/// 持ち駒
-	/// </summary>
-	/// <typeparam name="CLR"></typeparam>
-	/// <returns></returns>
-	template<Color CLR>
-	MuzHandModel GetHand() const
-	{
-		return this->m_hand_models_[CLR];
-	}
-	MuzHandModel GetHand(const Color c) const;
-
-	void SetHand(const Piece piece, const int num);
-
-	void SetHand(const HandPiece hp, const Color c, const int num);
 
 
 	// ========================================
