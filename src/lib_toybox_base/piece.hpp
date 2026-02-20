@@ -4,7 +4,6 @@
 #pragma once
 #include "../../src/lib_cpp/overload_enum_operators.hpp"
 
-
 /// <summary>
 ///		<pre>
 /// 駒
@@ -12,7 +11,8 @@
 ///		Promoted を加算することで、成りを表す。
 ///		</pre>
 /// </summary>
-enum Piece {
+enum Piece
+{
 	N00_Empty = 0,
 	UnPromoted = 0,
 	Promoted = 8,

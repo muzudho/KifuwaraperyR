@@ -4,12 +4,12 @@
 #pragma once
 #include "piece_type.hpp"
 
-
 /// <summary>
 /// 持ち駒を表すときに使用する。
 /// todo: HGold を HRook の後ろに持っていき、PieceType との変換を簡単に出来るようにする。
 /// </summary>
-enum HandPiece {
+enum HandPiece
+{
 	/// <summary>
 	/// 持ち駒の歩
 	/// </summary>

@@ -4,7 +4,6 @@
 #pragma once
 #include "../../src/lib_cpp/overload_enum_operators.hpp"
 
-
 /// <summary>
 ///		<pre>
 /// マス番号。
@@ -26,7 +25,8 @@
 ///		0 ビット目から順に、以下の位置と対応させる。
 ///		</pre>
 /// </summary>
-enum Square {
+enum Square
+{
 	I9, I8, I7, I6, I5, I4, I3, I2, I1,
 	H9, H8, H7, H6, H5, H4, H3, H2, H1,
 	G9, G8, G7, G6, G5, G4, G3, G2, G1,

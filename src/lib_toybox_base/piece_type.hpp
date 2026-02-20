@@ -4,7 +4,6 @@
 #pragma once
 #include "../../src/lib_cpp/overload_enum_operators.hpp"
 
-
 /// <summary>
 ///		<pre>
 /// 駒種類
@@ -12,7 +11,8 @@
 ///		- Pro* は 元の 駒の種類に 8 を加算したもの。
 ///		</pre>
 /// </summary>
-enum PieceType {
+enum PieceType
+{
 	PTPromote = 8,
 
 	/// <summary>

@@ -5,7 +5,6 @@
 #include "../../src/lib_cpp/int.hpp"
 #include "hand_piece.hpp"
 
-
 /// <summary>
 ///		<pre>
 /// 手駒
@@ -21,7 +20,8 @@
 ///		xxxxx11x xxxxxxxx xxxxxxxx xxxxxxxx  Rook
 ///		</pre>
 /// </summary>
-class Hand {
+class Hand
+{
 
 
 public:
