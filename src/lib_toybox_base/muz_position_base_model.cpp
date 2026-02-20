@@ -13,7 +13,7 @@
 /// 何手目か
 /// </summary>
 /// <returns></returns>
-Ply MuzPositionBaseModel::GetGamePly() const
+Ply MuzPositionBaseModel::GetGamePly()
 {
 	return this->m_gamePly_;
 }
@@ -33,7 +33,7 @@ void MuzPositionBaseModel::SetStartPosPly(const Ply ply)
 /// 手番を取得
 /// </summary>
 /// <returns></returns>
-Color MuzPositionBaseModel::GetTurn() const
+Color MuzPositionBaseModel::GetTurn()
 {
 	return this->m_turn_;
 }
