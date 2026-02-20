@@ -36,7 +36,7 @@ protected:
 	/// <summary>
 	/// 先後対局者別の手駒
 	/// </summary>
-	Hand m_hand_[g_COLOR_NUM];
+	MuzHandModel m_hand_[g_COLOR_NUM];
 
 
 	// ========================================
@@ -52,11 +52,11 @@ protected:
 	/// <typeparam name="CLR"></typeparam>
 	/// <returns></returns>
 	template<Color CLR>
-	Hand GetHand() const
+	MuzHandModel GetHand() const
 	{
 		return this->m_hand_[CLR];
 	}
-	Hand GetHand(const Color c) const;
+	MuzHandModel GetHand(const Color c) const;
 
 	void SetHand(const HandPiece hp, const Color c, const int num);
 

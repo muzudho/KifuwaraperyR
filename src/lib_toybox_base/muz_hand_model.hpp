@@ -22,7 +22,7 @@
 ///		xxxxx11x xxxxxxxx xxxxxxxx xxxxxxxx  Rook
 ///		</pre>
 /// </summary>
-class Hand
+class MuzHandModel
 {
 
 
@@ -32,14 +32,14 @@ public:
 	/// <summary>
 	/// 
 	/// </summary>
-	Hand() {}
+	MuzHandModel() {}
 
 
 	/// <summary>
 	/// 
 	/// </summary>
 	/// <param name="v"></param>
-	explicit Hand(u32 v) : m_value_(v) {}
+	explicit MuzHandModel(u32 v) : m_value_(v) {}
 
 
 	/// <summary>
