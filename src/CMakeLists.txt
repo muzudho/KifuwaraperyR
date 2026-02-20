@@ -21,11 +21,12 @@ add_executable (KifuwaraperyR
     # 📁 lib_shogi
     "lib_shogi/muz_shogi_model.cpp"
     # 📁 lib_toybox_base
+    "lib_toybox_n1/muz_hand_n1_model.cpp"
     "lib_toybox_n1/muz_position_n1_model.cpp"
     #"lib_toybox_base/muz_position_base_model.cpp"
     # 📁 src
     "main.cpp"
-    "muz_game_engine_service.cpp" "lib_toybox_n1/muz_position_n1_model.cpp")
+    "muz_game_engine_service.cpp" "lib_toybox_n1/muz_position_n1_model.cpp" "lib_toybox_n1/muz_hand_n1_model.cpp")
 
 
 #if (CMAKE_VERSION VERSION_GREATER 3.12)
