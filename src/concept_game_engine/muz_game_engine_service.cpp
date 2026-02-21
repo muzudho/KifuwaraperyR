@@ -163,7 +163,6 @@ void measureGenerateMoves(const Position& pos) {
 /// <param name="argv"></param>
 void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
 {
-    cout << "[game_engine] main loop." << endl;
 
     MuzCliService cliSvc;
 
@@ -174,12 +173,23 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
 
             MuzCliResultModel result;
 
-            // 例: exit系コマンドで終了したいなら
-            if (cmd == "exit" || cmd == "quit" || cmd == ":q")
+            // ポンダー（相手の手番に思考すること）してるのを止めるか
+            bool shall_stop_ponder = false;
+
+            // 例: 終了したいなら
+            if (cmd == "quit")
             {
                 // ここで何かフラグを立てて main_loop から抜けるようにする
                 // または throw とか exit(0) でもいいけど、できれば綺麗に抜けたい
                 result.request_quit();
+                
+                // 終了時にポンダーヒットが来ることがあるので、対処してください。
+                shall_stop_ponder = true;   // ポンダーしてようと、してなかろうと、止めたらいい。
+            }
+
+            if (shall_stop_ponder)
+            {
+                // TODO: ポンダーを止める処理をここに書いてください。
             }
 
             return result;
