@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../src/lib_gui/muz_engine_settings_model.hpp"
+#include "../lib_5a_gui/muz_engine_settings_model.hpp"
 
 /// <summary>
 ///		<pre>

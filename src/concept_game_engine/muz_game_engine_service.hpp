@@ -1,8 +1,8 @@
 #pragma once
+
 #include <iostream>
 #include <memory> // 追加: unique_ptrのため
-#include "../src/concept_game_engine/muz_game_engine_storage_model.hpp"
-
+#include "muz_game_engine_storage_model.hpp"
 
 /// <summary>
 /// 
@@ -29,7 +29,9 @@ public:
 
 
 	/// <summary>
-	///		ゲームエンジンが１つだけ持つ、局面の探索状態を保存するクラス☆（＾ｑ＾）
+	///	ゲームエンジン倉庫☆（＾ｑ＾）
+	///
+	///    - ゲームエンジンが１つだけ持つ、局面の探索状態を保存するクラス☆（＾ｑ＾）
 	/// </summary>
 	std::unique_ptr<MuzGameEngineStorageModel> m_pGameEngineStore;
 
