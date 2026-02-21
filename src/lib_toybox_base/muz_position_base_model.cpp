@@ -89,61 +89,6 @@ fail:
 	std::cout << "incorrect SFEN string : " << sfen << "\n";
 }
 
-bool MuzPositionBaseModel::ParseHand(std::string_view hand_str)
-{
-
-	/*
-	// 持ち駒
-	for (int digits = 0; ss.get(token) && token != ' '; ) {
-		if (token == '-') {
-			memset(m_hand_models_, 0, sizeof(m_hand_models_));
-		}
-		else if (isdigit(token)) {
-			digits = digits * 10 + token - '0';
-		}
-		else if (g_charToPieceUSI.IsLegalChar(token)) {
-			// 持ち駒を32bit に pack する
-			const Piece piece = g_charToPieceUSI.GetValue(token);
-			this->SetHand(piece, (digits == 0 ? 1 : digits));
-
-			digits = 0;
-		}
-		else {
-			goto fail;
-		}
-	}
-	*/
-
-	if (hand_str == "-")
-	{
-		std::fill(std::begin(m_hand_models_), std::end(m_hand_models_), 0);
-		return true;
-	}
-
-	std::size_t count = 0;
-
-	for (char ch : hand_str)
-	{
-		if (std::isdigit(ch))
-		{
-			count = count * 10 + (ch - '0');
-		}
-		else if (g_charToPieceUSI.IsLegalChar(ch))
-		{
-			Piece piece = g_charToPieceUSI.GetValue(ch);
-			SetHand(piece, count == 0 ? 1 : count);
-			count = 0;
-		}
-		else
-		{
-			return false;
-		}
-	}
-
-	// 最後に残った数字は無視しない（エラー扱い可）
-	return count == 0;
-}
-
 int MuzPositionBaseModel::ParsePly(std::string_view ply_str)
 {
 
