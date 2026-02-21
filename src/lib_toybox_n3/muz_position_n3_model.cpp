@@ -72,7 +72,13 @@ bool MuzPositionN3Model::ParseHand(std::string_view hand_str)
     // 持ち駒がない場合は "-" で表す
 	if (hand_str == "-")
 	{
-		std::fill(std::begin(m_hand_models_), std::end(m_hand_models_), 0);
+		// 各要素をデフォルト（ゼロ相当）に戻す
+		for (auto& hand : m_hand_models_)
+		{
+			hand = MuzHandN1Model{};          // デフォルト構築（ゼロクリア相当）
+			// または hand.Clear(); とか hand.count = 0; とか
+			// MuzHandN1Model に合ったゼロクリア方法を使う
+		}
 		return true;
 	}
 
