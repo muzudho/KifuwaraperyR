@@ -1,11 +1,46 @@
 #pragma once
 
 #include <string>
+#include <functional>   // std::function
 
 class MuzCliService
 {
 
 public:
+
+
+    // ========================================
+    // 型定義
+    // ========================================
+
+
+    // コールバックの型をtypedef（またはusing）でわかりやすく
+    using FnProcessCommand = std::function<void(const std::string& cmd)>;
+
+
+    // ========================================
+    // 生成／破棄
+    // ========================================
+
+
+    // コンストラクタでハンドラを受け取る（または後でsetしてもOK）
+    explicit MuzCliService(FnProcessCommand on_process_command = nullptr)
+        : process_command_(std::move(on_process_command))
+    {
+    }
+
+private:
+
+
+    // ========================================
+    // プロパティー
+    // ========================================
+
+
+    FnProcessCommand process_command_;
+
+public:
+
     // ========================================
     // 主要なメソッド
     // ========================================
