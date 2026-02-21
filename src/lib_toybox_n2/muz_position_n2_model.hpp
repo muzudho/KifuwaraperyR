@@ -44,7 +44,7 @@ protected:
 	}
 	MuzHandStandModel GetHandStand(const Color c) const;
 
-	void SetHand(const Piece piece, const int num);
+	void SetHandPiece(const Piece piece, const int num);
 
-	void SetHand(const HandPiece hp, const Color c, const int num);
+	void SetHandPiece(const Color c, const HandPiece hp, const int num);
 };

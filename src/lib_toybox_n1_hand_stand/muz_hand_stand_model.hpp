@@ -1,10 +1,7 @@
 #pragma once
 
-// MuzHandStandModel では使ってないが、他のクラスが MuzHandN1Model をインクルードすれば lib_toybox_n1 のクラスが全部付いてくるようにする
 #include "../lib_cpp/int.hpp"
 #include "hand_piece.hpp"
-#include "square.hpp"
-#include "square_delta.hpp"
 
 /// <summary>
 ///		<pre>

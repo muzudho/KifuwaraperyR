@@ -3,8 +3,6 @@
 // MuzPositionN1Model では使ってないヘッダーファイルでも、他のクラスが MuzPositionN1Model をインクルードすれば lib_toybox_n1 のヘッダーファイルが全部付いてくるようにします。
 #include "color.hpp"
 #include "file.hpp"
-#include "hand_piece.hpp"
-#include "muz_hand_stand_model.hpp"
 #include "piece.hpp"
 #include "piece_type.hpp"
 #include "ply.hpp"

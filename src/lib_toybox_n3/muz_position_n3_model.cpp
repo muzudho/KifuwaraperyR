@@ -156,7 +156,7 @@ bool MuzPositionN3Model::ParseHandStands(std::string_view hand_str)
 		else if (g_charToPieceUSI.IsLegalChar(ch))
 		{
 			Piece piece = g_charToPieceUSI.GetValue(ch);
-			SetHand(piece, count == 0 ? 1 : count);
+			SetHandPiece(piece, count == 0 ? 1 : count);
 			count = 0;
 		}
 		else
