@@ -22,5 +22,5 @@ protected:
 
 	bool ParseHand(std::string_view hand_str);
 
-	//int ParsePly(std::string_view ply_str);
+	int ParsePly(std::string_view ply_str);
 };
