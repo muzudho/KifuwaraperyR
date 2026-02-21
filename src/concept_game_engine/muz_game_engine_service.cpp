@@ -165,8 +165,22 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
 {
     cout << "[game_engine] main loop." << endl;
 
-    // メインループを走らせます。
     MuzCliService cliSvc;
+
+    cliSvc.set_process_command([](const std::string& cmd)
+        {
+            // TODO: ここで実際のコマンド処理を書く
+            std::cout << "処理したよ: " << cmd << "\n";
+            
+            // 例: exit系コマンドで終了したいなら
+            if (cmd == "exit" || cmd == "quit" || cmd == ":q")
+            {
+                // ここで何かフラグを立てて main_loop から抜けるようにする
+                // または throw とか exit(0) でもいいけど、できれば綺麗に抜けたい
+            }
+        });
+
+    // メインループを走らせます。
     cliSvc.main_loop(argc, argv);
 }
 

@@ -47,5 +47,7 @@ public:
 
     void main_loop(int argc, char* argv[]);
 
-    //void process_command(const std::string& cmd);
+    void set_process_command(FnProcessCommand h) {
+        process_command_ = std::move(h);
+    }
 };

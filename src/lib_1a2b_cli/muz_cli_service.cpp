@@ -32,6 +32,7 @@ void MuzCliService::main_loop(int argc, char* argv[])
             else
             {
                 std::cout << "process_command_ not found." << "\n";
+                return;
             }
             //process_command(line);
             line.clear();  // 次は標準入力から読む
@@ -65,6 +66,7 @@ void MuzCliService::main_loop(int argc, char* argv[])
         else
         {
             std::cout << "process_command_ not found." << "\n";
+            return;
         }
         //process_command(line);
         line.clear();  // 次回用にクリア（なくてもいいけど明示的）
