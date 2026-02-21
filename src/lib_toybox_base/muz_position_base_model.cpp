@@ -88,22 +88,3 @@ void MuzPositionBaseModel::Set(std::string_view sfen)
 fail:
 	std::cout << "incorrect SFEN string : " << sfen << "\n";
 }
-
-int MuzPositionBaseModel::ParsePly(std::string_view ply_str)
-{
-
-	/*
-	// 次の手が何手目か
-	ss >> this->m_gamePly_;
-	this->m_gamePly_ = std::max(2 * (this->m_gamePly_ - 1), 0) + static_cast<int>(this->GetTurn() == White);
-	*/
-
-	int value{};
-	auto [ptr, ec] = std::from_chars(ply_str.data(), ply_str.data() + ply_str.size(), value);
-
-	if (ec != std::errc{} || ptr != ply_str.data() + ply_str.size())
-		return -1;
-
-	// 元のロジックを再現
-	return std::max(2 * (value - 1), 0) + static_cast<int>(m_turn_ == Color::White);
-}

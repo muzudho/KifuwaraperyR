@@ -46,6 +46,4 @@ protected:
 	/// </summary>
 	/// <param name="sfen"></param>
 	void Set(std::string_view sfen);
-
-	int ParsePly(std::string_view ply_str);
 };
