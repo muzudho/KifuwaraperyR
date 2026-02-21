@@ -93,9 +93,9 @@ void MuzGameEngineService::initialize_10a()
 /// </summary>
 /// <param name="argc"></param>
 /// <param name="argv"></param>
-void MuzGameEngineService::body_50a(int argc, char* argv[])
+void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
 {
-    cout << "[game_engine] body." << endl;
+    cout << "[game_engine] main loop." << endl;
 }
 
 

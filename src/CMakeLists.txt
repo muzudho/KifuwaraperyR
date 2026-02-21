@@ -9,30 +9,35 @@ add_executable (KifuwaraperyR
     "concept_app/muz_default_logger_model.cpp"
     "concept_app/muz_logging_service.cpp"
     # 📁 concept_game_engine
+    "concept_game_engine/muz_game_engine_service.cpp"
     "concept_game_engine/muz_game_engine_storage_model.cpp"
-    # 📁 lib_gui
-    "lib_gui/muz_engine_option_abstract_model.cpp"
-    "lib_gui/muz_engine_option_button_model.cpp"
-    "lib_gui/muz_engine_option_checkbox_model.cpp"
-    "lib_gui/muz_engine_option_spinbox_model.cpp"
-    "lib_gui/muz_engine_option_textbox_model.cpp"
-    "lib_gui/muz_engine_settings_initialize_service.cpp"
-    "lib_gui/muz_engine_settings_model.cpp"
-    # 📁 lib_shogi
-    "lib_shogi/muz_shogi_model.cpp"
-    # 📁 lib_toybox_n1
-    "lib_toybox_n1/muz_position_n1_model.cpp"
-    # 📁 lib_toybox_n1_hand_stand
-    "lib_toybox_n1_hand_stand/muz_hand_stand_model.cpp"
-    # 📁 lib_toybox_n2
-    "lib_toybox_n2/char_to_piece_usi.cpp"
-    "lib_toybox_n2/muz_position_n2_model.cpp"
-    "lib_toybox_n2/piece_types.cpp"
-    # 📁 lib_toybox_n3
-    "lib_toybox_n3/muz_position_n3_model.cpp"
+    #
+    # ［lib］
+    #
+    # 📁 lib_1a2b_cli
+    "lib_1a2b_cli/muz_cli_service.cpp"
+    # 📁 lib_5a_gui
+    "lib_5a_gui/muz_engine_option_abstract_model.cpp"
+    "lib_5a_gui/muz_engine_option_button_model.cpp"
+    "lib_5a_gui/muz_engine_option_checkbox_model.cpp"
+    "lib_5a_gui/muz_engine_option_spinbox_model.cpp"
+    "lib_5a_gui/muz_engine_option_textbox_model.cpp"
+    "lib_5a_gui/muz_engine_settings_initialize_service.cpp"
+    "lib_5a_gui/muz_engine_settings_model.cpp"
+    # 📁 lib_5a_shogi
+    "lib_5a_shogi/muz_shogi_model.cpp"
+    # 📁 lib_5a_toybox_n1
+    "lib_5a_toybox_n1/muz_position_n1_model.cpp"
+    # 📁 lib_5a_toybox_n1_hand_stand
+    "lib_5a_toybox_n1_hand_stand/muz_hand_stand_model.cpp"
+    # 📁 lib_5a_toybox_n2
+    "lib_5a_toybox_n2/char_to_piece_usi.cpp"
+    "lib_5a_toybox_n2/muz_position_n2_model.cpp"
+    "lib_5a_toybox_n2/piece_types.cpp"
+    # 📁 lib_5a_toybox_n3
+    "lib_5a_toybox_n3/muz_position_n3_model.cpp"
     # 📁 src
-    "main.cpp"
-    "muz_game_engine_service.cpp")
+    "main.cpp")
 
 
 #if (CMAKE_VERSION VERSION_GREATER 3.12)
