@@ -1,6 +1,7 @@
 #include "muz_position_n3_model.hpp"
 #include <string_view>
 #include <ranges>	// std::views::split と std::views::transform を使うために必要
+#include <iostream>	// std::cout を使うために必要
 
 
 // ========================================
@@ -33,7 +34,6 @@ void MuzPositionN3Model::Set(std::string_view sfen)
 				return std::string_view(&*r.begin(), std::ranges::distance(r));
 			});
 
-	/*
 	auto it = parts.begin();
 
 	// 1. 盤面部分
@@ -55,7 +55,7 @@ void MuzPositionN3Model::Set(std::string_view sfen)
 	if (it != parts.end())
 	{
 		if (auto ply = ParsePly(*it))
-			m_gamePly_ = *ply;
+			m_gamePly_ = ply;
 		else
 			goto fail;
 	}
@@ -64,7 +64,6 @@ void MuzPositionN3Model::Set(std::string_view sfen)
 
 fail:
 	std::cout << "incorrect SFEN string : " << sfen << "\n";
-	*/
 }
 
 
