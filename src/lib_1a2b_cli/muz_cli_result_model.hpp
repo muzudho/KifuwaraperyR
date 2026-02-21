@@ -22,6 +22,6 @@ public:
     // ========================================
 
 
-    bool IsQuit() const { return is_quit_; }
-    void SetQuit() { is_quit_ = true; }
+    bool is_quit() const { return is_quit_; }
+    void set_quit(bool value) { is_quit_ = value; }
 };

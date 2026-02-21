@@ -27,7 +27,8 @@ void MuzCliService::main_loop(int argc, char* argv[])
             // ここで1回コマンドを処理する
             if (this->process_command_)
             {
-                this->process_command_(line);
+                auto result = this->process_command_(line);
+                if (result.is_quit()) { return; }
             }
             else
             {
@@ -61,7 +62,8 @@ void MuzCliService::main_loop(int argc, char* argv[])
         // コマンドを処理する
         if (this->process_command_)
         {
-            this->process_command_(line);
+            auto result = this->process_command_(line);
+            if (result.is_quit()) { return; }
         }
         else
         {

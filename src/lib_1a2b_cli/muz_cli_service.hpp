@@ -1,5 +1,6 @@
 #pragma once
 
+#include "muz_cli_result_model.hpp"
 #include <string>
 #include <functional>   // std::function
 
@@ -15,7 +16,7 @@ public:
 
 
     // コールバックの型をtypedef（またはusing）でわかりやすく
-    using FnProcessCommand = std::function<void(const std::string& cmd)>;
+    using FnProcessCommand = std::function<MuzCliResultModel(const std::string& cmd)>;
 
 
     // ========================================
