@@ -6,37 +6,9 @@
 // ========================================
 
 
+// 盤上の駒
 bool MuzPositionN3Model::ParseBoard(std::string_view board_str)
 {
-
-	/*
-	// 盤上の駒
-	while (ss.get(token) && token != ' ') {
-		if (isdigit(token)) {
-			sq += SquareDelta::DeltaE * (token - '0');
-		}
-		else if (token == '/') {
-			sq += (SquareDelta::DeltaW * 9) + SquareDelta::DeltaS;
-		}
-		else if (token == '+') {
-			promoteFlag = Promoted;
-		}
-		else if (g_charToPieceUSI.IsLegalChar(token)) {
-			if (ConvSquare::CONTAINS_OF10(sq)) {
-				SetPiece(g_charToPieceUSI.GetValue(token) + promoteFlag, sq);
-				promoteFlag = Piece::UnPromoted;
-				sq += SquareDelta::DeltaE;
-			}
-			else {
-				goto INCORRECT;
-			}
-		}
-		else {
-			goto INCORRECT;
-		}
-	}
-	*/
-
 	Square sq = A9;               // 仮の初期位置
 	Piece promote = Piece::UnPromoted;
 
@@ -81,4 +53,13 @@ bool MuzPositionN3Model::ParseBoard(std::string_view board_str)
 		}
 	}
 	return true;
+}
+
+
+// 手番
+bool MuzPositionN3Model::ParseTurn(std::string_view turn_str)
+{
+	if (turn_str == "b") { m_turn_ = Color::Black; return true; }
+	if (turn_str == "w") { m_turn_ = Color::White; return true; }
+	return false;
 }

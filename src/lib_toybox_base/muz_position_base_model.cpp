@@ -89,32 +89,6 @@ fail:
 	std::cout << "incorrect SFEN string : " << sfen << "\n";
 }
 
-
-
-bool MuzPositionBaseModel::ParseTurn(std::string_view turn_str)
-{
-
-	/*
-	// 手番
-	while (ss.get(token) && token != ' ')
-	{
-		if (token == 'b') {
-			this->m_turn_ = Black;
-		}
-		else if (token == 'w') {
-			this->m_turn_ = White;
-		}
-		else {
-			goto INCORRECT;
-		}
-	}
-	*/
-
-	if (turn_str == "b") { m_turn_ = Color::Black; return true; }
-	if (turn_str == "w") { m_turn_ = Color::White; return true; }
-	return false;
-}
-
 bool MuzPositionBaseModel::ParseHand(std::string_view hand_str)
 {
 
