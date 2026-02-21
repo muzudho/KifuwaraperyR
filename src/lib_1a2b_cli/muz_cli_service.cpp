@@ -28,7 +28,7 @@ void MuzCliService::main_loop(int argc, char* argv[])
             if (this->process_command_)
             {
                 auto result = this->process_command_(line);
-                if (result.is_quit()) { return; }
+                if (result.should_quit()) { return; }
             }
             else
             {
@@ -63,7 +63,7 @@ void MuzCliService::main_loop(int argc, char* argv[])
         if (this->process_command_)
         {
             auto result = this->process_command_(line);
-            if (result.is_quit()) { return; }
+            if (result.should_quit()) { return; }
         }
         else
         {

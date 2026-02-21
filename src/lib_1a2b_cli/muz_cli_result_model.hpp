@@ -11,7 +11,10 @@ class MuzCliResultModel
 
 private:
 
-    bool is_quit_;
+    /// <summary>
+    /// ［終了しろ］フラグ（＾～＾）
+    /// </summary>
+    bool should_quit_;
 
 
 public:
@@ -22,6 +25,6 @@ public:
     // ========================================
 
 
-    bool is_quit() const { return is_quit_; }
-    void set_quit(bool value) { is_quit_ = value; }
+    bool should_quit() const { return should_quit_; }
+    void request_quit() { should_quit_ = true; }
 };

@@ -179,7 +179,7 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             {
                 // ここで何かフラグを立てて main_loop から抜けるようにする
                 // または throw とか exit(0) でもいいけど、できれば綺麗に抜けたい
-                result.set_quit(true);
+                result.request_quit();
             }
 
             return result;
