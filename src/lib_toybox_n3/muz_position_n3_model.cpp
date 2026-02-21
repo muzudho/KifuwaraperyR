@@ -1,5 +1,6 @@
 #include "muz_position_n3_model.hpp"
 #include <string_view>
+#include <ranges>	// std::views::split と std::views::transform を使うために必要
 
 
 // ========================================
@@ -7,7 +8,6 @@
 // ========================================
 
 
-/*
 /// <summary>
 ///		<pre>
 /// 局面をセットします。
@@ -17,13 +17,8 @@
 ///		</pre>
 /// </summary>
 /// <param name="sfen"></param>
-void MuzPositionBaseModel::Set(std::string_view sfen)
+void MuzPositionN3Model::Set(std::string_view sfen)
 {
-	//Piece promoteFlag = UnPromoted;
-	//std::istringstream ss(sfen);
-	//char token;
-	//Square sq = A9;
-
 	//MuzGameEngineStorageModel* s = std::move(m_pGameEngineStore_);
 
 	//this->Clear();
@@ -38,6 +33,7 @@ void MuzPositionBaseModel::Set(std::string_view sfen)
 				return std::string_view(&*r.begin(), std::ranges::distance(r));
 			});
 
+	/*
 	auto it = parts.begin();
 
 	// 1. 盤面部分
@@ -68,8 +64,8 @@ void MuzPositionBaseModel::Set(std::string_view sfen)
 
 fail:
 	std::cout << "incorrect SFEN string : " << sfen << "\n";
+	*/
 }
-*/
 
 
 // 盤上の駒

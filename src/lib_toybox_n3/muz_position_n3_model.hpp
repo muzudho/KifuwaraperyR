@@ -15,13 +15,11 @@ protected:
 	// ========================================
 
 
-	/*
 	/// <summary>
 	/// 局面をセット
 	/// </summary>
 	/// <param name="sfen"></param>
 	void Set(std::string_view sfen);
-	*/
 
 	bool ParseBoard(std::string_view board_str);
 
