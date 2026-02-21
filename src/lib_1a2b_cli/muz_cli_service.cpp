@@ -24,8 +24,16 @@ void MuzCliService::main_loop(int argc, char* argv[])
                 line += " " + std::string(argv[i]);
             }
 
-            // ここで1回処理
-            process_command(line);
+            // ここで1回コマンドを処理する
+            if (this->process_command_)
+            {
+                this->process_command_(line);
+            }
+            else
+            {
+                std::cout << "process_command_ not found." << "\n";
+            }
+            //process_command(line);
             line.clear();  // 次は標準入力から読む
         }
     }
@@ -50,7 +58,15 @@ void MuzCliService::main_loop(int argc, char* argv[])
         }
 
         // コマンドを処理する
-        process_command(line);
+        if (this->process_command_)
+        {
+            this->process_command_(line);
+        }
+        else
+        {
+            std::cout << "process_command_ not found." << "\n";
+        }
+        //process_command(line);
         line.clear();  // 次回用にクリア（なくてもいいけど明示的）
     }
 
@@ -58,16 +74,16 @@ void MuzCliService::main_loop(int argc, char* argv[])
 }
 
 
-// 別関数にしたほうがテストしやすくておすすめ
-void MuzCliService::process_command(const std::string& cmd)
-{
-    // TODO: ここで実際のコマンド処理を書く
-    std::cout << "exec: " << cmd << "\n";
-
-    // 例: exit系コマンドで終了したいなら
-    if (cmd == "exit" || cmd == "quit" || cmd == ":q")
-    {
-        // ここで何かフラグを立てて main_loop から抜けるようにする
-        // または throw とか exit(0) でもいいけど、できれば綺麗に抜けたい
-    }
-}
+//// 別関数にしたほうがテストしやすくておすすめ
+//void MuzCliService::process_command(const std::string& cmd)
+//{
+//    // TODO: ここで実際のコマンド処理を書く
+//    std::cout << "exec: " << cmd << "\n";
+//
+//    // 例: exit系コマンドで終了したいなら
+//    if (cmd == "exit" || cmd == "quit" || cmd == ":q")
+//    {
+//        // ここで何かフラグを立てて main_loop から抜けるようにする
+//        // または throw とか exit(0) でもいいけど、できれば綺麗に抜けたい
+//    }
+//}

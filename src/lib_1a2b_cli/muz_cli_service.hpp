@@ -47,5 +47,5 @@ public:
 
     void main_loop(int argc, char* argv[]);
 
-    void process_command(const std::string& cmd);
+    //void process_command(const std::string& cmd);
 };
