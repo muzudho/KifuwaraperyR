@@ -58,7 +58,7 @@ int main(int argc, char* argv[])
 
     MuzGameEngineService gameEngineSvc;
     gameEngineSvc.initialize_10a();
-    gameEngineSvc.body_50a(argc, argv);
+    gameEngineSvc.main_loop_50a(argc, argv);
     gameEngineSvc.finalize_90a();
 
 

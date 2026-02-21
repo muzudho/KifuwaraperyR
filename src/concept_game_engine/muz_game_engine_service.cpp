@@ -1,4 +1,5 @@
 #include "../lib_5a_gui/muz_engine_settings_initialize_service.hpp"
+#include "../lib_1a2b_cli/muz_cli_service.hpp"
 #include "muz_game_engine_service.hpp"
 
 
@@ -166,7 +167,7 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
 
     // メインループを走らせます。
     MuzCliService cliSvc;
-    cliSvc.main_loop();
+    cliSvc.main_loop(argc, argv);
 }
 
 

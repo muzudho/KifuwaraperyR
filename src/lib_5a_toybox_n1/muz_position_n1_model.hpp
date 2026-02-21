@@ -1,6 +1,6 @@
 #pragma once
 
-// MuzPositionN1Model では使ってないヘッダーファイルでも、他のクラスが MuzPositionN1Model をインクルードすれば lib_toybox_n1 のヘッダーファイルが全部付いてくるようにします。
+// MuzPositionN1Model では使ってないヘッダーファイルでも、他のクラスが MuzPositionN1Model をインクルードすれば lib_5a_toybox_n1 のヘッダーファイルが全部付いてくるようにします。
 #include "color.hpp"
 #include "file.hpp"
 #include "piece.hpp"

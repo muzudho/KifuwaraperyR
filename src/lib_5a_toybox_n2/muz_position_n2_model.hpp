@@ -1,7 +1,7 @@
 #pragma once
 
-// MuzPositionN2Model では使ってないヘッダーファイルでも、他のクラスが MuzPositionN2Model をインクルードすれば lib_toybox_n2 のヘッダーファイルが全部付いてくるようにします。
-#include "../lib_toybox_n1/muz_position_n1_model.hpp"
+// MuzPositionN2Model では使ってないヘッダーファイルでも、他のクラスが MuzPositionN2Model をインクルードすれば lib_5a_toybox_n2 のヘッダーファイルが全部付いてくるようにします。
+#include "../lib_5a_toybox_n1/muz_position_n1_model.hpp"
 #include "char_to_piece_usi.hpp"
 #include "file_ope.hpp"
 #include "hand_piece_ope.hpp"

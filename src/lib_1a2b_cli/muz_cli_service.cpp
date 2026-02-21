@@ -1,5 +1,6 @@
 #include "muz_cli_service.hpp"
 #include <string>
+#include <iostream>
 
 
 // ========================================

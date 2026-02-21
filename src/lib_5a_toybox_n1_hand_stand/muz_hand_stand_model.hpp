@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../lib_cpp/int.hpp"
+#include "../lib_1a_cpp/int.hpp"
 #include "hand_piece.hpp"
 
 /// <summary>
