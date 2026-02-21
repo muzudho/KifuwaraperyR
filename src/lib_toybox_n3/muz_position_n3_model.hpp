@@ -21,11 +21,17 @@ protected:
 	/// <param name="sfen"></param>
 	void Set(std::string_view sfen);
 
+    /// <summary>
+    /// 盤上のマスに駒を置く
+    /// </summary>
 	bool ParseBoard(std::string_view board_str);
 
 	bool ParseTurn(std::string_view turn_str);
 
-	bool ParseHand(std::string_view hand_str);
+	/// <summary>
+    ///	駒台（持ち駒）をセット
+	/// </summary>
+	bool ParseHandStands(std::string_view hand_str);
 
 	int ParsePly(std::string_view ply_str);
 };

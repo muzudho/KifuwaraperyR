@@ -46,9 +46,9 @@ void MuzPositionN3Model::Set(std::string_view sfen)
 	if (!ParseTurn(*it)) goto fail;
 	++it;
 
-	// 3. 持ち駒
+	// 3. 駒台（持ち駒）
 	if (it == parts.end()) goto fail;
-	if (!ParseHand(*it)) goto fail;
+	if (!ParseHandStands(*it)) goto fail;
 	++it;
 
 	// 4. 手数（オプション）
@@ -126,8 +126,8 @@ bool MuzPositionN3Model::ParseTurn(std::string_view turn_str)
 }
 
 
-// 持ち駒
-bool MuzPositionN3Model::ParseHand(std::string_view hand_str)
+// 駒台（持ち駒）
+bool MuzPositionN3Model::ParseHandStands(std::string_view hand_str)
 {
     // 持ち駒がない場合は "-" で表す
 	if (hand_str == "-")
