@@ -133,11 +133,12 @@ bool MuzPositionN3Model::ParseHandStands(std::string_view hand_str)
 	if (hand_str == "-")
 	{
 		// 各要素をデフォルト（ゼロ相当）に戻す
-		for (auto& hand : m_hand_models_)
+		for (auto& hand : m_hand_stands_)
 		{
-			hand = MuzHandN1Model{};          // デフォルト構築（ゼロクリア相当）
+			// FIXME: ここはメンバーをリセットすること
+			hand = MuzHandStandModel{};          // デフォルト構築（ゼロクリア相当）
 			// または hand.Clear(); とか hand.count = 0; とか
-			// MuzHandN1Model に合ったゼロクリア方法を使う
+			// MuzHandStandModel に合ったゼロクリア方法を使う
 		}
 		return true;
 	}

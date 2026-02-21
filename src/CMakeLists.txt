@@ -21,7 +21,7 @@ add_executable (KifuwaraperyR
     # 📁 lib_shogi
     "lib_shogi/muz_shogi_model.cpp"
     # 📁 lib_toybox_n1
-    "lib_toybox_n1/muz_hand_n1_model.cpp"
+    "lib_toybox_n1/muz_hand_stand_model.cpp"
     "lib_toybox_n1/muz_position_n1_model.cpp"
     # 📁 lib_toybox_n2
     "lib_toybox_n2/char_to_piece_usi.cpp"

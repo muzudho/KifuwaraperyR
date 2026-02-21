@@ -23,7 +23,7 @@
 ///		xxxxx11x xxxxxxxx xxxxxxxx xxxxxxxx  Rook
 ///		</pre>
 /// </summary>
-class MuzHandModel : public MuzHandN1Model
+class MuzHandModel : public MuzHandStandModel
 {
 
 

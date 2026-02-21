@@ -11,9 +11,9 @@
 /// </summary>
 /// <param name="c"></param>
 /// <returns></returns>
-MuzHandN1Model MuzPositionN2Model::GetHand(const Color c) const
+MuzHandStandModel MuzPositionN2Model::GetHandStand(const Color c) const
 {
-	return this->m_hand_models_[c];
+	return this->m_hand_stands_[c];
 }
 
 
@@ -39,5 +39,5 @@ void MuzPositionN2Model::SetHand(const Piece piece, const int num)
 /// <param name="num"></param>
 void MuzPositionN2Model::SetHand(const HandPiece hp, const Color c, const int num)
 {
-	this->m_hand_models_[c].OrEqual(num, hp);
+	this->m_hand_stands_[c].OrEqual(num, hp);
 }

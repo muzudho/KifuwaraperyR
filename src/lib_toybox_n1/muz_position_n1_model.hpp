@@ -4,7 +4,7 @@
 #include "color.hpp"
 #include "file.hpp"
 #include "hand_piece.hpp"
-#include "muz_hand_n1_model.hpp"
+#include "muz_hand_stand_model.hpp"
 #include "piece.hpp"
 #include "piece_type.hpp"
 #include "ply.hpp"
