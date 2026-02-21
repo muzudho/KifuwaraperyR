@@ -31,7 +31,7 @@ add_executable (KifuwaraperyR
     "lib_toybox_n3/muz_position_n3_model.cpp"
     # 📁 src
     "main.cpp"
-    "muz_game_engine_service.cpp" "lib_toybox_n1/muz_position_n1_model.cpp" "lib_toybox_n1/muz_hand_n1_model.cpp" "lib_toybox_n2/muz_position_n2_model.cpp" "lib_toybox_n3/muz_position_n3_model.cpp")
+    "muz_game_engine_service.cpp")
 
 
 #if (CMAKE_VERSION VERSION_GREATER 3.12)
@@ -60,7 +60,7 @@ add_custom_command(TARGET KifuwaraperyR POST_BUILD
 
 
 # ビルドディレクトリのパスを表示してみる
-message(STATUS "CMAKE_BINARY_DIR はここだぜ: ${CMAKE_BINARY_DIR}")
+message(STATUS "(^q^) CMAKE_BINARY_DIR はここだぜ: ${CMAKE_BINARY_DIR}")
 
 
 # ========================================
@@ -107,9 +107,9 @@ target_link_libraries(KifuwaraperyR PRIVATE tomlplusplus::tomlplusplus)
 target_compile_features(KifuwaraperyR PRIVATE cxx_std_20)
 
 # CXX_STANDARDの確認
-message(STATUS "CXX_STANDARD for KifuwaraperyR: ${CMAKE_CXX_STANDARD}")  # グローバル変数（参考）
+message(STATUS "(^q^) CXX_STANDARD for KifuwaraperyR: ${CMAKE_CXX_STANDARD}")  # グローバル変数（参考）
 get_target_property(std KifuwaraperyR CXX_STANDARD)
-message(STATUS "CXX_STANDARD property: ${std}")
+message(STATUS "(^q^) CXX_STANDARD property: ${std}")
 
 # 警告とか追加（オプション）
 #target_compile_options(KifuwaraperyR PRIVATE -Wall -Wextra -Wpedantic)
