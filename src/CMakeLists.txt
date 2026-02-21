@@ -37,7 +37,7 @@ add_executable (KifuwaraperyR
     # 📁 lib_5a_toybox_n3
     "lib_5a_toybox_n3/muz_position_n3_model.cpp"
     # 📁 src
-    "main.cpp")
+    "main.cpp" "lib_1a2b_cli/muz_cli_result_model.cpp")
 
 
 #if (CMAKE_VERSION VERSION_GREATER 3.12)

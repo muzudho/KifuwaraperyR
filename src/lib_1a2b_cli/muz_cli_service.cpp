@@ -74,18 +74,3 @@ void MuzCliService::main_loop(int argc, char* argv[])
 
     std::cout << "bye.\n";
 }
-
-
-//// 別関数にしたほうがテストしやすくておすすめ
-//void MuzCliService::process_command(const std::string& cmd)
-//{
-//    // TODO: ここで実際のコマンド処理を書く
-//    std::cout << "exec: " << cmd << "\n";
-//
-//    // 例: exit系コマンドで終了したいなら
-//    if (cmd == "exit" || cmd == "quit" || cmd == ":q")
-//    {
-//        // ここで何かフラグを立てて main_loop から抜けるようにする
-//        // または throw とか exit(0) でもいいけど、できれば綺麗に抜けたい
-//    }
-//}
