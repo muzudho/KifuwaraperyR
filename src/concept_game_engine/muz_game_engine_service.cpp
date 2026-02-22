@@ -254,13 +254,25 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             else if (tokens[0] == "handb")
             {
                 MuzHandStandModel handStand;    // TODO
-                MuzHandStandView::print(handStand, Color::Black);
+                handStand.set_count(HRook, 0);
+                handStand.set_count(HBishop, 1);
+                handStand.set_count(HGold, 0);
+                handStand.set_count(HSilver, 4);
+                handStand.set_count(HLance, 1);
+                handStand.set_count(HPawn, 2);   // とりあえず歩を２枚持ってることにするぜ（＾ｑ＾）
+                MuzHandStandView::print_black(handStand);
             }
             // 後手駒台の描画
             else if (tokens[0] == "handw")
             {
                 MuzHandStandModel handStand;    // TODO
-                MuzHandStandView::print(handStand, Color::White);
+                handStand.set_count(HRook, 2);
+                handStand.set_count(HBishop, 0);
+                handStand.set_count(HGold, 1);
+                handStand.set_count(HSilver, 0);
+                handStand.set_count(HLance, 0);
+                handStand.set_count(HPawn, 3);   // とりあえず歩を３枚持ってることにするぜ（＾ｑ＾）
+                MuzHandStandView::print_white(handStand);
             }
             else
             {

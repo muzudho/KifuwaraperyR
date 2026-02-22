@@ -17,5 +17,6 @@ public:
     // ========================================
 
 
-    static void print(const MuzHandStandModel& handStand, Color color);
+    static void print_black(const MuzHandStandModel& handStand);
+    static void print_white(const MuzHandStandModel& handStand);
 };
