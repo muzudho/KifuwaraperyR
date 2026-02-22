@@ -2,6 +2,19 @@
 
 
 // ========================================
+// 生成／破棄
+// ========================================
+
+
+MuzGameEngineStorageModel::MuzGameEngineStorageModel()
+{
+    // TODO: ［駒台］は［ポジション］クラスに移動したい（＾～＾）
+    this->black_hand_stand_ = MuzHandStandModel{};
+    this->white_hand_stand_ = MuzHandStandModel{};
+}
+
+
+// ========================================
 // アクセッサー
 // ========================================
 

@@ -13,14 +13,12 @@ bool MuzHandStandCollectionModel::parse_hand_stand_collection(
     MuzHandStandModel& blackHandStand,
     MuzHandStandModel& whiteHandStand)
 {
+    // 初期化（＾～＾）先手と後手の持ち駒を０に戻すぜ（＾～＾）
+    blackHandStand = MuzHandStandModel{};
+    whiteHandStand = MuzHandStandModel{};
+
     // 持ち駒がない場合は "-" で表す
-    if (hand_str == "-")
-    {
-        // 先手と後手の持ち駒を０に戻すぜ（＾～＾）
-        blackHandStand = MuzHandStandModel{};
-        whiteHandStand = MuzHandStandModel{};
-        return true;
-    }
+    if (hand_str == "-") return true;
 
     std::size_t count = 0;
 

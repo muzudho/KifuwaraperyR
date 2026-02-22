@@ -165,6 +165,24 @@ void measureGenerateMoves(const Position& pos) {
 /// <param name="argv"></param>
 void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
 {
+    // テスト：駒台の初期化
+    // TODO: これらの変数は、ポジションに移動したい（＾～＾）
+    this->gameEngineStore_->black_hand_stand_.set_count(HRook, 0);
+    this->gameEngineStore_->black_hand_stand_.set_count(HBishop, 1);
+    this->gameEngineStore_->black_hand_stand_.set_count(HGold, 0);
+    this->gameEngineStore_->black_hand_stand_.set_count(HSilver, 4);
+    this->gameEngineStore_->black_hand_stand_.set_count(HKnight, 3);
+    this->gameEngineStore_->black_hand_stand_.set_count(HLance, 1);
+    this->gameEngineStore_->black_hand_stand_.set_count(HPawn, 2);   // とりあえず歩を２枚持ってることにするぜ（＾ｑ＾）
+
+    this->gameEngineStore_->white_hand_stand_.set_count(HRook, 2);
+    this->gameEngineStore_->white_hand_stand_.set_count(HBishop, 0);
+    this->gameEngineStore_->white_hand_stand_.set_count(HGold, 1);
+    this->gameEngineStore_->white_hand_stand_.set_count(HSilver, 0);
+    this->gameEngineStore_->white_hand_stand_.set_count(HKnight, 1);
+    this->gameEngineStore_->white_hand_stand_.set_count(HLance, 0);
+    this->gameEngineStore_->white_hand_stand_.set_count(HPawn, 3);   // とりあえず歩を３枚持ってることにするぜ（＾ｑ＾）
+
 
     MuzCliService cliSvc;
 
@@ -253,28 +271,12 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             // 先手駒台の描画
             else if (tokens[0] == "handb")
             {
-                MuzHandStandModel handStand;    // TODO
-                handStand.set_count(HRook, 0);
-                handStand.set_count(HBishop, 1);
-                handStand.set_count(HGold, 0);
-                handStand.set_count(HSilver, 4);
-                handStand.set_count(HKnight, 3);
-                handStand.set_count(HLance, 1);
-                handStand.set_count(HPawn, 2);   // とりあえず歩を２枚持ってることにするぜ（＾ｑ＾）
-                MuzHandStandView::print_black(handStand);
+                MuzHandStandView::print_black(this->gameEngineStore_->black_hand_stand_);
             }
             // 後手駒台の描画
             else if (tokens[0] == "handw")
             {
-                MuzHandStandModel handStand;    // TODO
-                handStand.set_count(HRook, 2);
-                handStand.set_count(HBishop, 0);
-                handStand.set_count(HGold, 1);
-                handStand.set_count(HSilver, 0);
-                handStand.set_count(HKnight, 1);
-                handStand.set_count(HLance, 0);
-                handStand.set_count(HPawn, 3);   // とりあえず歩を３枚持ってることにするぜ（＾ｑ＾）
-                MuzHandStandView::print_white(handStand);
+                MuzHandStandView::print_white(this->gameEngineStore_->white_hand_stand_);
             }
             else
             {
