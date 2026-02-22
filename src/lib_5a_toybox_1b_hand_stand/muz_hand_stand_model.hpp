@@ -29,18 +29,13 @@ public:
 
 private:
 
-	unsigned int fu_ : 5;		// 歩   0-18 枚
-	unsigned int kyo_ : 3;		// 香   0-4
-	unsigned int kei_ : 3;		// 桂   0-4
-	unsigned int gin_ : 3;		// 銀   0-4
-	unsigned int kin_ : 3;		// 金   0-4
-	unsigned int kaku_ : 2;		// 角   0-2
-	unsigned int hi_ : 2;		// 飛   0-2
-
-
-
-
-	static const int m_HandPieceShiftBits[HandPieceNum];
+	unsigned int pawn_ : 5;		// 歩   0-18 枚
+	unsigned int lance_ : 3;	// 香   0-4
+	unsigned int knight_ : 3;	// 桂   0-4
+	unsigned int silver_ : 3;	// 銀   0-4
+	unsigned int gold_ : 3;		// 金   0-4
+	unsigned int bishop_ : 2;	// 角   0-2
+	unsigned int rook_ : 2;		// 飛   0-2
 
 
 public:
