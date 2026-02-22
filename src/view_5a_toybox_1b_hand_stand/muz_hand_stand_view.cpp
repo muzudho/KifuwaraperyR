@@ -6,11 +6,13 @@
 // ========================================
 
 
-void MuzHandStandView::print(Color color)
+void MuzHandStandView::print(const MuzHandStandModel& handStand, Color color)
 {
     if (color == Black)
     {
         std::cout << "黒（＾～＾）\n";
+        //handStand.
+        
     }
     else if (color == White)
     {
