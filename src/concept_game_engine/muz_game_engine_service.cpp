@@ -37,9 +37,9 @@ MuzGameEngineService::~MuzGameEngineService()
 
 // 将棋エンジン表示名
 #ifdef NDEBUG
-const std::string MyName = "KifuwaraperyR(from Apery_Twig_SDT3)";
+const std::string my_name_ = "KifuwaraperyR(from Apery_Twig_SDT3)";
 #else
-const std::string MyName = "KifuwaraperyR(from Apery_Twig_SDT3) Debug Build";
+const std::string my_name_ = "KifuwaraperyR(from Apery_Twig_SDT3) Debug Build";
 #endif
 
 
@@ -195,9 +195,9 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
                 this->gameEngineStore_->set_usi();
 
                 // USIプロトコルのバージョンを返す。
-                std::cout << "id name " << MyName << "\nid author (Derivation)Takahashi Satoshi (Base)Hiraoka Takuya\nusiok" << "\n";
+                std::cout << "id name " << my_name_ << "\nid author (Derivation)Takahashi Satoshi (Base)Hiraoka Takuya\nusiok" << "\n";
 
-                // TODO: セット・オプション付けてください： std::cout << "id name " << MyName << "\nid author (Derivation)Takahashi Satoshi (Base)Hiraoka Takuya\n" << gameEngineStore_.m_engineSettings << "\nusiok" << "\n";
+                // TODO: セット・オプション付けてください： std::cout << "id name " << my_name_ << "\nid author (Derivation)Takahashi Satoshi (Base)Hiraoka Takuya\n" << gameEngineStore_.m_engineSettings << "\nusiok" << "\n";
             }
             else if (cmd == "isready")
             {
