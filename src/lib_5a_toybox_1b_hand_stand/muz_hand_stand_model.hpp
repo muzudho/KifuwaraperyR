@@ -29,13 +29,22 @@ public:
 
 private:
 
-	unsigned int pawn_ : 5;		// 歩   0-18 枚
-	unsigned int lance_ : 3;	// 香   0-4
-	unsigned int knight_ : 3;	// 桂   0-4
-	unsigned int silver_ : 3;	// 銀   0-4
-	unsigned int gold_ : 3;		// 金   0-4
-	unsigned int bishop_ : 2;	// 角   0-2
-	unsigned int rook_ : 2;		// 飛   0-2
+    /// <summary>
+	///		<pre>
+    /// 駒の枚数
+	/// 
+	///		下位ビットから上位ビットへ向かって並ぶ？
+	///		.. .. ... ... ... ... .....
+    ///		 R  B   G   S   N   L     P
+    ///		</pre>
+	/// </summary>
+	unsigned int pawn_		: 5;	// 歩   0-18 枚
+	unsigned int lance_		: 3;	// 香   0-4
+	unsigned int knight_	: 3;	// 桂   0-4
+	unsigned int silver_	: 3;	// 銀   0-4
+	unsigned int gold_		: 3;	// 金   0-4
+	unsigned int bishop_	: 2;	// 角   0-2
+	unsigned int rook_		: 2;	// 飛   0-2
 
 
 public:
