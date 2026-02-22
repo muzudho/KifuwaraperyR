@@ -25,8 +25,8 @@ private:
 	/// </summary>
 	bool is_usi_;
 
-
 public:
+
 	/// <summary>
 	/// USIエンジン設定
 	/// </summary>

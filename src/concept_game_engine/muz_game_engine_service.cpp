@@ -245,6 +245,17 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
 
                 std::cout << "bestmove resign" << "\n";  // とりあえず投了を返すぜ（＾ｑ＾）
             }
+            // ----------------------------------------
+            // 以下、独自実装
+            // ----------------------------------------
+            else if (tokens[0] == "handb")
+            {
+                // TODO: 先手駒台の描画
+            }
+            else if (tokens[0] == "handw")
+            {
+                // TODO: 後手駒台の描画
+            }
 
             if (shall_stop_ponder)
             {
