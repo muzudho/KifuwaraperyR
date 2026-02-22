@@ -253,12 +253,14 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             // 先手駒台の描画
             else if (tokens[0] == "handb")
             {
-                MuzHandStandView::print(Color::Black);
+                MuzHandStandModel handStand;    // TODO
+                MuzHandStandView::print(handStand, Color::Black);
             }
             // 後手駒台の描画
             else if (tokens[0] == "handw")
             {
-                MuzHandStandView::print(Color::White);
+                MuzHandStandModel handStand;    // TODO
+                MuzHandStandView::print(handStand, Color::White);
             }
             else
             {

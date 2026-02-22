@@ -2,50 +2,38 @@
 
 
 // ========================================
-// フィールド
-// ========================================
-
-
-/// <summary>
-/// 
-/// </summary>
-const int MuzHandStandModel::m_HandPieceShiftBits[HandPieceNum] = {
-	m_HPawnShiftBits,
-	m_HLanceShiftBits,
-	m_HKnightShiftBits,
-	m_HSilverShiftBits,
-	m_HGoldShiftBits,
-	m_HBishopShiftBits,
-	m_HRookShiftBits
-};
-
-
-// ========================================
 // アクセッサー
 // ========================================
 
 
-/// <summary>
-/// 
-/// </summary>
-/// <returns></returns>
-u32 MuzHandStandModel::Value() const
+unsigned int MuzHandStandModel::get_count(const HandPiece handPiece) const
 {
-	return this->m_value_;
+    switch (handPiece)
+    {
+    case HPawn:  return fu_;
+    case HLance: return kyo_;
+    case HKnight:return kei_;
+    case HSilver:return gin_;
+    case HGold:  return kin_;
+    case HBishop:return kaku_;
+    case HRook:  return hi_;
+    default:
+        // ここは本来は例外を投げるべきだが、今回はとりあえず0を返す
+        return 0;
+    }
 }
-
-
-// ========================================
-// 主要メソッド
-// ========================================
-
-
-/// <summary>
-/// 
-/// </summary>
-/// <param name="num"></param>
-/// <param name="handPiece"></param>
-void MuzHandStandModel::OrEqual(const int num, const HandPiece handPiece)
+void MuzHandStandModel::set_count(const HandPiece handPiece, unsigned int count)
 {
-	m_value_ |= num << m_HandPieceShiftBits[handPiece];
+    switch (handPiece)
+    {
+    case HPawn:  fu_ += count;
+    case HLance: kyo_ += count;
+    case HKnight:kei_ += count;
+    case HSilver:gin_ += count;
+    case HGold:  kin_ += count;
+    case HBishop:kaku_ += count;
+    case HRook:  hi_ += count;
+    default:
+        break;
+    }
 }

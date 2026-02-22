@@ -155,8 +155,39 @@ bool MuzPositionN3Model::ParseHandStands(std::string_view hand_str)
         // 駒の種類を表す文字が来たら、枚数をセットして、カウントをリセット
 		else if (g_charToPieceUSI.IsLegalChar(ch))
 		{
+            HandPiece hp;
+			switch (ch)
+			{
+            case 'P':
+            case 'p':
+				hp = HPawn; break;
+				case 'L':
+                case 'l':
+                    hp = HLance; break;
+                case 'N':
+				case 'n':
+                    hp = HKnight; break;
+                case 'S':
+				case 's':
+                    hp = HSilver; break;
+                case 'G':
+				case 'g':
+					hp = HGold; break;
+                case 'B':
+                case 'b':
+                    hp = HBishop; break;
+                case 'R':
+                case 'r':
+                    hp = HRook; break;
+                default:
+					// ここは本来は例外を投げるべきだが、今回はとりあえずスキップする
+					continue;
+			}
+
 			Piece piece = g_charToPieceUSI.GetValue(ch);
-			SetHandPiece(piece, count == 0 ? 1 : count);
+			MuzHandStandModel handStand;	// TODO: ここはポジションから取ってくる
+			// カウントが0のときは1枚とみなす（例: "P" は "1P" と同じ意味）
+			handStand.set_count(hp, count == 0 ? 1 : count);
 			count = 0;
 		}
 		else
