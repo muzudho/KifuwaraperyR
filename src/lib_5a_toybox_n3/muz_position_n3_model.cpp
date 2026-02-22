@@ -101,7 +101,7 @@ bool MuzPositionN3Model::ParseBoard(std::string_view board_str)
 			if (!ConvSquare::CONTAINS_OF10(sq)) return false;
 
 			Piece p = (Piece)(g_charToPieceUSI.GetValue(ch) + promote);
-			SetPiece(p, sq);
+			this->get_board().set_piece(p, sq);
 
 			promote = Piece::UnPromoted;
 

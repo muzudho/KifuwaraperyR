@@ -49,23 +49,3 @@ Color MuzPositionN1Model::GetTurn()
 {
 	return this->m_turn_;
 }
-
-
-/// <summary>
-/// マスにある駒を取得
-/// </summary>
-/// <param name="sq">マス番号</param>
-/// <returns></returns>
-Piece MuzPositionN1Model::GetPiece(const Square sq)
-{
-	return this->m_piece_[sq];
-}
-
-
-/// <summary>
-/// マスに駒を置く。
-/// </summary>
-void MuzPositionN1Model::SetPiece(const Piece piece, const Square sq)
-{
-	this->m_piece_[sq] = piece;
-}

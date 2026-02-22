@@ -1,6 +1,7 @@
 #pragma once
 
 // MuzPositionN1Model では使ってないヘッダーファイルでも、他のクラスが MuzPositionN1Model をインクルードすれば lib_5a_toybox_n1 のヘッダーファイルが全部付いてくるようにします。
+#include "../lib_5a_toybox_2b_board/muz_board_model.hpp"
 #include "../lib_5a_toybox_1b_hand_stand/color.hpp"
 #include "file.hpp"
 #include "piece.hpp"
@@ -40,10 +41,6 @@ protected:
 	/// </summary>
 	Color m_turn_;
 
-	/// <summary>
-	/// 各マスの駒
-	/// </summary>
-	Piece m_piece_[SquareNum];
     /// <summary>
     /// ボードの状態を表すぜ（＾～＾）
     /// </summary>
@@ -76,14 +73,6 @@ protected:
 	Color GetTurn();
 
 
-	/// <summary>
-	/// 
-	/// </summary>
-	/// <param name="sq"></param>
-	/// <returns></returns>
-	Piece GetPiece(const Square sq);
-
-	void SetPiece(const Piece piece, const Square sq);
-
-
+    const MuzBoardModel& get_board() const { return this->board_; }
+	MuzBoardModel& get_board() { return this->board_; }
 };
