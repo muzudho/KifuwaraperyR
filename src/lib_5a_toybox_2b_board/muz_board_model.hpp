@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../lib_5a_toybox_n1/piece.hpp"
-#include "../lib_5a_toybox_n1/square.hpp"
+#include "piece.hpp"
+#include "square.hpp"
 
 /// <summary>
 ///		<pre>

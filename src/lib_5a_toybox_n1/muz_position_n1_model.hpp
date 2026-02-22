@@ -4,11 +4,11 @@
 #include "../lib_5a_toybox_2b_board/muz_board_model.hpp"
 #include "../lib_5a_toybox_1b_hand_stand/color.hpp"
 #include "file.hpp"
-#include "piece.hpp"
+#include "../lib_5a_toybox_2b_board/piece.hpp"
+#include "../lib_5a_toybox_2b_board/square.hpp"
 #include "piece_type.hpp"
 #include "ply.hpp"
 #include "rank.hpp"
-#include "square.hpp"
 #include "square_delta.hpp"
 
 class MuzPositionN1Model
