@@ -1,7 +1,7 @@
 #include "../lib_5a_gui/muz_engine_settings_initialize_service.hpp"
 #include "../lib_1a2b_cli/muz_cli_service.hpp"
+#include "../lib_1a_cpp/muz_string_service.hpp"
 #include "muz_game_engine_service.hpp"
-
 
 using namespace std;
 
@@ -170,8 +170,14 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
     cliSvc.set_process_command_line([this](const std::string& line)
         {
             if (!this->gameEngineStore_->is_usi()) {
-                std::cout << "処理したよ: " << line << "\n";
+                std::cout << "処理するよ: " << line << "\n";
             }
+
+            MuzStringService stringSvc;
+            std::vector<std::string> tokens;
+
+            // 半角スペース ' ' で分割
+            tokens = stringSvc.split_command_line(line);
 
 
             MuzCliResultModel result;
