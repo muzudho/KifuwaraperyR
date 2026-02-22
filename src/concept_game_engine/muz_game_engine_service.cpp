@@ -280,7 +280,7 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
                 MuzHandStandView::print_white(this->gameEngineStore_->white_hand_stand_);
             }
             // 駒台のセット
-            //      - `handset 2P1R`
+            //      - `handset 2PR`
             else if (tokens[0] == "handset")
             {
                 MuzHandStandCollectionService handStandCollectionSvc;
