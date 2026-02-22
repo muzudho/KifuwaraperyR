@@ -166,7 +166,7 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
 
     MuzCliService cliSvc;
 
-    cliSvc.set_process_command([](const std::string& cmd)
+    cliSvc.set_process_command([this](const std::string& cmd)
         {
             // TODO: ここで実際のコマンド処理を書く
             std::cout << "処理したよ: " << cmd << "\n";
@@ -189,6 +189,8 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             }
             else if (cmd == "usi")
             {
+                this->m_pGameEngineStore->set_usi();
+
                 // USIプロトコルのバージョンを返す。
                 std::cout << "id name " << MyName << "\nid author (Derivation)Takahashi Satoshi (Base)Hiraoka Takuya\nusiok" << "\n";
 

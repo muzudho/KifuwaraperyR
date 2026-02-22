@@ -63,7 +63,7 @@ bool MuzLoggingService::setup(const std::string& config_path)
 
     std::string console_level_str = logging["console"]["level"].value_or(default_log_level_str);
     spdlog::level::level_enum console_log_level = spdlog::level::from_str(console_level_str);
-    cout << "[logging > console] level = " << console_level_str << endl;
+    cout << "(^q^) [logging > console] level = " << console_level_str << endl;
 
     auto console_sink = std::make_shared<spdlog::sinks::stdout_color_sink_mt>();
     console_sink->set_level(console_log_level);  // コンソールはinfo以上だけとか
@@ -77,7 +77,7 @@ bool MuzLoggingService::setup(const std::string& config_path)
 
     std::string file_log_level_str = logging["file"]["level"].value_or(default_log_level_str);
     spdlog::level::level_enum file_log_level = spdlog::level::from_str(file_log_level_str);
-    cout << "[logging > file] level = " << file_log_level_str << ", path = " << path_str << endl;
+    cout << "(^q^) [logging > file] level = " << file_log_level_str << ", path = " << path_str << endl;
 
     // ローテーション設定: ファイル名, 最大サイズ(バイト), 最大ファイル数
     // 例: 5MB超えたら回転、最大3ファイル残す（rotating.txt → rotating.txt.1 → rotating.txt.2 → 古いのは消える）

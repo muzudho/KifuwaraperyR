@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
     // ワーキング・ディレクトリー表示（スラッシュで統一）
     namespace fs = std::filesystem;
     fs::path cwd = fs::current_path();
-    std::cout << "[main] working_directory = " << cwd.generic_string() << std::endl;
+    std::cout << "(^q^) [main] working_directory = " << cwd.generic_string() << std::endl;
 
 
     // ロギングの設定

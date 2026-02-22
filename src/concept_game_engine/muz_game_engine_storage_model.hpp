@@ -14,19 +14,33 @@ class MuzGameEngineStorageModel
 {
 
 
-public:
-
-
 	// ========================================
 	// フィールド
 	// ========================================
 
 
+private:
+	/// <summary>
+	/// USIモードに入ったか。
+	/// </summary>
+	bool is_usi_;
+
+
+public:
 	/// <summary>
 	/// USIエンジン設定
 	/// </summary>
 	MuzEngineSettingsModel	m_engineSettings;
 
 
-};
+	// ========================================
+	// アクセッサー
+	// ========================================
 
+
+	/// <summary>
+	/// USIモードに入ったか。
+	/// </summary>
+	bool is_usi() const;
+	void set_usi();
+};
