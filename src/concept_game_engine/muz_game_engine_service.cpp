@@ -238,7 +238,7 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
                 // TODO: 局面を設定するコマンド。これが来たら、局面を変更する。
                 //usiOperation.SetPosition(pos, ssCmd);
             }
-            else if (line == "go")
+            else if (tokens[0] == "go")
             {
                 //// TODO: 思考開始のコマンド。これが来たら、思考を開始する。
                 //usiOperation.Go(gameStats, pos, ssCmd);
