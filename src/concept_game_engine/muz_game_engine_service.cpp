@@ -237,7 +237,7 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
                 //// TODO: 思考開始のコマンド。これが来たら、思考を開始する。
                 //usiOperation.Go(gameStats, pos, ssCmd);
 
-                std::cout << "resign" << "\n";  // とりあえず投了を返すぜ（＾ｑ＾）
+                std::cout << "bestmove resign" << "\n";  // とりあえず投了を返すぜ（＾ｑ＾）
             }
 
             if (shall_stop_ponder)
