@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "../../src/lib_cpp/int.hpp"
+#include "../../src/lib_cpp/muz_int.hpp"
 #include "../lib_5a_toybox_v1/muz_position_n1_model.hpp"
 #include "n1_hand_piece.hpp"
 #include "n1_piece_type.hpp"
