@@ -25,14 +25,14 @@ void MuzCliService::main_loop(int argc, char* argv[])
             }
 
             // ここで1回コマンドを処理する
-            if (this->process_command_)
+            if (this->process_command_line_)
             {
-                auto result = this->process_command_(line);
+                auto result = this->process_command_line_(line);
                 if (result.should_quit()) { return; }
             }
             else
             {
-                std::cout << "(^q^) process_command_ not found." << "\n";
+                std::cout << "(^q^) process_command_line_ not found." << "\n";
                 return;
             }
             //process_command(line);
@@ -60,14 +60,14 @@ void MuzCliService::main_loop(int argc, char* argv[])
         }
 
         // コマンドを処理する
-        if (this->process_command_)
+        if (this->process_command_line_)
         {
-            auto result = this->process_command_(line);
+            auto result = this->process_command_line_(line);
             if (result.should_quit()) { return; }
         }
         else
         {
-            std::cout << "(^q^) process_command_ not found." << "\n";
+            std::cout << "(^q^) process_command_line_ not found." << "\n";
             return;
         }
         //process_command(line);
