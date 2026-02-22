@@ -1,4 +1,4 @@
-#include "muz_hand_stand_collection_model.hpp"
+#include "muz_hand_stand_collection_service.hpp"
 #include <cctype>   // ← これ！ std::isdigit が定義されてるヘッダー
 
 
@@ -8,7 +8,7 @@
 
 
 // パース
-bool MuzHandStandCollectionModel::parse_hand_stand_collection(
+bool MuzHandStandCollectionService::parse_hand_stand_collection(
     std::string_view hand_str,
     MuzHandStandModel& blackHandStand,
     MuzHandStandModel& whiteHandStand)

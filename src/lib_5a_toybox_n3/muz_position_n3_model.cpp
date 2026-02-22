@@ -48,9 +48,9 @@ void MuzPositionN3Model::Set(std::string_view sfen)
 
 	// 3. 駒台（持ち駒）
     MuzHandStandModel blackHandStand, whiteHandStand;
-    MuzHandStandCollectionModel handStandCollection;
+    MuzHandStandCollectionService handStandCollectionSvc;
 	if (it == parts.end()) goto fail;
-	if (!handStandCollection.parse_hand_stand_collection(*it, blackHandStand, whiteHandStand)) goto fail;
+	if (!handStandCollectionSvc.parse_hand_stand_collection(*it, blackHandStand, whiteHandStand)) goto fail;
 	++it;
 
 	// 4. 手数（オプション）

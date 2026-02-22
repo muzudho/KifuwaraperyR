@@ -37,7 +37,7 @@ add_executable (KifuwaraperyR
     # 📁 lib_5a_toybox_n3
     "lib_5a_toybox_n3/muz_position_n3_model.cpp"
     # 📁 src
-    "main.cpp" "view_5a_toybox_1b_hand_stand/muz_hand_stand_view.cpp" "lib_5a_toybox_1b_hand_stand/muz_hand_stand_collection_model.cpp")
+    "main.cpp" "view_5a_toybox_1b_hand_stand/muz_hand_stand_view.cpp" "lib_5a_toybox_1b_hand_stand/muz_hand_stand_collection_service.cpp")
 
 
 #if (CMAKE_VERSION VERSION_GREATER 3.12)

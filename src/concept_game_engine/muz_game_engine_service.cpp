@@ -3,6 +3,7 @@
 #include "../lib_5a_gui/muz_engine_settings_initialize_service.hpp"
 #include "../lib_5a_toybox_n1/color.hpp"
 #include "../view_5a_toybox_1b_hand_stand/muz_hand_stand_view.hpp"
+#include "../lib_5a_toybox_1b_hand_stand/muz_hand_stand_collection_service.hpp"
 #include "muz_game_engine_service.hpp"
 
 using namespace std;
@@ -277,6 +278,16 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             else if (tokens[0] == "handw")
             {
                 MuzHandStandView::print_white(this->gameEngineStore_->white_hand_stand_);
+            }
+            // 駒台のセット
+            //      - `handset 2P1R`
+            else if (tokens[0] == "handset")
+            {
+                MuzHandStandCollectionService handStandCollectionSvc;
+                handStandCollectionSvc.parse_hand_stand_collection(
+                    tokens[1],
+                    this->gameEngineStore_->black_hand_stand_,
+                    this->gameEngineStore_->white_hand_stand_);
             }
             else
             {
