@@ -17,7 +17,7 @@ using namespace std;
 /// </summary>
 MuzGameEngineService::MuzGameEngineService()
 {
-    this->m_pGameEngineStore = std::unique_ptr<MuzGameEngineStorageModel>(new MuzGameEngineStorageModel);
+    this->gameEngineStore_ = std::unique_ptr<MuzGameEngineStorageModel>(new MuzGameEngineStorageModel);
 }
 
 
@@ -26,7 +26,7 @@ MuzGameEngineService::MuzGameEngineService()
 /// </summary>
 MuzGameEngineService::~MuzGameEngineService()
 {
-    this->m_pGameEngineStore.reset();
+    this->gameEngineStore_.reset();
 }
 
 
@@ -63,16 +63,16 @@ void MuzGameEngineService::initialize_10a()
         32601,  // TODO: SweetnessInfinite,
         32600,  // TODO: SweetnessMate0Ply,
         64,     // TODO: g_MaxThreads,
-        &this->m_pGameEngineStore->m_engineSettings,
+        &this->gameEngineStore_->m_engineSettings,
         // onHashSizeChanged:
         [](auto opt)    // [this](auto opt)
         {
-            // TODO: this->m_pGameEngineStore.get()->m_tt.setSize(opt);
+            // TODO: this->gameEngineStore_.get()->m_tt.setSize(opt);
         },
         // onHashCleared:
         [](auto opt)    // [this](auto opt)
         {
-            // TODO: this->m_pGameEngineStore.get()->m_tt.Clear();
+            // TODO: this->gameEngineStore_.get()->m_tt.Clear();
         },
         // onEvalDirChanged:
         [](auto opt)    // [this](auto opt)
@@ -82,12 +82,12 @@ void MuzGameEngineService::initialize_10a()
         // onMaxThreadsPerSplitPointChanged:
         [](auto opt)    // [this](auto opt)
         {
-            // TODO: this->m_pGameEngineStore.get()->m_pub.ReadUSIOptions(this->m_pGameEngineStore.get());
+            // TODO: this->gameEngineStore_.get()->m_pub.ReadUSIOptions(this->gameEngineStore_.get());
         },
         // onThreadsChanged:
         [](auto opt)    // [this](auto opt)
         {
-            // TODO: this->m_pGameEngineStore.get()->m_pub.ReadUSIOptions(this->m_pGameEngineStore.get());
+            // TODO: this->gameEngineStore_.get()->m_pub.ReadUSIOptions(this->gameEngineStore_.get());
         },
         // getCpuCoreCount:
         []()    // [this]()
@@ -189,12 +189,12 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             }
             else if (cmd == "usi")
             {
-                this->m_pGameEngineStore->set_usi();
+                this->gameEngineStore_->set_usi();
 
                 // USIプロトコルのバージョンを返す。
                 std::cout << "id name " << MyName << "\nid author (Derivation)Takahashi Satoshi (Base)Hiraoka Takuya\nusiok" << "\n";
 
-                // TODO: セット・オプション付けてください： std::cout << "id name " << MyName << "\nid author (Derivation)Takahashi Satoshi (Base)Hiraoka Takuya\n" << m_pGameEngineStore.m_engineSettings << "\nusiok" << "\n";
+                // TODO: セット・オプション付けてください： std::cout << "id name " << MyName << "\nid author (Derivation)Takahashi Satoshi (Base)Hiraoka Takuya\n" << gameEngineStore_.m_engineSettings << "\nusiok" << "\n";
             }
             else if (cmd == "isready")
             {
@@ -204,12 +204,12 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             else if (cmd == "setoption")
             {
                 // TODO: エンジンのオプションを設定するコマンド。これが来たら、オプションを変更する。
-                //m_pGameEngineStore.SetOption(ssCmd);
+                //gameEngineStore_.SetOption(ssCmd);
             }
             else if (cmd == "usinewgame")
             {
 //                // 新しいゲームの開始を知らせるコマンド。これが来たら、前のゲームの情報をクリアする。
-//                m_pGameEngineStore.m_tt.Clear();
+//                gameEngineStore_.m_tt.Clear();
 //
 //#if defined INANIWA_SHIFT
 //                inaniwaFlag = NotInaniwa;
