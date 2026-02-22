@@ -166,10 +166,13 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
 
     MuzCliService cliSvc;
 
+    // TODO: ここで実際のコマンド処理を書く
     cliSvc.set_process_command([this](const std::string& cmd)
         {
-            // TODO: ここで実際のコマンド処理を書く
-            std::cout << "処理したよ: " << cmd << "\n";
+            if (!this->gameEngineStore_->is_usi()) {
+                std::cout << "処理したよ: " << cmd << "\n";
+            }
+
 
             MuzCliResultModel result;
 

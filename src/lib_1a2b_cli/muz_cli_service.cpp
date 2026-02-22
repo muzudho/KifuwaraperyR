@@ -32,7 +32,7 @@ void MuzCliService::main_loop(int argc, char* argv[])
             }
             else
             {
-                std::cout << "process_command_ not found." << "\n";
+                std::cout << "(^q^) process_command_ not found." << "\n";
                 return;
             }
             //process_command(line);
@@ -44,7 +44,7 @@ void MuzCliService::main_loop(int argc, char* argv[])
     //      - いわゆる、コマンド受付
     while (true)
     {
-        std::cout << "muz> " << std::flush;  // プロンプト（好みで変えて）
+        //std::cout << "(^q^) muz> " << std::flush;  // プロンプト（好みで変えて）
 
         if (!std::getline(std::cin, line)) {
             // Ctrl+D または入力エラー → 終了
@@ -67,12 +67,12 @@ void MuzCliService::main_loop(int argc, char* argv[])
         }
         else
         {
-            std::cout << "process_command_ not found." << "\n";
+            std::cout << "(^q^) process_command_ not found." << "\n";
             return;
         }
         //process_command(line);
         line.clear();  // 次回用にクリア（なくてもいいけど明示的）
     }
 
-    std::cout << "bye.\n";
+    //std::cout << "bye.\n";
 }
