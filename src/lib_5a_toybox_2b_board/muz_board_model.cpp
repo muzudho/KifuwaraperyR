@@ -11,7 +11,7 @@
 /// </summary>
 /// <param name="sq">マス番号</param>
 /// <returns></returns>
-Piece MuzBoardModel::get_piece(const Square sq)
+const Piece MuzBoardModel::get_piece(const Square sq) const
 {
 	return this->piece_[sq];
 }
