@@ -2,6 +2,7 @@
 
 #include "../lib_5a_gui/muz_engine_settings_model.hpp"
 #include "../lib_5a_toybox_1b_hand_stand/muz_hand_stand_model.hpp"
+#include "../lib_5a_toybox_2b_board/muz_board_model.hpp"
 
 /// <summary>
 ///		<pre>
@@ -48,6 +49,10 @@ public:
 	MuzHandStandModel black_hand_stand_;
 	MuzHandStandModel white_hand_stand_;
 
+	/// <summary>
+	/// TODO: ［盤］は［ポジション］クラスに移動したい（＾～＾）
+	/// </summary>
+    MuzBoardModel board_;
 
 
 	// ========================================
@@ -60,4 +65,6 @@ public:
 	/// </summary>
 	bool is_usi() const;
 	void set_usi();
+
+    const MuzBoardModel& get_board() const;
 };

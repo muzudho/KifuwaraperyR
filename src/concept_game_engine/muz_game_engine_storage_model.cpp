@@ -30,3 +30,9 @@ void MuzGameEngineStorageModel::set_usi()
 {
     this->is_usi_ = true;
 }
+
+
+const MuzBoardModel& MuzGameEngineStorageModel::get_board() const
+{
+    return this->board_;
+}
