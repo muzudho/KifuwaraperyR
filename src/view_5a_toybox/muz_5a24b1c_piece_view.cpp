@@ -34,9 +34,9 @@ std::string MuzPieceView::pretty(const Piece piece)
         return " 圭";
     case BProSilver:
         return " 全";
-    case BProBishop:
+    case BHorse:
         return " 馬";
-    case BProRook:
+    case BDragon:
         return " 龍";
     case WPawn:
         return "v歩";
@@ -62,9 +62,9 @@ std::string MuzPieceView::pretty(const Piece piece)
         return "v圭";
     case WProSilver:
         return "v全";
-    case WProBishop:
+    case WHorse:
         return "v馬";
-    case WProRook:
+    case WDragon:
         return "v龍";
     case Empty: // thru
     default:

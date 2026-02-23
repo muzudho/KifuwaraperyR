@@ -13,7 +13,7 @@
 /// </summary>
 enum Piece
 {
-	N00_Empty = 0,
+	Empty = 0,
 	UnPromoted = 0,
 	Promoted = 8,
 	BPawn = 1,		// Black Pawn
