@@ -57,7 +57,7 @@ const std::string my_name_ = "KifuwaraperyR(from Apery_Twig_SDT3) Debug Build";
 /// </summary>
 void MuzGameEngineService::initialize_10a()
 {
-    cout << "[game_engine] initialize." << endl;
+    //cout << "(^q^) [game_engine] initialize." << endl;
 
 
     cout << "(^q^) 2.9 . エンジン設定！" << endl;
@@ -196,6 +196,37 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
     this->gameEngineStore_->board_.set_piece(M31, WSilver);
     this->gameEngineStore_->board_.set_piece(M21, WKnight);
     this->gameEngineStore_->board_.set_piece(M11, WLance);
+    this->gameEngineStore_->board_.set_piece(M82, WRook);
+    this->gameEngineStore_->board_.set_piece(M22, WBishop);
+    this->gameEngineStore_->board_.set_piece(M93, WPawn);
+    this->gameEngineStore_->board_.set_piece(M83, WPawn);
+    this->gameEngineStore_->board_.set_piece(M73, WPawn);
+    this->gameEngineStore_->board_.set_piece(M63, WPawn);
+    this->gameEngineStore_->board_.set_piece(M53, WPawn);
+    this->gameEngineStore_->board_.set_piece(M43, WPawn);
+    this->gameEngineStore_->board_.set_piece(M33, WPawn);
+    this->gameEngineStore_->board_.set_piece(M23, WPawn);
+    this->gameEngineStore_->board_.set_piece(M13, WPawn);
+    this->gameEngineStore_->board_.set_piece(M97, BPawn);
+    this->gameEngineStore_->board_.set_piece(M87, BPawn);
+    this->gameEngineStore_->board_.set_piece(M77, BPawn);
+    this->gameEngineStore_->board_.set_piece(M67, BPawn);
+    this->gameEngineStore_->board_.set_piece(M57, BPawn);
+    this->gameEngineStore_->board_.set_piece(M47, BPawn);
+    this->gameEngineStore_->board_.set_piece(M37, BPawn);
+    this->gameEngineStore_->board_.set_piece(M27, BPawn);
+    this->gameEngineStore_->board_.set_piece(M17, BPawn);
+    this->gameEngineStore_->board_.set_piece(M88, BBishop);
+    this->gameEngineStore_->board_.set_piece(M28, BRook);
+    this->gameEngineStore_->board_.set_piece(M99, BLance);
+    this->gameEngineStore_->board_.set_piece(M89, BKnight);
+    this->gameEngineStore_->board_.set_piece(M79, BSilver);
+    this->gameEngineStore_->board_.set_piece(M69, BGold);
+    this->gameEngineStore_->board_.set_piece(M59, BKing);
+    this->gameEngineStore_->board_.set_piece(M49, BGold);
+    this->gameEngineStore_->board_.set_piece(M39, BSilver);
+    this->gameEngineStore_->board_.set_piece(M29, BKnight);
+    this->gameEngineStore_->board_.set_piece(M19, BLance);
 
     MuzCliService cliSvc;
 
