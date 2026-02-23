@@ -20,7 +20,7 @@ const Piece MuzBoardModel::get_piece(const Square sq) const
 /// <summary>
 /// マスに駒を置く。
 /// </summary>
-void MuzBoardModel::set_piece(const Piece piece, const Square sq)
+void MuzBoardModel::set_piece(const Square sq, const Piece piece)
 {
 	this->piece_[sq] = piece;
 }

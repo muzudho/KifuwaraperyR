@@ -185,6 +185,17 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
     this->gameEngineStore_->white_hand_stand_.set_count(HLance, 0);
     this->gameEngineStore_->white_hand_stand_.set_count(HPawn, 3);   // とりあえず歩を３枚持ってることにするぜ（＾ｑ＾）
 
+    // テスト：盤の初期化
+    // TODO: これらの変数は、ポジションに移動したい（＾～＾）
+    this->gameEngineStore_->board_.set_piece(M99, WLance);
+    this->gameEngineStore_->board_.set_piece(M98, WKnight);
+    this->gameEngineStore_->board_.set_piece(M97, WSilver);
+    this->gameEngineStore_->board_.set_piece(M96, WGold);
+    this->gameEngineStore_->board_.set_piece(M95, WKing);
+    this->gameEngineStore_->board_.set_piece(M94, WGold);
+    this->gameEngineStore_->board_.set_piece(M93, WSilver);
+    this->gameEngineStore_->board_.set_piece(M92, WKnight);
+    this->gameEngineStore_->board_.set_piece(M91, WLance);
 
     MuzCliService cliSvc;
 
