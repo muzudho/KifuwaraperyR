@@ -2,7 +2,7 @@
 #include "../lib_1a2b_cli/muz_cli_service.hpp"
 #include "../lib_5a_gui/muz_engine_settings_initialize_service.hpp"
 #include "../lib_5a_toybox_1b_hand_stand/color.hpp"
-#include "../view_5a_toybox_1b_hand_stand/muz_hand_stand_view.hpp"
+#include "../view_5a_toybox/muz_5a1b_hand_stand_view.hpp"
 #include "../lib_5a_toybox_1b_hand_stand/muz_hand_stand_collection_service.hpp"
 #include "muz_game_engine_service.hpp"
 
@@ -288,6 +288,11 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
                     tokens[1],
                     this->gameEngineStore_->black_hand_stand_,
                     this->gameEngineStore_->white_hand_stand_);
+            }
+            // 盤だけの描画（駒台を除く）
+            else if (tokens[0] == "boardonly")
+            {
+                // TODO: MuzBoardView::print(this->gameEngineStore_->board_);
             }
             else
             {

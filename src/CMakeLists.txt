@@ -30,14 +30,20 @@ add_executable (KifuwaraperyR
     "lib_5a_toybox_n1/muz_position_n1_model.cpp"
     # 📁 lib_5a_toybox_1b_hand_stand
     "lib_5a_toybox_1b_hand_stand/muz_hand_stand_model.cpp"
+    "lib_5a_toybox_1b_hand_stand/muz_hand_stand_collection_service.cpp"
+    # 📁 lib_5a_toybox_2b_board
+    "lib_5a_toybox_2b_board/muz_board_model.cpp" 
     # 📁 lib_5a_toybox_n2
     "lib_5a_toybox_n2/char_to_piece_usi.cpp"
     "lib_5a_toybox_n2/muz_position_n2_model.cpp"
     "lib_5a_toybox_n2/piece_types.cpp"
     # 📁 lib_5a_toybox_n3
     "lib_5a_toybox_n3/muz_position_n3_model.cpp"
-    # 📁 src
-    "main.cpp" "view_5a_toybox_1b_hand_stand/muz_hand_stand_view.cpp" "lib_5a_toybox_1b_hand_stand/muz_hand_stand_collection_service.cpp" "lib_5a_toybox_2b_board/muz_board_model.cpp")
+    # 📁 view_5a_toybox
+    "view_5a_toybox/muz_5a1b_hand_stand_view.cpp"
+    "view_5a_toybox/muz_5a2b_board_view.cpp"
+    # 📁 src, その他
+    "main.cpp" )
 
 
 #if (CMAKE_VERSION VERSION_GREATER 3.12)
