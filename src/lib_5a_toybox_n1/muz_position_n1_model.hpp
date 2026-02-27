@@ -2,7 +2,7 @@
 
 // MuzPositionN1Model では使ってないヘッダーファイルでも、他のクラスが MuzPositionN1Model をインクルードすれば lib_5a_toybox_n1 のヘッダーファイルが全部付いてくるようにします。
 #include "../lib_5a_toybox_2b_board/muz_board_model.hpp"
-#include "../lib_5a_toybox_1b_hand_stand/color.hpp"
+#include "../core_library/lib_55a_toybox_95b_hand_stand/color.hpp"
 #include "file.hpp"
 #include "../lib_5a_toybox_2b_board/piece.hpp"
 #include "../lib_5a_toybox_2b_board/square.hpp"

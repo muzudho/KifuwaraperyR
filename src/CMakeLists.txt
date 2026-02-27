@@ -28,9 +28,9 @@ add_executable (KifuwaraperyR
     "lib_5a_shogi/muz_shogi_model.cpp"
     # 📁 lib_5a_toybox_n1
     "lib_5a_toybox_n1/muz_position_n1_model.cpp"
-    # 📁 lib_5a_toybox_1b_hand_stand
-    "lib_5a_toybox_1b_hand_stand/muz_hand_stand_model.cpp"
-    "lib_5a_toybox_1b_hand_stand/muz_hand_stand_collection_service.cpp"
+    # 📁 core_library/lib_55a_toybox_95b_hand_stand
+    "core_library/lib_55a_toybox_95b_hand_stand/muz_hand_stand_model.cpp"
+    "core_library/lib_55a_toybox_95b_hand_stand/muz_hand_stand_collection_service.cpp"
     # 📁 lib_5a_toybox_2b_board
     "lib_5a_toybox_2b_board/muz_board_model.cpp" 
     # 📁 lib_5a_toybox_n2

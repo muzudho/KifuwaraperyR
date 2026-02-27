@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../lib_5a_gui/muz_engine_settings_model.hpp"
-#include "../lib_5a_toybox_1b_hand_stand/muz_hand_stand_model.hpp"
+#include "../core_library/lib_55a_toybox_95b_hand_stand/muz_hand_stand_model.hpp"
 #include "../lib_5a_toybox_2b_board/muz_board_model.hpp"
 
 /// <summary>
