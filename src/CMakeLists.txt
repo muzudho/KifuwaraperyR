@@ -14,8 +14,8 @@ add_executable (KifuwaraperyR
     #
     # ［lib］
     #
-    # 📁 lib_1a2b_cli
-    "lib_1a2b_cli/muz_cli_service.cpp"
+    # 📁 core_library/lib_94a_cli
+    "core_library/lib_94a_cli/muz_cli_service.cpp"
     # 📁 lib_5a_gui
     "lib_5a_gui/muz_engine_option_abstract_model.cpp"
     "lib_5a_gui/muz_engine_option_button_model.cpp"
