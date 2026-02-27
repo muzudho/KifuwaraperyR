@@ -28,9 +28,9 @@ add_executable (KifuwaraperyR
     "n95a_core_library/lib_5a_shogi/muz_shogi_model.cpp"
     # 📁 n95a_core_library/lib_5a_toybox_n1
     "n95a_core_library/lib_5a_toybox_n1/muz_position_n1_model.cpp"
-    # 📁 n95a_core_library/lib_55a_toybox_95b_hand_stand
-    "n95a_core_library/lib_55a_toybox_95b_hand_stand/muz_hand_stand_model.cpp"
-    "n95a_core_library/lib_55a_toybox_95b_hand_stand/muz_hand_stand_collection_service.cpp"
+    # 📁 n95a_core_library/n95a55b_toybox_95c_hand_stand
+    "n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_model.cpp"
+    "n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_collection_service.cpp"
     # 📁 n95a_core_library/lib_55a_toybox_94b_board
     "n95a_core_library/lib_55a_toybox_94b_board/muz_board_model.cpp" 
     # 📁 n95a_core_library/lib_5a_toybox_n2
