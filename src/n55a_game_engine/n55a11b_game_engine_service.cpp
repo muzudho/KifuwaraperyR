@@ -3,8 +3,8 @@
 #include "../n95a_core_library/lib_5a_gui/muz_engine_settings_initialize_service.hpp"
 #include "../n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_collection_service.hpp"
 #include "../n95a_core_library/n95a55b_toybox_96c_turn/color.hpp"
-#include "../n11a_views/view_55a_toybox/muz_5a1b_hand_stand_view.hpp"
-#include "../n11a_views/view_55a_toybox/muz_5a25b_board_view.hpp"
+#include "../n11a_views/n11a55b_toybox/muz_5a1b_hand_stand_view.hpp"
+#include "../n11a_views/n11a55b_toybox/muz_5a25b_board_view.hpp"
 #include "n55a11b_game_engine_service.hpp"
 
 using namespace std;
@@ -312,6 +312,25 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             // ----------------------------------------
             // 以下、独自実装
             // ----------------------------------------
+            // ----------------------------------------
+            // 盤面
+            // ----------------------------------------
+            // 盤だけの描画（駒台を除く）
+            else if (tokens[0] == "boardonly")
+            {
+                MuzBoardView::print(this->gameEngineStore_->get_board());
+            }
+            // 盤面だけセット
+            //      - 例： `boardset lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL`
+            //      - 例： `boardset 4k4/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/4K4`
+            //      - 例： `boardset 9/9/9/9/9/9/9/9/9`
+            else if (tokens[0] == "boardset")
+            {
+                this->gameEngineStore_->get_board().from_string(tokens[1]);
+            }
+            // ----------------------------------------
+            // 駒台
+            // ----------------------------------------
             // 先手駒台の描画
             else if (tokens[0] == "handb")
             {
@@ -332,19 +351,9 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
                     this->gameEngineStore_->black_hand_stand_,
                     this->gameEngineStore_->white_hand_stand_);
             }
-            // 盤だけの描画（駒台を除く）
-            else if (tokens[0] == "boardonly")
-            {
-                MuzBoardView::print(this->gameEngineStore_->get_board());
-            }
-            // 盤面だけセット
-            //      - 例： `boardset lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL`
-            //      - 例： `boardset 4k4/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/4K4`
-            //      - 例： `boardset 9/9/9/9/9/9/9/9/9`
-            else if (tokens[0] == "boardset")
-            {
-                this->gameEngineStore_->get_board().from_string(tokens[1]);
-            }
+            // ----------------------------------------
+            // 無いよ
+            // ----------------------------------------
             else
             {
                 std::cout << "そんなコマンド無い（＾～＾）\n";

@@ -47,10 +47,10 @@ add_executable (KifuwaraperyR
     #
     # [n11a_views]
     #
-    # 📁 n11a_views/view_55a_toybox
-    "n11a_views/view_55a_toybox/muz_5a1b_hand_stand_view.cpp"
-    "n11a_views/view_55a_toybox/muz_5a24b1c_piece_view.cpp"
-    "n11a_views/view_55a_toybox/muz_5a25b_board_view.cpp"
+    # 📁 n11a_views/n11a55b_toybox
+    "n11a_views/n11a55b_toybox/muz_5a1b_hand_stand_view.cpp"
+    "n11a_views/n11a55b_toybox/muz_5a24b1c_piece_view.cpp"
+    "n11a_views/n11a55b_toybox/muz_5a25b_board_view.cpp"
     # 📁 src, その他
     "main.cpp")
 
