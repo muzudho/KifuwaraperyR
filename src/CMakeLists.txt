@@ -14,8 +14,8 @@ add_executable (KifuwaraperyR
     #
     # ［n95a_core_library］
     #
-    # 📁 n95a_core_library/lib_94a_cli
-    "n95a_core_library/lib_94a_cli/muz_cli_service.cpp"
+    # 📁 n95a_core_library/n95a95b_infrastructure_94a_cli
+    "n95a_core_library/n95a95b_infrastructure_94a_cli/muz_cli_service.cpp"
     # 📁 n95a_core_library/lib_5a_gui
     "n95a_core_library/lib_5a_gui/muz_engine_option_abstract_model.cpp"
     "n95a_core_library/lib_5a_gui/muz_engine_option_button_model.cpp"
