@@ -1,4 +1,4 @@
-#include "../lib_1a_cpp/muz_string_service.hpp"
+#include "../core_library/lib_95a_cpp/muz_string_service.hpp"
 #include "../lib_1a2b_cli/muz_cli_service.hpp"
 #include "../lib_5a_gui/muz_engine_settings_initialize_service.hpp"
 #include "../lib_5a_toybox_1b_hand_stand/color.hpp"
