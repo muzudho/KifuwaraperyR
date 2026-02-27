@@ -31,8 +31,8 @@ add_executable (KifuwaraperyR
     # 📁 n95a_core_library/n95a55b_toybox_95c_hand_stand
     "n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_model.cpp"
     "n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_collection_service.cpp"
-    # 📁 n95a_core_library/lib_55a_toybox_94b_board
-    "n95a_core_library/lib_55a_toybox_94b_board/muz_board_model.cpp" 
+    # 📁 n95a_core_library/n95a55b_toybox_94c_board
+    "n95a_core_library/n95a55b_toybox_94c_board/muz_board_model.cpp" 
     # 📁 n95a_core_library/lib_5a_toybox_n2
     "n95a_core_library/lib_5a_toybox_n2/char_to_piece_usi.cpp"
     "n95a_core_library/lib_5a_toybox_n2/muz_position_n2_model.cpp"

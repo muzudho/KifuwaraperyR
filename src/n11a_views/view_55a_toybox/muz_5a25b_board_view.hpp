@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../n95a_core_library/lib_55a_toybox_94b_board/muz_board_model.hpp"
+#include "../../n95a_core_library/n95a55b_toybox_94c_board/muz_board_model.hpp"
 #include <iostream>
 
 class MuzBoardView

@@ -1,11 +1,11 @@
 #pragma once
 
 // MuzPositionN1Model では使ってないヘッダーファイルでも、他のクラスが MuzPositionN1Model をインクルードすれば lib_5a_toybox_n1 のヘッダーファイルが全部付いてくるようにします。
-#include "../lib_55a_toybox_94b_board/muz_board_model.hpp"
+#include "../n95a55b_toybox_94c_board/muz_board_model.hpp"
 #include "../n95a55b_toybox_95c_hand_stand/color.hpp"
 #include "file.hpp"
-#include "../lib_55a_toybox_94b_board/piece.hpp"
-#include "../lib_55a_toybox_94b_board/square.hpp"
+#include "../n95a55b_toybox_94c_board/piece.hpp"
+#include "../n95a55b_toybox_94c_board/square.hpp"
 #include "piece_type.hpp"
 #include "ply.hpp"
 #include "rank.hpp"
