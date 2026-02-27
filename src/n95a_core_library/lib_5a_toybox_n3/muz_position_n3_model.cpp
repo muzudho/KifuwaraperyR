@@ -37,35 +37,39 @@ void MuzPositionN3Model::Set(std::string_view sfen)
 	auto it = parts.begin();
 
 	// 1. 盤面部分
-	if (it == parts.end()) goto fail;
-	if (!this->get_board().from_string(*it)) goto fail;
+	if (it == parts.end() || !this->get_board().from_string(*it)) {
+		std::cout << "incorrect SFEN string (Board) : " << sfen << "\n";
+		return;
+	}
 	++it;
 
 	// 2. 手番
-	if (it == parts.end()) goto fail;
-	if (!this->get_turn().from_string(*it)) goto fail;
+	if (it == parts.end() || !this->get_turn().from_string(*it)) {
+		std::cout << "incorrect SFEN string (Turn) : " << sfen << "\n";
+		return;
+	}
 	++it;
 
 	// 3. 駒台（持ち駒）
     MuzHandStandModel blackHandStand, whiteHandStand;
     MuzHandStandCollectionService handStandCollectionSvc;
-	if (it == parts.end()) goto fail;
-	if (!handStandCollectionSvc.parse_hand_stand_collection(*it, blackHandStand, whiteHandStand)) goto fail;
+	if (it == parts.end() || !handStandCollectionSvc.parse_hand_stand_collection(*it, blackHandStand, whiteHandStand)) {
+		std::cout << "incorrect SFEN string (Hand stand) : " << sfen << "\n";
+		return;
+	}
 	++it;
 
 	// 4. 手数（オプション）
 	if (it != parts.end())
 	{
-		if (auto ply = ParsePly(*it))
+		if (auto ply = ParsePly(*it)) {
 			m_gamePly_ = ply;
-		else
-			goto fail;
+		}
+		else {
+			std::cout << "incorrect SFEN string (Ply) : " << sfen << "\n";
+			return;
+		}
 	}
-
-	return;
-
-fail:
-	std::cout << "incorrect SFEN string : " << sfen << "\n";
 }
 
 
