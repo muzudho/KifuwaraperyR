@@ -57,7 +57,7 @@ const std::string my_name_ = "KifuwaraperyR(from Apery_Twig_SDT3) Debug Build";
 /// </summary>
 void MuzGameEngineService::initialize_10a()
 {
-    //cout << "(^q^) [game_engine] initialize." << endl;
+    //cout << "(^q^) [n55a_game_engine] initialize." << endl;
 
 
     cout << "(^q^) 2.9 . エンジン設定！" << endl;
@@ -360,5 +360,5 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
 /// </summary>
 void MuzGameEngineService::finalize_90a()
 {
-    cout << "[game_engine] finalize." << endl;
+    cout << "[n55a_game_engine] finalize." << endl;
 }

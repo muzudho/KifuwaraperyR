@@ -8,9 +8,9 @@ add_executable (KifuwaraperyR
     # 📁 src/n91a_application
     "n91a_application/muz_default_logger_model.cpp"
     "n91a_application/muz_logging_service.cpp"
-    # 📁 game_engine
-    "game_engine/muz_game_engine_service.cpp"
-    "game_engine/muz_game_engine_storage_model.cpp"
+    # 📁 n55a_game_engine
+    "n55a_game_engine/muz_game_engine_service.cpp"
+    "n55a_game_engine/muz_game_engine_storage_model.cpp"
     #
     # ［n95a_core_library］
     #
