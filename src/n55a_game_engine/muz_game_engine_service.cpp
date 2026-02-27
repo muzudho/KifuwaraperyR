@@ -3,8 +3,8 @@
 #include "../n95a_core_library/lib_5a_gui/muz_engine_settings_initialize_service.hpp"
 #include "../n95a_core_library/lib_55a_toybox_95b_hand_stand/color.hpp"
 #include "../n95a_core_library/lib_55a_toybox_95b_hand_stand/muz_hand_stand_collection_service.hpp"
-#include "../views/view_55a_toybox/muz_5a1b_hand_stand_view.hpp"
-#include "../views/view_55a_toybox/muz_5a25b_board_view.hpp"
+#include "../n11a_views/view_55a_toybox/muz_5a1b_hand_stand_view.hpp"
+#include "../n11a_views/view_55a_toybox/muz_5a25b_board_view.hpp"
 #include "muz_game_engine_service.hpp"
 
 using namespace std;
@@ -322,8 +322,8 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             {
                 MuzHandStandView::print_white(this->gameEngineStore_->white_hand_stand_);
             }
-            // 駒台のセット
-            //      - `handset 2PR`
+            // 駒台だけセット
+            //      - 例： `handset 2PR`
             else if (tokens[0] == "handset")
             {
                 MuzHandStandCollectionService handStandCollectionSvc;
@@ -336,6 +336,11 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             else if (tokens[0] == "boardonly")
             {
                 MuzBoardView::print(this->gameEngineStore_->get_board());
+            }
+            // 盤面だけセット
+            //      - 例： `boardset lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL`
+            else if (tokens[0] == "boardset")
+            {
             }
             else
             {
