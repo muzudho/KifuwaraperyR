@@ -5,7 +5,17 @@
 
 # 実行ファイルにコンパイルするソースファイル（.cpp）を全部羅列してください。（.hppは不要）
 add_executable (KifuwaraperyR
+    #
+    # [views]
+    #
+    # 📁 n11a_views/n11a55b_toybox
+    #
+    "n11a_views/n11a55b_toybox/n11a55b94c_board_view.cpp"
+    "n11a_views/n11a55b_toybox/n11a55b95c_hand_stand_view.cpp"
+    "n11a_views/n11a55b_toybox/n11a55b100c_piece_view.cpp"
+    #
     # 📁 n55a_game_engine
+    #
     "n55a_game_engine/n55a11b_game_engine_service.cpp"
     "n55a_game_engine/n55a55b_game_engine_storage_model.cpp"
     # 📁 src/n91a_application
@@ -45,13 +55,8 @@ add_executable (KifuwaraperyR
     # 📁 n95a_core_library/n95a95b_infrastructure_94a_cli
     "n95a_core_library/n95a95b_infrastructure_94a_cli/muz_cli_service.cpp"
     #
-    # [n11a_views]
-    #
-    # 📁 n11a_views/n11a55b_toybox
-    "n11a_views/n11a55b_toybox/muz_5a1b_hand_stand_view.cpp"
-    "n11a_views/n11a55b_toybox/muz_5a24b1c_piece_view.cpp"
-    "n11a_views/n11a55b_toybox/muz_5a25b_board_view.cpp"
     # 📁 src, その他
+    #
     "main.cpp")
 
 
