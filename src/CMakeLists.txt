@@ -12,33 +12,33 @@ add_executable (KifuwaraperyR
     "game_engine/muz_game_engine_service.cpp"
     "game_engine/muz_game_engine_storage_model.cpp"
     #
-    # ［core_library］
+    # ［n95a_core_library］
     #
-    # 📁 core_library/lib_94a_cli
-    "core_library/lib_94a_cli/muz_cli_service.cpp"
-    # 📁 core_library/lib_5a_gui
-    "core_library/lib_5a_gui/muz_engine_option_abstract_model.cpp"
-    "core_library/lib_5a_gui/muz_engine_option_button_model.cpp"
-    "core_library/lib_5a_gui/muz_engine_option_checkbox_model.cpp"
-    "core_library/lib_5a_gui/muz_engine_option_spinbox_model.cpp"
-    "core_library/lib_5a_gui/muz_engine_option_textbox_model.cpp"
-    "core_library/lib_5a_gui/muz_engine_settings_initialize_service.cpp"
-    "core_library/lib_5a_gui/muz_engine_settings_model.cpp"
-    # 📁 core_library/lib_5a_shogi
-    "core_library/lib_5a_shogi/muz_shogi_model.cpp"
-    # 📁 core_library/lib_5a_toybox_n1
-    "core_library/lib_5a_toybox_n1/muz_position_n1_model.cpp"
-    # 📁 core_library/lib_55a_toybox_95b_hand_stand
-    "core_library/lib_55a_toybox_95b_hand_stand/muz_hand_stand_model.cpp"
-    "core_library/lib_55a_toybox_95b_hand_stand/muz_hand_stand_collection_service.cpp"
-    # 📁 core_library/lib_55a_toybox_94b_board
-    "core_library/lib_55a_toybox_94b_board/muz_board_model.cpp" 
-    # 📁 core_library/lib_5a_toybox_n2
-    "core_library/lib_5a_toybox_n2/char_to_piece_usi.cpp"
-    "core_library/lib_5a_toybox_n2/muz_position_n2_model.cpp"
-    "core_library/lib_5a_toybox_n2/piece_types.cpp"
-    # 📁 core_library/lib_5a_toybox_n3
-    "core_library/lib_5a_toybox_n3/muz_position_n3_model.cpp"
+    # 📁 n95a_core_library/lib_94a_cli
+    "n95a_core_library/lib_94a_cli/muz_cli_service.cpp"
+    # 📁 n95a_core_library/lib_5a_gui
+    "n95a_core_library/lib_5a_gui/muz_engine_option_abstract_model.cpp"
+    "n95a_core_library/lib_5a_gui/muz_engine_option_button_model.cpp"
+    "n95a_core_library/lib_5a_gui/muz_engine_option_checkbox_model.cpp"
+    "n95a_core_library/lib_5a_gui/muz_engine_option_spinbox_model.cpp"
+    "n95a_core_library/lib_5a_gui/muz_engine_option_textbox_model.cpp"
+    "n95a_core_library/lib_5a_gui/muz_engine_settings_initialize_service.cpp"
+    "n95a_core_library/lib_5a_gui/muz_engine_settings_model.cpp"
+    # 📁 n95a_core_library/lib_5a_shogi
+    "n95a_core_library/lib_5a_shogi/muz_shogi_model.cpp"
+    # 📁 n95a_core_library/lib_5a_toybox_n1
+    "n95a_core_library/lib_5a_toybox_n1/muz_position_n1_model.cpp"
+    # 📁 n95a_core_library/lib_55a_toybox_95b_hand_stand
+    "n95a_core_library/lib_55a_toybox_95b_hand_stand/muz_hand_stand_model.cpp"
+    "n95a_core_library/lib_55a_toybox_95b_hand_stand/muz_hand_stand_collection_service.cpp"
+    # 📁 n95a_core_library/lib_55a_toybox_94b_board
+    "n95a_core_library/lib_55a_toybox_94b_board/muz_board_model.cpp" 
+    # 📁 n95a_core_library/lib_5a_toybox_n2
+    "n95a_core_library/lib_5a_toybox_n2/char_to_piece_usi.cpp"
+    "n95a_core_library/lib_5a_toybox_n2/muz_position_n2_model.cpp"
+    "n95a_core_library/lib_5a_toybox_n2/piece_types.cpp"
+    # 📁 n95a_core_library/lib_5a_toybox_n3
+    "n95a_core_library/lib_5a_toybox_n3/muz_position_n3_model.cpp"
     #
     # [views]
     #
