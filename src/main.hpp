@@ -3,7 +3,7 @@
 //      または、プロジェクト専用のインクルード ファイル。
 
 #pragma once
-#include "n55a_game_engine/muz_game_engine_service.hpp"
+#include "n55a_game_engine/n55a11b_game_engine_service.hpp"
 #include "n91a_application/muz_logging_service.hpp"
 #include <iostream>
 #include <cstdio>    // printf を使うために必要

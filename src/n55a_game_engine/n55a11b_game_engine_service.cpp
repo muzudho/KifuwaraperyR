@@ -5,7 +5,7 @@
 #include "../n95a_core_library/lib_55a_toybox_95b_hand_stand/muz_hand_stand_collection_service.hpp"
 #include "../n11a_views/view_55a_toybox/muz_5a1b_hand_stand_view.hpp"
 #include "../n11a_views/view_55a_toybox/muz_5a25b_board_view.hpp"
-#include "muz_game_engine_service.hpp"
+#include "n55a11b_game_engine_service.hpp"
 
 using namespace std;
 
