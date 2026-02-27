@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../lib_5a_toybox_2b_board/piece.hpp"
+#include "../core_library/lib_55a_toybox_94b_board/piece.hpp"
 #include <string>
 
 class MuzPieceView
