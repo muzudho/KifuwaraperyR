@@ -56,6 +56,14 @@ public:
 
 
 	/// <summary>
+	/// 盤面をクリアーするぜ（＾～＾）
+	/// </summary>
+	void clear() {
+		std::fill(std::begin(piece_), std::end(piece_), Piece::Empty);
+    }
+
+
+	/// <summary>
 	///		<pre>
 	/// 盤上のマスに駒を置く
 	/// 

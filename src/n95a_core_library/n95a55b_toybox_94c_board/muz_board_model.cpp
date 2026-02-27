@@ -34,11 +34,15 @@ void MuzBoardModel::set_piece(const Square sq, const Piece piece)
 
 bool MuzBoardModel::from_string(std::string_view board_str)
 {
-	Square sq = A9;               // 仮の初期位置
+	// 盤面をクリアーしないといけない（＾～＾）
+    this->clear();
+
+	Square sq = M91;               // 先手から見て左上隅。SFENの最初のマス。オリジナルでは A9 だったが、わたしは M91 を入れるぜ（＾～＾）
 	Piece promote = Piece::UnPromoted;
 
 	for (char ch : board_str)
 	{
+		// 数値が入っていたら、その分だけ西へ進めだぜ（＾～＾）
 		if (std::isdigit(ch))
 		{
 			sq = static_cast<Square>(
@@ -46,6 +50,7 @@ bool MuzBoardModel::from_string(std::string_view board_str)
 				static_cast<int>(SquareDelta::DeltaE) * (ch - '0')
 				);
 		}
+		// 次の段の左端隅へ進めだぜ（＾～＾）
 		else if (ch == '/')
 		{
 			sq = static_cast<Square>(
