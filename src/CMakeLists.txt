@@ -8,9 +8,9 @@ add_executable (KifuwaraperyR
     # 📁 src/application
     "application/muz_default_logger_model.cpp"
     "application/muz_logging_service.cpp"
-    # 📁 concept_game_engine
-    "concept_game_engine/muz_game_engine_service.cpp"
-    "concept_game_engine/muz_game_engine_storage_model.cpp"
+    # 📁 game_engine
+    "game_engine/muz_game_engine_service.cpp"
+    "game_engine/muz_game_engine_storage_model.cpp"
     #
     # ［core_library］
     #
