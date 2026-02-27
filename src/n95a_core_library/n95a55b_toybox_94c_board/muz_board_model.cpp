@@ -37,7 +37,7 @@ bool MuzBoardModel::from_string(std::string_view board_str)
 	// 盤面をクリアーしないといけない（＾～＾）
     this->clear();
 
-	Square sq = M91;               // 先手から見て左上隅。SFENの最初のマス。オリジナルでは A9 だったが、わたしは M91 を入れるぜ（＾～＾）
+	Square sq = M91;               // 先手から見て左上隅（９筋一段目）。SFENの最初のマス。オリジナルでは A9 だったが、わたしは M91 を入れるぜ（＾～＾）
 	Piece promote = Piece::UnPromoted;
 
 	for (char ch : board_str)
@@ -47,24 +47,25 @@ bool MuzBoardModel::from_string(std::string_view board_str)
 		{
 			sq = static_cast<Square>(
 				static_cast<int>(sq) +
-				static_cast<int>(SquareDelta::DeltaE) * (ch - '0')
-				);
+				static_cast<int>(SquareDelta::DeltaE) * (ch - '0'));
 		}
-		// 次の段の左端隅へ進めだぜ（＾～＾）
+        // 次の段の左端隅へ進めだぜ（＾～＾）つまり西に９マス、南に１マス進めだぜ（＾～＾）
 		else if (ch == '/')
 		{
 			sq = static_cast<Square>(
 				static_cast<int>(sq) +
 				static_cast<int>(SquareDelta::DeltaW) * 9 +
-				static_cast<int>(SquareDelta::DeltaS)
-				);
+				static_cast<int>(SquareDelta::DeltaS));
 		}
+        // 駒の前に「+」があったら、その駒は成っているぜ（＾～＾）
 		else if (ch == '+')
 		{
 			promote = Piece::Promoted;
 		}
+		// 駒を表す文字なら（＾～＾）
 		else if (g_charToPieceUSI.IsLegalChar(ch))
 		{
+            // 盤の外に飛び出てたらおかしいぜ（＾～＾）
 			if (!ConvSquare::CONTAINS_OF10(sq)) return false;
 
 			Piece p = (Piece)(g_charToPieceUSI.GetValue(ch) + promote);
