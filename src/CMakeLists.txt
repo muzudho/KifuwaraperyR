@@ -5,9 +5,9 @@
 
 # 実行ファイルにコンパイルするソースファイル（.cpp）を全部羅列してください。（.hppは不要）
 add_executable (KifuwaraperyR
-    # 📁 src/concept_app
-    "concept_app/muz_default_logger_model.cpp"
-    "concept_app/muz_logging_service.cpp"
+    # 📁 src/application
+    "application/muz_default_logger_model.cpp"
+    "application/muz_logging_service.cpp"
     # 📁 concept_game_engine
     "concept_game_engine/muz_game_engine_service.cpp"
     "concept_game_engine/muz_game_engine_storage_model.cpp"

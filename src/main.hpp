@@ -4,7 +4,7 @@
 
 #pragma once
 #include "concept_game_engine/muz_game_engine_service.hpp"
-#include "concept_app/muz_logging_service.hpp"
+#include "application/muz_logging_service.hpp"
 #include <iostream>
 #include <cstdio>    // printf を使うために必要
 #include <filesystem>
