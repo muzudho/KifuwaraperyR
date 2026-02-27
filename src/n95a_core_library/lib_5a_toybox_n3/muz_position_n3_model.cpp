@@ -43,7 +43,7 @@ void MuzPositionN3Model::Set(std::string_view sfen)
 
 	// 2. 手番
 	if (it == parts.end()) goto fail;
-	if (!ParseTurn(*it)) goto fail;
+	if (!this->get_turn().from_string(*it)) goto fail;
 	++it;
 
 	// 3. 駒台（持ち駒）
@@ -66,15 +66,6 @@ void MuzPositionN3Model::Set(std::string_view sfen)
 
 fail:
 	std::cout << "incorrect SFEN string : " << sfen << "\n";
-}
-
-
-// 手番
-bool MuzPositionN3Model::ParseTurn(std::string_view turn_str)
-{
-	if (turn_str == "b") { m_turn_ = Color::Black; return true; }
-	if (turn_str == "w") { m_turn_ = Color::White; return true; }
-	return false;
 }
 
 
@@ -104,5 +95,5 @@ int MuzPositionN3Model::ParsePly(std::string_view ply_str)
 
 	// 元のロジックを再現（1手目を2とかにするやつ）
 	// ※ 2*(n-1) + (自分が白なら1) という形が多い
-	return std::max(2 * (value - 1), 0) + static_cast<int>(m_turn_ == Color::White);
+	return std::max(2 * (value - 1), 0) + static_cast<int>(turn_.is_white());
 }

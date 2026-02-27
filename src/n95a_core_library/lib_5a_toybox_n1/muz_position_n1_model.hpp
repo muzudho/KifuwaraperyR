@@ -3,6 +3,7 @@
 // MuzPositionN1Model では使ってないヘッダーファイルでも、他のクラスが MuzPositionN1Model をインクルードすれば lib_5a_toybox_n1 のヘッダーファイルが全部付いてくるようにします。
 #include "../n95a55b_toybox_94c_board/muz_board_model.hpp"
 #include "../n95a55b_toybox_96c_turn/color.hpp"
+#include "../n95a55b_toybox_96c_turn/muz_turn_model.hpp"
 #include "piece_type.hpp"
 #include "ply.hpp"
 
@@ -34,7 +35,7 @@ protected:
 	/// <summary>
 	/// 手番
 	/// </summary>
-	Color m_turn_;
+	MuzTurnModel turn_;
 
     /// <summary>
     /// ボードの状態を表すぜ（＾～＾）
@@ -70,4 +71,7 @@ protected:
 
     const MuzBoardModel& get_board() const { return this->board_; }
 	MuzBoardModel& get_board() { return this->board_; }
+
+	const MuzTurnModel& get_turn() const { return this->turn_; }
+	MuzTurnModel& get_turn() { return this->turn_; }
 };
