@@ -67,4 +67,5 @@ public:
 	void set_usi();
 
     const MuzBoardModel& get_board() const;
+	MuzBoardModel& get_board();
 };

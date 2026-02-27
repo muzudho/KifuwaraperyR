@@ -339,8 +339,11 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             }
             // 盤面だけセット
             //      - 例： `boardset lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL`
+            //      - 例： `boardset 4k4/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/4K4`
+            //      - 例： `boardset 9/9/9/9/9/9/9/9/9`
             else if (tokens[0] == "boardset")
             {
+                this->gameEngineStore_->get_board().from_string(tokens[1]);
             }
             else
             {

@@ -36,3 +36,7 @@ const MuzBoardModel& MuzGameEngineStorageModel::get_board() const
 {
     return this->board_;
 }
+MuzBoardModel& MuzGameEngineStorageModel::get_board()
+{
+    return this->board_;
+}
