@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../lib_5a_toybox_n1/muz_position_n1_model.hpp"
+#include "piece.hpp"
 #include <map>
 
 /// <summary>

@@ -5,17 +5,15 @@
 
 # 実行ファイルにコンパイルするソースファイル（.cpp）を全部羅列してください。（.hppは不要）
 add_executable (KifuwaraperyR
-    # 📁 src/n91a_application
-    "n91a_application/muz_default_logger_model.cpp"
-    "n91a_application/muz_logging_service.cpp"
     # 📁 n55a_game_engine
     "n55a_game_engine/n55a11b_game_engine_service.cpp"
     "n55a_game_engine/n55a55b_game_engine_storage_model.cpp"
+    # 📁 src/n91a_application
+    "n91a_application/muz_default_logger_model.cpp"
+    "n91a_application/muz_logging_service.cpp"
     #
     # ［n95a_core_library］
     #
-    # 📁 n95a_core_library/n95a95b_infrastructure_94a_cli
-    "n95a_core_library/n95a95b_infrastructure_94a_cli/muz_cli_service.cpp"
     # 📁 n95a_core_library/lib_5a_gui
     "n95a_core_library/lib_5a_gui/muz_engine_option_abstract_model.cpp"
     "n95a_core_library/lib_5a_gui/muz_engine_option_button_model.cpp"
@@ -28,17 +26,19 @@ add_executable (KifuwaraperyR
     "n95a_core_library/lib_5a_shogi/muz_shogi_model.cpp"
     # 📁 n95a_core_library/lib_5a_toybox_n1
     "n95a_core_library/lib_5a_toybox_n1/muz_position_n1_model.cpp"
-    # 📁 n95a_core_library/n95a55b_toybox_95c_hand_stand
-    "n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_model.cpp"
-    "n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_collection_service.cpp"
-    # 📁 n95a_core_library/n95a55b_toybox_94c_board
-    "n95a_core_library/n95a55b_toybox_94c_board/muz_board_model.cpp" 
     # 📁 n95a_core_library/lib_5a_toybox_n2
-    "n95a_core_library/lib_5a_toybox_n2/char_to_piece_usi.cpp"
     "n95a_core_library/lib_5a_toybox_n2/muz_position_n2_model.cpp"
     "n95a_core_library/lib_5a_toybox_n2/piece_types.cpp"
     # 📁 n95a_core_library/lib_5a_toybox_n3
     "n95a_core_library/lib_5a_toybox_n3/muz_position_n3_model.cpp"
+    # 📁 n95a_core_library/n95a55b_toybox_94c_board
+    "n95a_core_library/n95a55b_toybox_94c_board/char_to_piece_usi.cpp"
+    "n95a_core_library/n95a55b_toybox_94c_board/muz_board_model.cpp" 
+    # 📁 n95a_core_library/n95a55b_toybox_95c_hand_stand
+    "n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_model.cpp"
+    "n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_collection_service.cpp"
+    # 📁 n95a_core_library/n95a95b_infrastructure_94a_cli
+    "n95a_core_library/n95a95b_infrastructure_94a_cli/muz_cli_service.cpp"
     #
     # [n11a_views]
     #

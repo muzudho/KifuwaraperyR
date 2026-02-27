@@ -4,7 +4,6 @@
 #include "../lib_5a_toybox_n2/muz_position_n2_model.hpp"
 #include "../n95a55b_toybox_95c_hand_stand/muz_hand_stand_model.hpp"
 #include "../n95a55b_toybox_95c_hand_stand/muz_hand_stand_collection_service.hpp"
-#include "square_ope.hpp"
 #include <string_view>
 #include <charconv>     // ← これが大事！ ParsePly() で std::from_chars を使ってる
 
@@ -22,11 +21,6 @@ protected:
 	/// </summary>
 	/// <param name="sfen"></param>
 	void Set(std::string_view sfen);
-
-    /// <summary>
-    /// 盤上のマスに駒を置く
-    /// </summary>
-	bool ParseBoard(std::string_view board_str);
 
 	bool ParseTurn(std::string_view turn_str);
 

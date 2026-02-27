@@ -38,7 +38,7 @@ void MuzPositionN3Model::Set(std::string_view sfen)
 
 	// 1. 盤面部分
 	if (it == parts.end()) goto fail;
-	if (!ParseBoard(*it)) goto fail;
+	if (!this->get_board().from_string(*it)) goto fail;
 	++it;
 
 	// 2. 手番
@@ -66,56 +66,6 @@ void MuzPositionN3Model::Set(std::string_view sfen)
 
 fail:
 	std::cout << "incorrect SFEN string : " << sfen << "\n";
-}
-
-
-// 盤上の駒
-bool MuzPositionN3Model::ParseBoard(std::string_view board_str)
-{
-	Square sq = A9;               // 仮の初期位置
-	Piece promote = Piece::UnPromoted;
-
-	for (char ch : board_str)
-	{
-		if (std::isdigit(ch))
-		{
-			sq = static_cast<Square>(
-				static_cast<int>(sq) +
-				static_cast<int>(SquareDelta::DeltaE) * (ch - '0')
-				);
-		}
-		else if (ch == '/')
-		{
-			sq = static_cast<Square>(
-				static_cast<int>(sq) +
-				static_cast<int>(SquareDelta::DeltaW) * 9 +
-				static_cast<int>(SquareDelta::DeltaS)
-				);
-		}
-		else if (ch == '+')
-		{
-			promote = Piece::Promoted;
-		}
-		else if (g_charToPieceUSI.IsLegalChar(ch))
-		{
-			if (!ConvSquare::CONTAINS_OF10(sq)) return false;
-
-			Piece p = (Piece)(g_charToPieceUSI.GetValue(ch) + promote);
-			this->get_board().set_piece(sq, p);
-
-			promote = Piece::UnPromoted;
-
-			sq = static_cast<Square>(
-				static_cast<int>(sq) +
-				static_cast<int>(SquareDelta::DeltaE)
-				);
-		}
-		else
-		{
-			return false;
-		}
-	}
-	return true;
 }
 
 
