@@ -39,11 +39,15 @@ add_executable (KifuwaraperyR
     "core_library/lib_5a_toybox_n2/piece_types.cpp"
     # 📁 core_library/lib_5a_toybox_n3
     "core_library/lib_5a_toybox_n3/muz_position_n3_model.cpp"
-    # 📁 view_5a_toybox
-    "view_5a_toybox/muz_5a1b_hand_stand_view.cpp"
-    "view_5a_toybox/muz_5a25b_board_view.cpp"
+    #
+    # [views]
+    #
+    # 📁 views/view_55a_toybox
+    "views/view_55a_toybox/muz_5a1b_hand_stand_view.cpp"
+    "views/view_55a_toybox/muz_5a24b1c_piece_view.cpp"
+    "views/view_55a_toybox/muz_5a25b_board_view.cpp"
     # 📁 src, その他
-    "main.cpp"  "view_5a_toybox/muz_5a24b1c_piece_view.cpp")
+    "main.cpp")
 
 
 #if (CMAKE_VERSION VERSION_GREATER 3.12)

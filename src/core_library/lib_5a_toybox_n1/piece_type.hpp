@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "../core_library/lib_95a_cpp/muz_int.hpp"
+#include "../lib_95a_cpp/muz_int.hpp"
 
 /// <summary>
 /// pc が遠隔駒であるかを調べるのに使います。

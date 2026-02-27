@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../core_library/lib_55a_toybox_95b_hand_stand/color.hpp"
-#include "../core_library/lib_55a_toybox_95b_hand_stand/muz_hand_stand_model.hpp"
+#include "../../core_library/lib_55a_toybox_95b_hand_stand/color.hpp"
+#include "../../core_library/lib_55a_toybox_95b_hand_stand/muz_hand_stand_model.hpp"
 #include <iostream>
 
 /// <summary>
