@@ -1,5 +1,5 @@
-#include "muz_5a24b1c_piece_view.hpp"
-#include "muz_5a25b_board_view.hpp"
+#include "n11a55b94c_board_view.hpp"
+#include "n11a55b100c_piece_view.hpp"
 #include <iomanip>   // ← これ必須！ setw, right とか入ってる
 
 
