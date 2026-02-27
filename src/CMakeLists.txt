@@ -13,6 +13,7 @@ add_executable (KifuwaraperyR
     "n11a_views/n11a55b_toybox/n11a55b94c_board_view.cpp"
     "n11a_views/n11a55b_toybox/n11a55b95c_hand_stand_view.cpp"
     "n11a_views/n11a55b_toybox/n11a55b100c_piece_view.cpp"
+    "n11a_views/n11a55b_toybox/n11a55b105c_turn_view.cpp"
     #
     # 📁 n55a_game_engine
     #

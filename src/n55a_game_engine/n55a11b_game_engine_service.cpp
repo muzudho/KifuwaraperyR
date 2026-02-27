@@ -1,10 +1,11 @@
-#include "../n95a_core_library/n95a95b_infrastructure_95c_cpp/muz_string_service.hpp"
-#include "../n95a_core_library/n95a95b_infrastructure_94a_cli/muz_cli_service.hpp"
+#include "../n11a_views/n11a55b_toybox/n11a55b94c_board_view.hpp"
+#include "../n11a_views/n11a55b_toybox/n11a55b95c_hand_stand_view.hpp"
+#include "../n11a_views/n11a55b_toybox/n11a55b105c_turn_view.hpp"
 #include "../n95a_core_library/lib_5a_gui/muz_engine_settings_initialize_service.hpp"
 #include "../n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_collection_service.hpp"
 #include "../n95a_core_library/n95a55b_toybox_96c_turn/color.hpp"
-#include "../n11a_views/n11a55b_toybox/n11a55b94c_board_view.hpp"
-#include "../n11a_views/n11a55b_toybox/n11a55b95c_hand_stand_view.hpp"
+#include "../n95a_core_library/n95a95b_infrastructure_95c_cpp/muz_string_service.hpp"
+#include "../n95a_core_library/n95a95b_infrastructure_94a_cli/muz_cli_service.hpp"
 #include "n55a11b_game_engine_service.hpp"
 
 using namespace std;
@@ -350,6 +351,16 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
                     tokens[1],
                     this->gameEngineStore_->black_hand_stand_,
                     this->gameEngineStore_->white_hand_stand_);
+            }
+            // ----------------------------------------
+            // 手番
+            // ----------------------------------------
+            // 手番の描画
+            else if (tokens[0] == "turnget")
+            {
+                // テスト
+                std::cout << MuzTurnView::to_code(Color::Black) << "\n";
+                std::cout << MuzTurnView::to_code(Color::White) << "\n";
             }
             // ----------------------------------------
             // 無いよ
