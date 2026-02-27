@@ -1,4 +1,4 @@
-#include "../n95a_core_library/lib_95a_cpp/muz_string_service.hpp"
+#include "../n95a_core_library/n95a95b_infrastructure_95c_cpp/muz_string_service.hpp"
 #include "../n95a_core_library/lib_94a_cli/muz_cli_service.hpp"
 #include "../n95a_core_library/lib_5a_gui/muz_engine_settings_initialize_service.hpp"
 #include "../n95a_core_library/lib_55a_toybox_95b_hand_stand/color.hpp"
