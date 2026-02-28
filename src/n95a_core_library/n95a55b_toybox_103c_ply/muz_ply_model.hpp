@@ -70,6 +70,14 @@ public:
 
 
     // ========================================
+    // 主要メソッド
+    // ========================================
+
+
+    void update_from_string(MuzTurnModel turn, std::string_view half_ply_str);
+
+
+    // ========================================
     // サブルーチン
     // ========================================
 
@@ -82,5 +90,5 @@ private:
     ///     - エラーの時はヌル・オプションを返す。
     ///     </pre>
     /// </summary>
-    static std::optional<RadixHalfPly> parse(MuzTurnModel turn, std::string_view turn_str);
+    static std::optional<RadixHalfPly> parse(MuzTurnModel turn, std::string_view half_ply_str);
 };

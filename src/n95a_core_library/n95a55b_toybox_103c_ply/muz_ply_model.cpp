@@ -23,11 +23,22 @@ MuzPlyModel::MuzPlyModel(RadixHalfPly game_ply)
 
 
 // ========================================
+// 主要メソッド
+// ========================================
+
+
+void MuzPlyModel::update_from_string(MuzTurnModel turn, std::string_view half_ply_str)
+{
+	this.radix_half_ply_ = MuzPlyModel::parse(turn, half_ply_str);
+}
+
+
+// ========================================
 // サブルーチン
 // ========================================
 
 
-std::optional<RadixHalfPly> parse(MuzTurnModel _turn, std::string_view half_ply_str)
+std::optional<RadixHalfPly> MuzPlyModel::parse(MuzTurnModel _turn, std::string_view half_ply_str)
 {
 	// 空 or 空白だけ → 即失敗
 	if (half_ply_str.empty()) return std::nullopt;
