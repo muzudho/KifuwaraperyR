@@ -2,7 +2,7 @@
 #include "../n11a_views/n11a55b_toybox/n11a55b95c_hand_stand_view.hpp"
 #include "../n11a_views/n11a55b_toybox/n11a55b105c_turn_view.hpp"
 #include "../n95a_core_library/lib_5a_gui/muz_engine_settings_initialize_service.hpp"
-#include "../n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_collection_service.hpp"
+#include "../n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_collection_model.hpp"
 #include "../n95a_core_library/n95a55b_toybox_103c_ply/ply.hpp"
 #include "../n95a_core_library/n95a55b_toybox_103c_ply/muz_ply_model.hpp"
 #include "../n95a_core_library/n95a55b_toybox_105c_turn/color.hpp"
