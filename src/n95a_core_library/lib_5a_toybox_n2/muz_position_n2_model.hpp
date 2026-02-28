@@ -40,8 +40,4 @@ protected:
 		return this->m_hand_stands_[CLR];
 	}
 	MuzHandStandModel GetHandStand(const Color c) const;
-
-	//void SetHandPiece(const Piece piece, const int num);
-
-	//void SetHandPiece(const Color c, const HandPiece hp, const int num);
 };
