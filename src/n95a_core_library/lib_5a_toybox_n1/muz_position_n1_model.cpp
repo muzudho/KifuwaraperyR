@@ -31,9 +31,3 @@ RadixHalfPly MuzPositionN1Model::GetRadixHalfPly()
 {
 	return this->position_.get_ply_obj().get_radix_half_ply();
 }
-
-
-Color MuzPositionN1Model::GetTurn()
-{
-	return this->position_.get_turn().get_color();
-}

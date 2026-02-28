@@ -53,10 +53,4 @@ protected:
 	/// <returns></returns>
 	RadixHalfPly GetRadixHalfPly();
 
-
-	/// <summary>
-	/// 次の手番
-	/// </summary>
-	/// <returns></returns>
-	Color GetTurn();
 };

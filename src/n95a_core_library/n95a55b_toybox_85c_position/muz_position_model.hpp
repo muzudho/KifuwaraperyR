@@ -86,6 +86,12 @@ public:
 	const MuzTurnModel& get_turn() const { return this->turn_; }
 	MuzTurnModel& get_turn() { return this->turn_; }
 
+	/// <summary>
+	/// 手番の色。
+	/// </summary>
+	/// <returns></returns>
+	Color get_turn_color() const { return this->get_turn().get_color(); }
+
 
 	// ========================================
 	// 主要メソッド
