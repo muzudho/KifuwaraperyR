@@ -62,7 +62,7 @@ void MuzPositionN2Model::Set(std::string_view sfen)
 	if (it != parts.end())
 	{
 		MuzTurnModel turn = this->position_.get_turn();	// TODO: これ、仮なんで修正したい（＾～＾）
-		if (!this->ply_obj_.update_from_string(turn, *it)) {
+		if (!this->position_.get_ply_obj().update_from_string(turn, *it)) {
 			std::cout << "incorrect SFEN string (RadixHalfPly) : " << sfen << "\n";
 			return;
 		}
