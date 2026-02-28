@@ -33,12 +33,8 @@ add_executable (KifuwaraperyR
     "n95a_core_library/lib_5a_gui/muz_engine_option_textbox_model.cpp"
     "n95a_core_library/lib_5a_gui/muz_engine_settings_initialize_service.cpp"
     "n95a_core_library/lib_5a_gui/muz_engine_settings_model.cpp"
-    # 📁 n95a_core_library/lib_5a_shogi
-    "n95a_core_library/lib_5a_shogi/muz_shogi_model.cpp"
-    # 📁 n95a_core_library/lib_5a_toybox_n1
-    
-    # 📁 n95a_core_library/lib_5a_toybox_n2
-    
+    #
+    # 📁 n95a_core_library/lib_5a_toybox_n2    
     "n95a_core_library/lib_5a_toybox_n2/piece_types.cpp"
     #
     # 📁 n95a55b_toybox_85c_position/muz_position_model
