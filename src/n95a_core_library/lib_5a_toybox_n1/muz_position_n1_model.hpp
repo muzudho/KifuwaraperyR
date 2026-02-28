@@ -5,8 +5,6 @@
 #include "../n95a55b_toybox_94c_board/muz_board_model.hpp"
 #include "../n95a55b_toybox_103c_ply/muz_ply_model.hpp"
 #include "../n95a55b_toybox_103c_ply/ply.hpp"
-#include "../n95a55b_toybox_105c_turn/color.hpp"
-#include "../n95a55b_toybox_105c_turn/muz_turn_model.hpp"
 #include "piece_type.hpp"
 
 class MuzPositionN1Model
@@ -47,16 +45,6 @@ protected:
 	/// </summary>
 	MuzPlyModel ply_obj_;
 
-	/// <summary>
-	/// 手番
-	/// </summary>
-	MuzTurnModel turn_;
-
-    /// <summary>
-    /// ボードの状態を表すぜ（＾～＾）
-    /// </summary>
-	MuzBoardModel board_;
-
 
 	// ========================================
 	// アクセッサ
@@ -82,11 +70,4 @@ protected:
 	/// </summary>
 	/// <returns></returns>
 	Color GetTurn();
-
-
-    const MuzBoardModel& get_board() const { return this->board_; }
-	MuzBoardModel& get_board() { return this->board_; }
-
-	const MuzTurnModel& get_turn() const { return this->turn_; }
-	MuzTurnModel& get_turn() { return this->turn_; }
 };

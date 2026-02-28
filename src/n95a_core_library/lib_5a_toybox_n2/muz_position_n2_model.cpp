@@ -38,14 +38,14 @@ void MuzPositionN2Model::Set(std::string_view sfen)
 	auto it = parts.begin();
 
 	// 1. 盤面部分
-	if (it == parts.end() || !this->get_board().from_string(*it)) {
+	if (it == parts.end() || !this->position_.get_board().from_string(*it)) {
 		std::cout << "incorrect SFEN string (Board) : " << sfen << "\n";
 		return;
 	}
 	++it;
 
 	// 2. 手番
-	if (it == parts.end() || !this->get_turn().from_string(*it)) {
+	if (it == parts.end() || !this->position_.get_turn().from_string(*it)) {
 		std::cout << "incorrect SFEN string (Turn) : " << sfen << "\n";
 		return;
 	}
@@ -61,7 +61,7 @@ void MuzPositionN2Model::Set(std::string_view sfen)
 	// 4. 手数（オプション）
 	if (it != parts.end())
 	{
-		MuzTurnModel turn = this->get_turn();	// TODO: これ、仮なんで修正したい（＾～＾）
+		MuzTurnModel turn = this->position_.get_turn();	// TODO: これ、仮なんで修正したい（＾～＾）
 		if (!this->ply_obj_.update_from_string(turn, *it)) {
 			std::cout << "incorrect SFEN string (RadixHalfPly) : " << sfen << "\n";
 			return;

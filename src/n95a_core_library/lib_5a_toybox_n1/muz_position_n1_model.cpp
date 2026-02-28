@@ -11,8 +11,8 @@
 
 MuzPositionN1Model::MuzPositionN1Model()
 {
-	// 盤上を空っぽにするぜ（＾～＾）
-    this->board_ = MuzBoardModel{};
+	//// 盤上を空っぽにするぜ（＾～＾）
+ //   this->board_ = MuzBoardModel{};
 }
 
 
@@ -35,5 +35,5 @@ RadixHalfPly MuzPositionN1Model::GetRadixHalfPly()
 
 Color MuzPositionN1Model::GetTurn()
 {
-	return this->turn_.get_color();
+	return this->position_.get_turn().get_color();
 }
