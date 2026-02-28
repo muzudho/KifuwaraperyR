@@ -24,6 +24,25 @@ MuzHandStandModel MuzHandStandCollectionModel::GetHandStand(const Color c) const
 // ========================================
 
 
+bool MuzHandStandCollectionModel::update_from_string(std::string_view hand_str)
+{
+    auto result = MuzHandStandCollectionModel::parse(hand_str);
+    if (result) {
+        auto [b_hs, w_hs] = result.value();
+        this->m_hand_stands_[Black] = b_hs;
+        this->m_hand_stands_[White] = w_hs;
+        return true;
+    }
+
+    return false;
+}
+
+
+// ========================================
+// サブルーチン
+// ========================================
+
+
 std::optional<std::pair<MuzHandStandModel, MuzHandStandModel>> MuzHandStandCollectionModel::parse(
     std::string_view hand_str)
 {

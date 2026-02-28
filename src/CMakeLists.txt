@@ -41,6 +41,9 @@ add_executable (KifuwaraperyR
     "n95a_core_library/lib_5a_toybox_n2/muz_position_n2_model.cpp"
     "n95a_core_library/lib_5a_toybox_n2/piece_types.cpp"
     #
+    # 📁 n95a55b_toybox_85c_position/muz_position_model
+    "n95a_core_library/n95a55b_toybox_85c_position/muz_position_model.cpp"
+    #
     # 📁 n95a_core_library/n95a55b_toybox_94c_board
     "n95a_core_library/n95a55b_toybox_94c_board/char_to_piece_usi.cpp"
     "n95a_core_library/n95a55b_toybox_94c_board/muz_board_model.cpp" 

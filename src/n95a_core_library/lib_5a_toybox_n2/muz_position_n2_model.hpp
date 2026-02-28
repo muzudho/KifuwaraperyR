@@ -2,14 +2,6 @@
 
 // MuzPositionN2Model では使ってないヘッダーファイルでも、他のクラスが MuzPositionN2Model をインクルードすれば lib_5a_toybox_n2 のヘッダーファイルが全部付いてくるようにします。
 #include "../lib_5a_toybox_n1/muz_position_n1_model.hpp"
-#include "../n95a55b_toybox_94c_board/char_to_piece_usi.hpp"
-#include "../n95a55b_toybox_95c_hand_stand/muz_hand_stand_collection_model.hpp"
-#include "hand_piece_ope.hpp"
-#include "piece_ope.hpp"
-#include "piece_types.hpp"
-#include "piece_type_ope.hpp"
-#include "../lib_5a_toybox_n2/muz_position_n2_model.hpp"
-#include "../n95a55b_toybox_95c_hand_stand/muz_hand_stand_model.hpp"
 #include "../n95a55b_toybox_95c_hand_stand/muz_hand_stand_collection_model.hpp"
 #include <string_view>
 
@@ -17,36 +9,36 @@ class MuzPositionN2Model : public MuzPositionN1Model
 {
 
 
-	// ========================================
-	// フィールド
-	// ========================================
+    // ========================================
+    // フィールド
+    // ========================================
 
 
 protected:
-	/// <summary>
+    /// <summary>
     /// 先手、後手の駒台をまとめて表すぜ（＾～＾） SFEN 形式がそうなってるから（＾～＾）
     /// </summary>
-	MuzHandStandCollectionModel hand_stand_collection_;
+    MuzHandStandCollectionModel hand_stand_collection_;
 
 
-	// ========================================
-	// アクセッサ
-	// ========================================
+    // ========================================
+    // アクセッサ
+    // ========================================
 
 
 public:
-	const MuzHandStandCollectionModel& get_hand_stand_collection() const { return this->hand_stand_collection_; }
-	MuzHandStandCollectionModel& get_hand_stand_collection() { return this->hand_stand_collection_; }
+    const MuzHandStandCollectionModel& get_hand_stand_collection() const { return this->hand_stand_collection_; }
+    MuzHandStandCollectionModel& get_hand_stand_collection() { return this->hand_stand_collection_; }
 
 
-	// ========================================
-	// 主要メソッド
-	// ========================================
+    // ========================================
+    // 主要メソッド
+    // ========================================
 
 
-	/// <summary>
-	/// 局面をセット
-	/// </summary>
-	/// <param name="sfen"></param>
-	void Set(std::string_view sfen);
+    /// <summary>
+    /// 局面をセット
+    /// </summary>
+    /// <param name="sfen"></param>
+    void Set(std::string_view sfen);
 };
