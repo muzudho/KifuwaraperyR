@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../n95a55b_toybox_105c_turn/muz_turn_model.hpp"
 #include "ply.hpp"
 #include <string_view>
 
@@ -67,5 +68,5 @@ public:
     ///     - エラーの時は何もセットせず偽を返す。
     ///     </pre>
     /// </summary>
-    bool from_string(std::string_view turn_str);
+    bool from_string(MuzTurnModel turn, std::string_view turn_str);
 };

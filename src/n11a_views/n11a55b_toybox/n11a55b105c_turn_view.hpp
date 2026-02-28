@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../n95a_core_library/n95a55b_toybox_96c_turn/color.hpp"
+#include "../../n95a_core_library/n95a55b_toybox_105c_turn/color.hpp"
 #include <string>
 
 class MuzTurnView
