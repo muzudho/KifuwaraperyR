@@ -36,7 +36,7 @@ add_executable (KifuwaraperyR
     # 📁 n95a_core_library/lib_5a_shogi
     "n95a_core_library/lib_5a_shogi/muz_shogi_model.cpp"
     # 📁 n95a_core_library/lib_5a_toybox_n1
-    "n95a_core_library/lib_5a_toybox_n1/muz_position_n1_model.cpp"
+    
     # 📁 n95a_core_library/lib_5a_toybox_n2
     
     "n95a_core_library/lib_5a_toybox_n2/piece_types.cpp"

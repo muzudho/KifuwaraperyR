@@ -73,11 +73,17 @@ public:
 	MuzHandStandCollectionModel& get_hand_stand_collection() { return this->hand_stand_collection_; }
 
 	/// <summary>
-	/// 将棋式の手数、つまり開始局面を０とする。
+	/// 手数オブジェクトを取得。
 	/// </summary>
 	/// <returns></returns>
 	const MuzPlyModel& get_ply_obj() const { return this->ply_obj_; }
 	MuzPlyModel& get_ply_obj() { return this->ply_obj_; }
+
+	/// <summary>
+	/// ［将棋式の手数、つまり開始局面を０とする］を取得。
+	/// </summary>
+	/// <returns></returns>
+	RadixHalfPly get_radix_half_ply() { return this->get_ply_obj().get_radix_half_ply(); }
 
 	/// <summary>
 	/// 手番。
