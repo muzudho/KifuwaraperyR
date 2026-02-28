@@ -30,7 +30,7 @@ private:
 	/// <summary>
 	/// 先後対局者別の手駒
 	/// </summary>
-	MuzHandStandModel m_hand_stands_[g_COLOR_NUM];
+	MuzHandStandModel hand_stands_[g_COLOR_NUM];
 
 
 	// ========================================
@@ -45,11 +45,11 @@ public:
 	/// <typeparam name="CLR"></typeparam>
 	/// <returns></returns>
 	template<Color CLR>
-	MuzHandStandModel GetHandStand() const
+	MuzHandStandModel get_hand_stand() const
 	{
-		return this->m_hand_stands_[CLR];
+		return this->hand_stands_[CLR];
 	}
-	MuzHandStandModel GetHandStand(const Color c) const;
+	MuzHandStandModel get_hand_stand(const Color c) const;
 
 
 	// ========================================

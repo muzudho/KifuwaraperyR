@@ -10,8 +10,8 @@
 
 MuzHandStandCollectionModel::MuzHandStandCollectionModel()
 {
-    this->m_hand_stands_[Black] = MuzHandStandModel{};
-    this->m_hand_stands_[White] = MuzHandStandModel{};
+    this->hand_stands_[Black] = MuzHandStandModel{};
+    this->hand_stands_[White] = MuzHandStandModel{};
 }
 
 
@@ -25,9 +25,9 @@ MuzHandStandCollectionModel::MuzHandStandCollectionModel()
 /// </summary>
 /// <param name="c"></param>
 /// <returns></returns>
-MuzHandStandModel MuzHandStandCollectionModel::GetHandStand(const Color c) const
+MuzHandStandModel MuzHandStandCollectionModel::get_hand_stand(const Color c) const
 {
-    return this->m_hand_stands_[c];
+    return this->hand_stands_[c];
 }
 
 
@@ -41,8 +41,8 @@ bool MuzHandStandCollectionModel::update_from_string(std::string_view hand_str)
     auto result = MuzHandStandCollectionModel::parse(hand_str);
     if (result) {
         auto [b_hs, w_hs] = result.value();
-        this->m_hand_stands_[Black] = b_hs;
-        this->m_hand_stands_[White] = w_hs;
+        this->hand_stands_[Black] = b_hs;
+        this->hand_stands_[White] = w_hs;
         return true;
     }
 
