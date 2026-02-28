@@ -74,7 +74,7 @@ public:
     // ========================================
 
 
-    void update_from_string(MuzTurnModel turn, std::string_view half_ply_str);
+    bool update_from_string(MuzTurnModel turn, std::string_view half_ply_str);
 
 
     // ========================================

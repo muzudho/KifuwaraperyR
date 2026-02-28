@@ -12,7 +12,7 @@
 std::optional<MuzPlyModel> MuzPlyModel::from_string(MuzTurnModel _turn, std::string_view half_ply_str)
 {
     auto radix_half_ply = MuzPlyModel::parse(_turn, half_ply_str);
-	return MuzPlyModel(radix_half_ply);
+	return MuzPlyModel(radix_half_ply.value());
 }
 
 
@@ -27,9 +27,15 @@ MuzPlyModel::MuzPlyModel(RadixHalfPly game_ply)
 // ========================================
 
 
-void MuzPlyModel::update_from_string(MuzTurnModel turn, std::string_view half_ply_str)
+bool MuzPlyModel::update_from_string(MuzTurnModel turn, std::string_view half_ply_str)
 {
-	this.radix_half_ply_ = MuzPlyModel::parse(turn, half_ply_str);
+    auto radix_half_ply = MuzPlyModel::parse(turn, half_ply_str);
+	if (radix_half_ply) {
+		this->radix_half_ply_ = radix_half_ply.value();
+		return true;
+	}
+
+	return false;
 }
 
 
