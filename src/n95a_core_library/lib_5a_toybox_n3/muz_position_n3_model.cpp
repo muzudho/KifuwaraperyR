@@ -51,7 +51,7 @@ void MuzPositionN3Model::Set(std::string_view sfen)
 	++it;
 
 	// 3. 駒台（持ち駒）
-    MuzHandStandModel blackHandStand, whiteHandStand;
+    MuzHandStandModel blackHandStand, whiteHandStand;	// TODO: これらの変数は、Position クラスのメンバ変数にしたい（＾～＾）
     MuzHandStandCollectionService handStandCollectionSvc;
 	if (it == parts.end() || !handStandCollectionSvc.parse_hand_stand_collection(*it, blackHandStand, whiteHandStand)) {
 		std::cout << "incorrect SFEN string (Hand stand) : " << sfen << "\n";

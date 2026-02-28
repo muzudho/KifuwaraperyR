@@ -4,8 +4,8 @@
 #include "../n95a55b_toybox_94c_board/muz_board_model.hpp"
 #include "../n95a55b_toybox_96c_turn/color.hpp"
 #include "../n95a55b_toybox_96c_turn/muz_turn_model.hpp"
+#include "../n95a55b_toybox_97c_ply/ply.hpp"
 #include "piece_type.hpp"
-#include "ply.hpp"
 
 class MuzPositionN1Model
 {
