@@ -348,7 +348,7 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             //      - 例： `handset 2PR`
             else if (tokens[0] == "handset")
             {
-                MuzHandStandCollectionService handStandCollectionSvc;
+                MuzHandStandCollectionModel handStandCollectionSvc;
                 handStandCollectionSvc.parse_hand_stand_collection(
                     tokens[1],
                     this->gameEngineStore_->black_hand_stand_,

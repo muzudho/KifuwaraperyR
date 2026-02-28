@@ -6,7 +6,7 @@
 /// <summary>
 /// 駒台２つをまとめて表すぜ（＾～＾） SFEN 形式がそうなってるから（＾～＾）
 /// </summary>
-class MuzHandStandCollectionService
+class MuzHandStandCollectionModel
 {
 public:
 

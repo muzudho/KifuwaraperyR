@@ -9,7 +9,7 @@
 
 
 // パース
-bool MuzHandStandCollectionService::parse_hand_stand_collection(
+bool MuzHandStandCollectionModel::parse_hand_stand_collection(
     std::string_view hand_str,
     MuzHandStandModel& b_hs,
     MuzHandStandModel& w_hs)
