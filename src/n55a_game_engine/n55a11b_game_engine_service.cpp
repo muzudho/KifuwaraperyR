@@ -371,7 +371,7 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             else if (tokens[0] == "plyget")
             {
                 // テスト
-                std::cout << "ply = " << MuzPlyModel(123).get_ply() << "\n";
+                std::cout << "game_ply = " << MuzPlyModel(123).get_game_ply() << "\n";
             }
             // ----------------------------------------
             // 無いよ

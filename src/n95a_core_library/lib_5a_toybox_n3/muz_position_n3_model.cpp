@@ -1,4 +1,5 @@
 #include "muz_position_n3_model.hpp"
+#include "../n95a55b_toybox_103c_ply/muz_ply_model.hpp"
 #include <string_view>
 #include <ranges>	// std::views::split と std::views::transform を使うために必要
 #include <iostream>	// std::cout を使うために必要
@@ -62,8 +63,9 @@ void MuzPositionN3Model::Set(std::string_view sfen)
 	// 4. 手数（オプション）
 	if (it != parts.end())
 	{
-		if (auto ply = ParsePly(*it)) {
-			m_gamePly_ = ply;
+        MuzTurnModel turn = this->get_turn();	// TODO: これ、仮なんで修正したい（＾～＾）
+		if (auto muz_ply = MuzPlyModel::from_string(turn, *it)) {
+			m_gamePly_ = muz_ply->get_game_ply();
 		}
 		else {
 			std::cout << "incorrect SFEN string (Ply) : " << sfen << "\n";

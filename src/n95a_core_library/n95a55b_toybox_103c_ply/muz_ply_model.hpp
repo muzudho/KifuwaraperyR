@@ -3,6 +3,7 @@
 #include "../n95a55b_toybox_105c_turn/muz_turn_model.hpp"
 #include "ply.hpp"
 #include <string_view>
+#include <optional>
 
 /// <summary>
 /// 手数
@@ -17,6 +18,16 @@ class MuzPlyModel
 
 
 public:
+    /// <summary>
+    ///     <pre>
+    /// 文字列から何手目かをセット。
+    /// 
+    ///     - エラーの時はヌルを返す。
+    ///     </pre>
+    /// </summary>
+    static std::optional<MuzPlyModel> from_string(MuzTurnModel turn, std::string_view turn_str);
+
+
     MuzPlyModel(Ply ply = (Ply)0);
 
 
@@ -28,12 +39,12 @@ public:
 private:
     /// <summary>
     ///     <pre>
-    /// 何手目か。
+    /// チェスの何手目かの数え方から１引いたもの。［ストックフィッシュ］の書き方を残している（＾～＾）
     /// 
     ///     - 時間管理の役に立つ。
     ///     </pre>
     /// </summary>
-    Ply ply_;
+    Ply game_ply_;
 
 
     // ========================================
@@ -43,30 +54,15 @@ private:
 
 public:
     /// <summary>
-    /// 何手目かを取得
+    /// ストックフィッシュでの［手目］を取得
     /// </summary>
     /// <returns></returns>
-    Ply get_ply() const { return this->ply_; }
+    Ply get_game_ply() const { return this->game_ply_; }
 
 
     /// <summary>
-    /// 何手目かをセット
+    /// ストックフィッシュでの［手目］をセット
     /// </summary>
     /// <param name="turn"></param>
-    void set_ply(const Ply ply) { this->ply_ = ply; }
-
-
-    // ========================================
-    // 主要メソッド
-    // ========================================
-
-
-    /// <summary>
-    ///     <pre>
-    /// 文字列から何手目かをセット。
-    /// 
-    ///     - エラーの時は何もセットせず偽を返す。
-    ///     </pre>
-    /// </summary>
-    bool from_string(MuzTurnModel turn, std::string_view turn_str);
+    void set_game_ply(const Ply ply) { this->game_ply_ = ply; }
 };
