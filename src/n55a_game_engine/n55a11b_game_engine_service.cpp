@@ -172,21 +172,21 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
 {
     // テスト：駒台の初期化
     // TODO: これらの変数は、ポジションに移動したい（＾～＾）
-    this->game_engine_store_->black_hand_stand_.set_count(HRook, 0);
-    this->game_engine_store_->black_hand_stand_.set_count(HBishop, 1);
-    this->game_engine_store_->black_hand_stand_.set_count(HGold, 0);
-    this->game_engine_store_->black_hand_stand_.set_count(HSilver, 4);
-    this->game_engine_store_->black_hand_stand_.set_count(HKnight, 3);
-    this->game_engine_store_->black_hand_stand_.set_count(HLance, 1);
-    this->game_engine_store_->black_hand_stand_.set_count(HPawn, 2);   // とりあえず歩を２枚持ってることにするぜ（＾ｑ＾）
+    this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<Black>().set_count(HRook, 0);
+    this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<Black>().set_count(HBishop, 1);
+    this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<Black>().set_count(HGold, 0);
+    this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<Black>().set_count(HSilver, 4);
+    this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<Black>().set_count(HKnight, 3);
+    this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<Black>().set_count(HLance, 1);
+    this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<Black>().set_count(HPawn, 2);   // とりあえず歩を２枚持ってることにするぜ（＾ｑ＾）
 
-    this->game_engine_store_->white_hand_stand_.set_count(HRook, 2);
-    this->game_engine_store_->white_hand_stand_.set_count(HBishop, 0);
-    this->game_engine_store_->white_hand_stand_.set_count(HGold, 1);
-    this->game_engine_store_->white_hand_stand_.set_count(HSilver, 0);
-    this->game_engine_store_->white_hand_stand_.set_count(HKnight, 1);
-    this->game_engine_store_->white_hand_stand_.set_count(HLance, 0);
-    this->game_engine_store_->white_hand_stand_.set_count(HPawn, 3);   // とりあえず歩を３枚持ってることにするぜ（＾ｑ＾）
+    this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<White>().set_count(HRook, 2);
+    this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<White>().set_count(HBishop, 0);
+    this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<White>().set_count(HGold, 1);
+    this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<White>().set_count(HSilver, 0);
+    this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<White>().set_count(HKnight, 1);
+    this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<White>().set_count(HLance, 0);
+    this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<White>().set_count(HPawn, 3);   // とりあえず歩を３枚持ってることにするぜ（＾ｑ＾）
 
     // テスト：盤の初期化
     // TODO: これらの変数は、ポジションに移動したい（＾～＾）
@@ -338,29 +338,24 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             // 両駒台の描画
             else if (tokens[0] == "handget")
             {
-                MuzHandStandView::print_black(this->game_engine_store_->black_hand_stand_);
-                MuzHandStandView::print_white(this->game_engine_store_->white_hand_stand_);
+                MuzHandStandView::print_black(this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<Black>());
+                MuzHandStandView::print_white(this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<White>());
             }
             // 先手駒台の描画
             else if (tokens[0] == "handb")
             {
-                MuzHandStandView::print_black(this->game_engine_store_->black_hand_stand_);
+                MuzHandStandView::print_black(this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<Black>());
             }
             // 後手駒台の描画
             else if (tokens[0] == "handw")
             {
-                MuzHandStandView::print_white(this->game_engine_store_->white_hand_stand_);
+                MuzHandStandView::print_white(this->game_engine_store_->get_position().get_hand_stand_collection().GetHandStand<White>());
             }
             // 駒台だけセット
             //      - 例： `handset 2PR`
             else if (tokens[0] == "handset")
             {
-                MuzHandStandCollectionModel handStandCollectionSvc;
-                auto result = handStandCollectionSvc.parse(tokens[1]);
-                auto [b_hs, w_hs] = *result;
-
-                this->game_engine_store_->black_hand_stand_ = b_hs;
-                this->game_engine_store_->white_hand_stand_ = w_hs;
+                this->game_engine_store_->get_position().get_hand_stand_collection().update_from_string(tokens[1]);
             }
             // ----------------------------------------
             // 手番

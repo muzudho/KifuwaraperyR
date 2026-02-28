@@ -4,6 +4,18 @@
 
 
 // ========================================
+// 生成／破棄
+// ========================================
+
+
+MuzHandStandCollectionModel::MuzHandStandCollectionModel()
+{
+    this->m_hand_stands_[Black] = MuzHandStandModel{};
+    this->m_hand_stands_[White] = MuzHandStandModel{};
+}
+
+
+// ========================================
 // アクセッサ
 // ========================================
 

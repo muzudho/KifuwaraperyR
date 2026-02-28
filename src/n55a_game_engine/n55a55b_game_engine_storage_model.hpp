@@ -47,11 +47,6 @@ public:
     /// 局面（＾～＾）
     /// </summary>
     MuzPositionModel position_;
-    /// <summary>
-	/// TODO: ［駒台］は［ポジション］クラスに移動したい（＾～＾）
-	/// </summary>
-	MuzHandStandModel black_hand_stand_;
-	MuzHandStandModel white_hand_stand_;
 
 
 	// ========================================
