@@ -11,8 +11,8 @@
 // 次の手が何手目か。エラーのときは -1 を返す。
 std::optional<MuzPlyModel> MuzPlyModel::from_string(MuzTurnModel _turn, std::string_view half_ply_str)
 {
-    auto radix_half_ply = MuzPlyModel::parse(_turn, half_ply_str);
-	return MuzPlyModel(radix_half_ply.value());
+    auto result = MuzPlyModel::parse(_turn, half_ply_str);
+	return MuzPlyModel(result.value());
 }
 
 
