@@ -8,6 +8,10 @@
 #include "piece_ope.hpp"
 #include "piece_types.hpp"
 #include "piece_type_ope.hpp"
+#include "../lib_5a_toybox_n2/muz_position_n2_model.hpp"
+#include "../n95a55b_toybox_95c_hand_stand/muz_hand_stand_model.hpp"
+#include "../n95a55b_toybox_95c_hand_stand/muz_hand_stand_collection_model.hpp"
+#include <string_view>
 
 class MuzPositionN2Model : public MuzPositionN1Model
 {
@@ -35,4 +39,14 @@ public:
 	MuzHandStandCollectionModel& get_hand_stand_collection() { return this->hand_stand_collection_; }
 
 
+	// ========================================
+	// 主要メソッド
+	// ========================================
+
+
+	/// <summary>
+	/// 局面をセット
+	/// </summary>
+	/// <param name="sfen"></param>
+	void Set(std::string_view sfen);
 };

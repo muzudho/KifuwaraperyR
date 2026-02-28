@@ -2,6 +2,7 @@
 
 #include "muz_hand_stand_model.hpp"
 #include <string_view>
+#include <optional>
 
 /// <summary>
 /// 駒台２つをまとめて表すぜ（＾～＾） SFEN 形式がそうなってるから（＾～＾）
