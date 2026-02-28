@@ -56,14 +56,14 @@ private:
 
 public:
     /// <summary>
-    /// ストックフィッシュでの［手数］を取得
+    /// ［将棋式の手数、つまり開始局面を０とする］を取得
     /// </summary>
     /// <returns></returns>
     RadixHalfPly get_radix_half_ply() const { return this->radix_half_ply_; }
 
 
     /// <summary>
-    /// ストックフィッシュでの［手数］をセット
+    /// ［将棋式の手数、つまり開始局面を０とする］をセット
     /// </summary>
     /// <param name="turn"></param>
     void set_radix_half_ply(const RadixHalfPly radix_half_ply) { this->radix_half_ply_ = radix_half_ply; }
