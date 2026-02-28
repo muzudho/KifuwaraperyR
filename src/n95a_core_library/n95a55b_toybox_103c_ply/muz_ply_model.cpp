@@ -9,7 +9,7 @@
 
 
 // 次の手が何手目か。エラーのときは -1 を返す。
-std::optional<MuzPlyModel> MuzPlyModel::from_string(MuzTurnModel turn, std::string_view half_ply_str)
+std::optional<MuzPlyModel> MuzPlyModel::from_string(MuzTurnModel _turn, std::string_view half_ply_str)
 {
 	// 空 or 空白だけ → 即失敗
 	if (half_ply_str.empty()) return std::nullopt;
@@ -58,8 +58,8 @@ std::optional<MuzPlyModel> MuzPlyModel::from_string(MuzTurnModel turn, std::stri
 	// ［大樹の枝］の `Position::set` はストックフィッシュと実装が同じ。（SFEN が ply なのか half_ply なのかはっきりしないのが悪い）
 	// 
 	// 頑固一徹な［きふわらぷりーＲ］は将棋の思考エンジンなので、SFEN には half_ply が記録されてるだろうと勝手に決めつけ、
-	// 「half_ply - 1 + (自分が先手の色なら0、後手の色なら1)」という形に変える（＾～＾）
-	auto radix_half_ply = std::max(half_ply - 1, 0) + static_cast<int>(turn.is_white());
+	// 「half_ply - 1」という形に変える（＾～＾）
+	auto radix_half_ply = std::max(half_ply - 1, 0);
 	return MuzPlyModel(radix_half_ply);
 }
 
