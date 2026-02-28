@@ -64,7 +64,7 @@ std::optional<MuzPlyModel> MuzPlyModel::from_string(MuzTurnModel _turn, std::str
 }
 
 
-MuzPlyModel::MuzPlyModel(Ply game_ply)
+MuzPlyModel::MuzPlyModel(RadixHalfPly game_ply)
 {
     this->radix_half_ply_ = game_ply;
 }

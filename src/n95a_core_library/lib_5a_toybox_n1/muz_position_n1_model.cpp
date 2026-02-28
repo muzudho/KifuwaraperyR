@@ -25,7 +25,7 @@ MuzPositionN1Model::MuzPositionN1Model()
 /// 
 /// </summary>
 /// <param name="ply"></param>
-void MuzPositionN1Model::SetStartPosPly(const Ply ply)
+void MuzPositionN1Model::SetStartPosPly(const RadixHalfPly ply)
 {
 	this->m_gamePly_ = ply;
 }
@@ -35,7 +35,7 @@ void MuzPositionN1Model::SetStartPosPly(const Ply ply)
 /// 何手目か
 /// </summary>
 /// <returns></returns>
-Ply MuzPositionN1Model::GetGamePly()
+RadixHalfPly MuzPositionN1Model::GetGamePly()
 {
 	return this->m_gamePly_;
 }

@@ -30,7 +30,7 @@ protected:
 	/// <summary>
 	/// 何手目か。時間管理に使用する
 	/// </summary>
-	Ply m_gamePly_;
+	RadixHalfPly m_gamePly_;
 
 	/// <summary>
 	/// 手番
@@ -52,14 +52,14 @@ protected:
 	/// 
 	/// </summary>
 	/// <param name="ply"></param>
-	void SetStartPosPly(const Ply ply);
+	void SetStartPosPly(const RadixHalfPly ply);
 
 
 	/// <summary>
 	/// 何手目か
 	/// </summary>
 	/// <returns></returns>
-	Ply GetGamePly();
+	RadixHalfPly GetGamePly();
 
 
 	/// <summary>

@@ -28,7 +28,7 @@ public:
     static std::optional<MuzPlyModel> from_string(MuzTurnModel turn, std::string_view turn_str);
 
 
-    MuzPlyModel(Ply radix_half_ply = (Ply)0);
+    MuzPlyModel(RadixHalfPly radix_half_ply = (RadixHalfPly)0);
 
 
     // ========================================
@@ -46,7 +46,7 @@ private:
     ///     - ［ストックフィッシュ］では `gamePly` と呼ばれている。`2 * (ply - 1) + （先手は0、後手は1）` という計算式。
     ///     </pre>
     /// </summary>
-    Ply radix_half_ply_;
+    RadixHalfPly radix_half_ply_;
 
 
     // ========================================
@@ -59,12 +59,12 @@ public:
     /// ストックフィッシュでの［手数］を取得
     /// </summary>
     /// <returns></returns>
-    Ply get_radix_half_ply() const { return this->radix_half_ply_; }
+    RadixHalfPly get_radix_half_ply() const { return this->radix_half_ply_; }
 
 
     /// <summary>
     /// ストックフィッシュでの［手数］をセット
     /// </summary>
     /// <param name="turn"></param>
-    void set_radix_half_ply(const Ply radix_half_ply) { this->radix_half_ply_ = radix_half_ply; }
+    void set_radix_half_ply(const RadixHalfPly radix_half_ply) { this->radix_half_ply_ = radix_half_ply; }
 };

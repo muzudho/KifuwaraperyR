@@ -68,7 +68,7 @@ void MuzPositionN3Model::Set(std::string_view sfen)
 			m_gamePly_ = muz_ply->get_radix_half_ply();
 		}
 		else {
-			std::cout << "incorrect SFEN string (Ply) : " << sfen << "\n";
+			std::cout << "incorrect SFEN string (RadixHalfPly) : " << sfen << "\n";
 			return;
 		}
 	}
