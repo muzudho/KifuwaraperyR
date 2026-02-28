@@ -2,7 +2,6 @@
 
 #include "../n95a_core_library/lib_5a_gui/muz_engine_settings_model.hpp"
 #include "../n95a_core_library/n95a55b_toybox_85c_position/muz_position_model.hpp"
-#include "../n95a_core_library/n95a55b_toybox_94c_board/muz_board_model.hpp"
 #include "../n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_model.hpp"
 
 /// <summary>
@@ -54,11 +53,6 @@ public:
 	MuzHandStandModel black_hand_stand_;
 	MuzHandStandModel white_hand_stand_;
 
-	/// <summary>
-	/// TODO: ［盤］は［ポジション］クラスに移動したい（＾～＾）
-	/// </summary>
-    MuzBoardModel board_;
-
 
 	// ========================================
 	// アクセッサー
@@ -71,6 +65,11 @@ public:
 	bool is_usi() const;
 	void set_usi();
 
-    const MuzBoardModel& get_board() const;
-	MuzBoardModel& get_board();
+
+	/// <summary>
+	/// 盤。
+	/// </summary>
+	/// <returns></returns>
+	const MuzPositionModel& get_position() const;
+	MuzPositionModel& get_position();
 };

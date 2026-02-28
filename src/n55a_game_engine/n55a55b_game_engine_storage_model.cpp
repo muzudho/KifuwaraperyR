@@ -32,11 +32,11 @@ void MuzGameEngineStorageModel::set_usi()
 }
 
 
-const MuzBoardModel& MuzGameEngineStorageModel::get_board() const
+const MuzPositionModel& MuzGameEngineStorageModel::get_position() const
 {
-    return this->board_;
+    return this->position_;
 }
-MuzBoardModel& MuzGameEngineStorageModel::get_board()
+MuzPositionModel& MuzGameEngineStorageModel::get_position()
 {
-    return this->board_;
+    return this->position_;
 }

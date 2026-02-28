@@ -190,46 +190,46 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
 
     // テスト：盤の初期化
     // TODO: これらの変数は、ポジションに移動したい（＾～＾）
-    this->gameEngineStore_->board_.set_piece(M91, WLance);
-    this->gameEngineStore_->board_.set_piece(M81, WKnight);
-    this->gameEngineStore_->board_.set_piece(M71, WSilver);
-    this->gameEngineStore_->board_.set_piece(M61, WGold);
-    this->gameEngineStore_->board_.set_piece(M51, WKing);
-    this->gameEngineStore_->board_.set_piece(M41, WGold);
-    this->gameEngineStore_->board_.set_piece(M31, WSilver);
-    this->gameEngineStore_->board_.set_piece(M21, WKnight);
-    this->gameEngineStore_->board_.set_piece(M11, WLance);
-    this->gameEngineStore_->board_.set_piece(M82, WRook);
-    this->gameEngineStore_->board_.set_piece(M22, WBishop);
-    this->gameEngineStore_->board_.set_piece(M93, WPawn);
-    this->gameEngineStore_->board_.set_piece(M83, WPawn);
-    this->gameEngineStore_->board_.set_piece(M73, WPawn);
-    this->gameEngineStore_->board_.set_piece(M63, WPawn);
-    this->gameEngineStore_->board_.set_piece(M53, WPawn);
-    this->gameEngineStore_->board_.set_piece(M43, WPawn);
-    this->gameEngineStore_->board_.set_piece(M33, WPawn);
-    this->gameEngineStore_->board_.set_piece(M23, WPawn);
-    this->gameEngineStore_->board_.set_piece(M13, WPawn);
-    this->gameEngineStore_->board_.set_piece(M97, BPawn);
-    this->gameEngineStore_->board_.set_piece(M87, BPawn);
-    this->gameEngineStore_->board_.set_piece(M77, BPawn);
-    this->gameEngineStore_->board_.set_piece(M67, BPawn);
-    this->gameEngineStore_->board_.set_piece(M57, BPawn);
-    this->gameEngineStore_->board_.set_piece(M47, BPawn);
-    this->gameEngineStore_->board_.set_piece(M37, BPawn);
-    this->gameEngineStore_->board_.set_piece(M27, BPawn);
-    this->gameEngineStore_->board_.set_piece(M17, BPawn);
-    this->gameEngineStore_->board_.set_piece(M88, BBishop);
-    this->gameEngineStore_->board_.set_piece(M28, BRook);
-    this->gameEngineStore_->board_.set_piece(M99, BLance);
-    this->gameEngineStore_->board_.set_piece(M89, BKnight);
-    this->gameEngineStore_->board_.set_piece(M79, BSilver);
-    this->gameEngineStore_->board_.set_piece(M69, BGold);
-    this->gameEngineStore_->board_.set_piece(M59, BKing);
-    this->gameEngineStore_->board_.set_piece(M49, BGold);
-    this->gameEngineStore_->board_.set_piece(M39, BSilver);
-    this->gameEngineStore_->board_.set_piece(M29, BKnight);
-    this->gameEngineStore_->board_.set_piece(M19, BLance);
+    this->gameEngineStore_->get_position().get_board().set_piece(M91, WLance);
+    this->gameEngineStore_->get_position().get_board().set_piece(M81, WKnight);
+    this->gameEngineStore_->get_position().get_board().set_piece(M71, WSilver);
+    this->gameEngineStore_->get_position().get_board().set_piece(M61, WGold);
+    this->gameEngineStore_->get_position().get_board().set_piece(M51, WKing);
+    this->gameEngineStore_->get_position().get_board().set_piece(M41, WGold);
+    this->gameEngineStore_->get_position().get_board().set_piece(M31, WSilver);
+    this->gameEngineStore_->get_position().get_board().set_piece(M21, WKnight);
+    this->gameEngineStore_->get_position().get_board().set_piece(M11, WLance);
+    this->gameEngineStore_->get_position().get_board().set_piece(M82, WRook);
+    this->gameEngineStore_->get_position().get_board().set_piece(M22, WBishop);
+    this->gameEngineStore_->get_position().get_board().set_piece(M93, WPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M83, WPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M73, WPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M63, WPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M53, WPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M43, WPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M33, WPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M23, WPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M13, WPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M97, BPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M87, BPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M77, BPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M67, BPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M57, BPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M47, BPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M37, BPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M27, BPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M17, BPawn);
+    this->gameEngineStore_->get_position().get_board().set_piece(M88, BBishop);
+    this->gameEngineStore_->get_position().get_board().set_piece(M28, BRook);
+    this->gameEngineStore_->get_position().get_board().set_piece(M99, BLance);
+    this->gameEngineStore_->get_position().get_board().set_piece(M89, BKnight);
+    this->gameEngineStore_->get_position().get_board().set_piece(M79, BSilver);
+    this->gameEngineStore_->get_position().get_board().set_piece(M69, BGold);
+    this->gameEngineStore_->get_position().get_board().set_piece(M59, BKing);
+    this->gameEngineStore_->get_position().get_board().set_piece(M49, BGold);
+    this->gameEngineStore_->get_position().get_board().set_piece(M39, BSilver);
+    this->gameEngineStore_->get_position().get_board().set_piece(M29, BKnight);
+    this->gameEngineStore_->get_position().get_board().set_piece(M19, BLance);
 
     MuzCliService cliSvc;
 
@@ -321,7 +321,7 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             // 盤だけの描画（駒台を除く）
             else if (tokens[0] == "boardonly")
             {
-                MuzBoardView::print(this->gameEngineStore_->get_board());
+                MuzBoardView::print(this->gameEngineStore_->get_position().get_board());
             }
             // 盤面だけセット
             //      - 例： `boardset lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL`
@@ -329,7 +329,7 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             //      - 例： `boardset 9/9/9/9/9/9/9/9/9`
             else if (tokens[0] == "boardset")
             {
-                this->gameEngineStore_->get_board().from_string(tokens[1]);
+                this->gameEngineStore_->get_position().get_board().from_string(tokens[1]);
             }
             // ----------------------------------------
             // 駒台
