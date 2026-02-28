@@ -30,7 +30,11 @@ public:
 
 
     /// <summary>
+    ///     <pre>
     /// 局面をセット
+    /// 
+    ///     - 旧名： `Position::set()`
+    ///     </pre>
     /// </summary>
     /// <param name="sfen"></param>
     void Set(std::string_view sfen);

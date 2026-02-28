@@ -38,14 +38,14 @@ void MuzPositionN2Model::Set(std::string_view sfen)
 	auto it = parts.begin();
 
 	// 1. 盤面部分
-	if (it == parts.end() || !this->position_.get_board().from_string(*it)) {
+	if (it == parts.end() || !this->position_.get_board().update_from_string(*it)) {
 		std::cout << "incorrect SFEN string (Board) : " << sfen << "\n";
 		return;
 	}
 	++it;
 
 	// 2. 手番
-	if (it == parts.end() || !this->position_.get_turn().from_string(*it)) {
+	if (it == parts.end() || !this->position_.get_turn().update_from_string(*it)) {
 		std::cout << "incorrect SFEN string (Turn) : " << sfen << "\n";
 		return;
 	}

@@ -6,7 +6,6 @@
 // ========================================
 
 
-// 次の手が何手目か。エラーのときは -1 を返す。
 std::optional<MuzTurnModel> MuzTurnModel::from_string(std::string_view turn_str)
 {
     auto result = MuzTurnModel::parse(turn_str);

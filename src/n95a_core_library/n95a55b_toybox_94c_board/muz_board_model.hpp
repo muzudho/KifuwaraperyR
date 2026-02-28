@@ -75,9 +75,7 @@ public:
 	/// <summary>
 	///		<pre>
 	/// 盤上のマスに駒を置く
-	/// 
-	///		- 旧名： `ParseBoard`
 	///		</pre>
 	/// </summary>
-	bool from_string(std::string_view board_str);
+	bool update_from_string(std::string_view board_str);
 };

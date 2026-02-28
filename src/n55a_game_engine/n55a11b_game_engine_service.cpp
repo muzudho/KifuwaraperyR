@@ -329,7 +329,7 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             //      - 例： `boardset 9/9/9/9/9/9/9/9/9`
             else if (tokens[0] == "boardset")
             {
-                this->gameEngineStore_->get_position().get_board().from_string(tokens[1]);
+                this->gameEngineStore_->get_position().get_board().update_from_string(tokens[1]);
             }
             // ----------------------------------------
             // 駒台
