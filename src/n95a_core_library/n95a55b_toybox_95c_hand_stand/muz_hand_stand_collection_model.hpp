@@ -3,6 +3,7 @@
 #include "muz_hand_stand_model.hpp"
 #include <string_view>
 #include <optional>
+#include <tuple>
 
 /// <summary>
 /// 駒台２つをまとめて表すぜ（＾～＾） SFEN 形式がそうなってるから（＾～＾）
@@ -45,6 +46,16 @@ public:
 	// ========================================
 	// 主要メソッド
 	// ========================================
+
+
+	/// <summary>
+	///		<pre>
+	///	駒台（持ち駒）のセットをテキスト形式で行う。
+	///		- 例えば "2P1R" なら、▲歩が2、▲飛が1枚あることを表す。
+	///		</pre>
+	/// </summary>
+	static std::optional<std::pair<MuzHandStandModel, MuzHandStandModel>> parse(
+		std::string_view hand_str);
 
 
 	/// <summary>

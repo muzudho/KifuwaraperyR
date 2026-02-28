@@ -24,6 +24,13 @@ MuzHandStandModel MuzHandStandCollectionModel::GetHandStand(const Color c) const
 // ========================================
 
 
+std::optional<std::pair<MuzHandStandModel, MuzHandStandModel>> MuzHandStandCollectionModel::parse(
+    std::string_view hand_str)
+{
+    return std::nullopt;  // とりあえず未実装
+}
+
+
 // パース
 bool MuzHandStandCollectionModel::parse_hand_stand_collection(
     std::string_view hand_str,
