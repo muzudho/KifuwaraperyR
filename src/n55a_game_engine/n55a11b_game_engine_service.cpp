@@ -349,10 +349,11 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             else if (tokens[0] == "handset")
             {
                 MuzHandStandCollectionModel handStandCollectionSvc;
-                handStandCollectionSvc.parse_hand_stand_collection(
-                    tokens[1],
-                    this->gameEngineStore_->black_hand_stand_,
-                    this->gameEngineStore_->white_hand_stand_);
+                auto result = handStandCollectionSvc.parse(tokens[1]);
+                auto [b_hs, w_hs] = *result;
+
+                this->gameEngineStore_->black_hand_stand_ = b_hs;
+                this->gameEngineStore_->white_hand_stand_ = w_hs;
             }
             // ----------------------------------------
             // 手番
