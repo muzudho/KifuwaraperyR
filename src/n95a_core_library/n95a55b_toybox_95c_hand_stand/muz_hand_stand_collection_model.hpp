@@ -8,7 +8,37 @@
 /// </summary>
 class MuzHandStandCollectionModel
 {
+
+
+	// ========================================
+	// フィールド
+	// ========================================
+
+
+private:
+	/// <summary>
+	/// 先後対局者別の手駒
+	/// </summary>
+	MuzHandStandModel m_hand_stands_[g_COLOR_NUM];
+
+
+	// ========================================
+	// アクセッサ
+	// ========================================
+
+
 public:
+	/// <summary>
+	/// 持ち駒
+	/// </summary>
+	/// <typeparam name="CLR"></typeparam>
+	/// <returns></returns>
+	template<Color CLR>
+	MuzHandStandModel GetHandStand() const
+	{
+		return this->m_hand_stands_[CLR];
+	}
+	MuzHandStandModel GetHandStand(const Color c) const;
 
 
 	// ========================================

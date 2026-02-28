@@ -13,20 +13,16 @@ class MuzPositionN2Model : public MuzPositionN1Model
 {
 
 
-protected:
 	// ========================================
 	// フィールド
 	// ========================================
 
 
-    /// <summary>
+protected:
+	/// <summary>
     /// 先手、後手の駒台をまとめて表すぜ（＾～＾） SFEN 形式がそうなってるから（＾～＾）
     /// </summary>
 	MuzHandStandCollectionModel hand_stand_collection_;
-	/// <summary>
-	/// 先後対局者別の手駒
-	/// </summary>
-	MuzHandStandModel m_hand_stands_[g_COLOR_NUM];
 
 
 	// ========================================
@@ -34,15 +30,9 @@ protected:
 	// ========================================
 
 
-	/// <summary>
-	/// 持ち駒
-	/// </summary>
-	/// <typeparam name="CLR"></typeparam>
-	/// <returns></returns>
-	template<Color CLR>
-	MuzHandStandModel GetHandStand() const
-	{
-		return this->m_hand_stands_[CLR];
-	}
-	MuzHandStandModel GetHandStand(const Color c) const;
+public:
+	const MuzHandStandCollectionModel& get_hand_stand_collection() const { return this->hand_stand_collection_; }
+	MuzHandStandCollectionModel& get_hand_stand_collection() { return this->hand_stand_collection_; }
+
+
 };
