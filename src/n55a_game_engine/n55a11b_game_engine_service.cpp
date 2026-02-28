@@ -300,10 +300,10 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
                 //                    g_randomTimeSeed();
                 //                }
             }
-            else if (line == "position")
+            else if (tokens[0] == "position")
             {
                 // TODO: 局面を設定するコマンド。これが来たら、局面を変更する。
-                //usiOperation.SetPosition(pos, ssCmd);
+                this->gameEngineStore_->get_position().Set(tokens[1]);
             }
             else if (tokens[0] == "go")
             {
