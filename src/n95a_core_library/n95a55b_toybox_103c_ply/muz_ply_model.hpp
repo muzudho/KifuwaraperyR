@@ -54,14 +54,14 @@ private:
 
 public:
     /// <summary>
-    /// ストックフィッシュでの［手目］を取得
+    /// ストックフィッシュでの［手数］を取得
     /// </summary>
     /// <returns></returns>
     Ply get_game_ply() const { return this->game_ply_; }
 
 
     /// <summary>
-    /// ストックフィッシュでの［手目］をセット
+    /// ストックフィッシュでの［手数］をセット
     /// </summary>
     /// <param name="turn"></param>
     void set_game_ply(const Ply ply) { this->game_ply_ = ply; }
