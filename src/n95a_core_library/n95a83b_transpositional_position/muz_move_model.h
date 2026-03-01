@@ -26,10 +26,25 @@ public:
     ///     - 旧名： `Move.from()`
     ///     </pre>
     /// </summary>
-    Square source_;
+    Square source_sq_;
 
-    // TODO: 移動する前の駒の種類（盤上にある駒の場合）
-    // TODO: 移動する前の駒の種類（打つ場合）
+    /// <summary>
+    ///     <pre>
+    /// 移動する前の駒の種類（盤上にある駒の場合）。
+    /// 
+    ///     - 旧名： `Move.pieceTypeFrom()`
+    ///     </pre>
+    /// </summary>
+    PieceType source_pt_;
+
+    /// <summary>
+    ///     <pre>
+    /// 移動する前の駒の種類（打つ場合）。
+    /// 
+    ///     - 旧名： `Move.pieceTypeDropped()`
+    ///     </pre>
+    /// </summary>
+    PieceType source_dropped_pt_;
 
 
     // ［移動による変化］
@@ -66,7 +81,7 @@ public:
     ///     <pre>
     /// 駒を取った場合の、取った駒の種類。
     /// 
-    ///     - 旧名： `Move.isCapture()`
+    ///     - 旧名： `Move.cap()`
     ///     </pre>
     /// </summary>
     PieceType capture_pt_;
@@ -82,9 +97,16 @@ public:
     ///     - 旧名： `Move.to()`
     ///     </pre>
     /// </summary>
-    Square destination_;
+    Square destination_sq_;
 
-    // TODO: 移動した後の駒の種類
+    /// <summary>
+    ///     <pre>
+    /// 移動した後の駒の種類。
+    /// 
+    ///     - 旧名： `Move.pieceTypeTo()`
+    ///     </pre>
+    /// </summary>
+    PieceType destination_pt_;
 
 
     // ［組み合わせ］
