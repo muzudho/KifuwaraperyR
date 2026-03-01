@@ -124,7 +124,5 @@ public:
 	///     </pre>
 	/// </summary>
 	/// <param name="sfen"></param>
-	void Set(std::string_view sfen);
-
 	void Set(std::span<std::string_view> parameter_tokens);
 };
