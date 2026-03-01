@@ -244,7 +244,7 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             std::vector<std::string> tokens;
 
             // 半角スペース ' ' で分割
-            tokens = stringSvc.split_command_line(line);
+            tokens = stringSvc.split(line, ' ');
 
 
             MuzCliResultModel result;
@@ -302,8 +302,11 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             }
             else if (tokens[0] == "position")
             {
+                //std::span parameter_tokens{ tokens.begin() + 1, tokens.end() };
+
                 // TODO: 局面を設定するコマンド。これが来たら、局面を変更する。
                 //usiOperation.SetPosition(pos, ssCmd);
+                // TODO: tokens[1] ではなくて、 `position` 以降の全ての文字列を渡したい。
                 this->game_engine_store_->get_position().Set(tokens[1]);
             }
             else if (tokens[0] == "go")
