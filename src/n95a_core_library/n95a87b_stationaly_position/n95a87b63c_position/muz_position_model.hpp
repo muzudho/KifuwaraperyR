@@ -121,6 +121,8 @@ public:
 	/// 局面をセット
 	/// 
 	///     - 旧名： `Position::set()`
+    ///		- `moves` の解析は含まないぜ（＾～＾） `moves` の解析は、 `Position::set()` を呼び出した後に、 ループを回しながらやるぜ（＾～＾）
+	///			例えば［大樹の枝］の `usi.cpp/setPosition()` を参考にしてほしいぜ（＾～＾）
 	///     </pre>
 	/// </summary>
 	/// <param name="sfen"></param>

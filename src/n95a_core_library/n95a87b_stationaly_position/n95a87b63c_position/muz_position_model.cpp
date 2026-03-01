@@ -78,5 +78,7 @@ void MuzPositionModel::Set(std::span<std::string_view> parameter_tokens)
 		}
 	}
 
-	// TODO: 5. あれば moves
+    // moves の解析は、ここでは行わないぜ（＾～＾）
+	// `Position::set()` を呼び出した後に、 ループを回しながらやるぜ（＾～＾）
+    // 例えば［大樹の枝］の `usi.cpp/setPosition()` を参考にしてほしいぜ（＾～＾）
 }
