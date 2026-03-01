@@ -95,36 +95,28 @@ void MuzPositionModel::Set(std::string_view sfen)
 	}
 }
 
-/*
-void Set(std::span parameter_tokens)
+//*
+void MuzPositionModel::Set(std::span<std::string_view> parameter_tokens)
 {
-	//// コマンドをスペースで分割して、std::views::split と std::views::transform を使って、std::string_view の range を作る。
-	//auto parts = sfen
-	//	| std::views::split(' ')
-	//	| std::views::transform([](auto&& r)
-	//		{
-	//			return std::string_view(&*r.begin(), std::ranges::distance(r));
-	//		});
-
 	auto it = parameter_tokens.begin();
 
 	// 1. 盤面部分
 	if (it == parameter_tokens.end() || !this->get_board().update_from_string(*it)) {
-		std::cout << "incorrect SFEN string (Board) : " << sfen << "\n";
+		std::cout << "incorrect SFEN string (Board).\n";
 		return;
 	}
 	++it;
 
 	// 2. 手番
 	if (it == parameter_tokens.end() || !this->get_turn().update_from_string(*it)) {
-		std::cout << "incorrect SFEN string (Turn) : " << sfen << "\n";
+		std::cout << "incorrect SFEN string (Turn).\n";
 		return;
 	}
 	++it;
 
 	// 3. 駒台（持ち駒）
 	if (it == parameter_tokens.end() || !this->get_hand_stand_collection().update_from_string(*it)) {
-		std::cout << "incorrect SFEN string (Hand stand) : " << sfen << "\n";
+		std::cout << "incorrect SFEN string (Hand stand).\n";
 		return;
 	}
 	++it;
@@ -132,10 +124,11 @@ void Set(std::span parameter_tokens)
 	// 4. 手数（オプション）
 	if (it != parameter_tokens.end())
 	{
-		if (!this->get_ply_obj().update_from_string(this->get_turn(), *it)) {
-			std::cout << "incorrect SFEN string (RadixHalfPly) : " << sfen << "\n";
+        auto turn = this->get_turn();
+		if (!this->get_ply_obj().update_from_string(turn, *it)) {
+			std::cout << "incorrect SFEN string (RadixHalfPly).\n";
 			return;
 		}
 	}
 }
-*/
+// */
