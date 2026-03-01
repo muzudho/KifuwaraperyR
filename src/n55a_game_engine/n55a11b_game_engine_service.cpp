@@ -9,6 +9,7 @@
 #include "../n95a_core_library/n95a95b_infrastructure_95c_cpp/muz_string_service.hpp"
 #include "../n95a_core_library/n95a95b_infrastructure_94a_cli/muz_cli_service.hpp"
 #include "n55a11b_game_engine_service.hpp"
+#include <span>     // std::span を使うために必要
 
 using namespace std;
 
@@ -241,10 +242,9 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             }
 
             MuzStringService stringSvc;
-            std::vector<std::string> tokens;
 
             // 半角スペース ' ' で分割
-            tokens = stringSvc.split(line, ' ');
+            auto tokens = stringSvc.split(line, ' ');
 
 
             MuzCliResultModel result;
@@ -300,14 +300,20 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
                 //                    g_randomTimeSeed();
                 //                }
             }
+            // ----------------------------------------
+            // 局面
+            // ----------------------------------------
+            //      - 例： `position sfen lnsgkgsnl/9/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL w - 1 moves 5a6b 7g7f 3a3b`
             else if (tokens[0] == "position")
             {
-                //std::span parameter_tokens{ tokens.begin() + 1, tokens.end() };
 
                 // TODO: 局面を設定するコマンド。これが来たら、局面を変更する。
                 //usiOperation.SetPosition(pos, ssCmd);
                 // TODO: tokens[1] ではなくて、 `position` 以降の全ての文字列を渡したい。
                 this->game_engine_store_->get_position().Set(tokens[1]);
+
+                //std::span parameter_tokens{ tokens.begin() + 1, tokens.end() };
+                //this->game_engine_store_->get_position().Set(parameter_tokens);
             }
             else if (tokens[0] == "go")
             {
