@@ -1,4 +1,4 @@
-#include "../n95a87b_stationaly_position/n95a87b79c_turn/color.hpp"
+#include "../n95a87b79c_turn/color.hpp"
 #include "muz_hand_stand_collection_model.hpp"
 #include <cctype>   // ← これ！ std::isdigit が定義されてるヘッダー
 

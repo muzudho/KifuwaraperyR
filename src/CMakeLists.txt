@@ -37,26 +37,26 @@ add_executable (KifuwaraperyR
     # 📁 n95a_core_library/lib_5a_toybox_n2    
     "n95a_core_library/lib_5a_toybox_n2/piece_types.cpp"
     #
-    # 📁 n95a55b_toybox_85c_position/muz_position_model
-    "n95a_core_library/n95a55b_toybox_85c_position/muz_position_model.cpp"
+    # 📁 n95a87b_stationaly_position/n95a87b63c_position/muz_position_model
+    "n95a_core_library/n95a87b_stationaly_position/n95a87b63c_position/muz_position_model.cpp"
     #
-    # 📁 n95a_core_library/n95a55b_toybox_94c_board
-    "n95a_core_library/n95a55b_toybox_94c_board/char_to_piece_usi.cpp"
-    "n95a_core_library/n95a55b_toybox_94c_board/muz_board_model.cpp" 
-    # 📁 n95a_core_library/n95a55b_toybox_95c_hand_stand
-    "n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_model.cpp"
-    "n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_collection_model.cpp"
+    # 📁 n95a_core_library/n95a87b_stationaly_position/n95a87b67c_board
+    "n95a_core_library/n95a87b_stationaly_position/n95a87b67c_board/char_to_piece_usi.cpp"
+    "n95a_core_library/n95a87b_stationaly_position/n95a87b67c_board/muz_board_model.cpp" 
+    # 📁 n95a_core_library/n95a87b_stationaly_position/n95a87b71c_hand_stand
+    "n95a_core_library/n95a87b_stationaly_position/n95a87b71c_hand_stand/muz_hand_stand_model.cpp"
+    "n95a_core_library/n95a87b_stationaly_position/n95a87b71c_hand_stand/muz_hand_stand_collection_model.cpp"
     #
     # 📁 core_library > turn
     "n95a_core_library/n95a87b_stationaly_position/n95a87b79c_turn/muz_turn_model.cpp"
     #
     # 📁 core_library > ply
-    "n95a_core_library/n95a55b_toybox_103c_ply/muz_ply_model.cpp"
+    "n95a_core_library/n95a87b_stationaly_position/n95a87b75c_ply/muz_ply_model.cpp"
     #
     # [infrastructure]
     #
-    # 📁 n95a_core_library/n95a95b_infrastructure_94a_cli
-    "n95a_core_library/n95a95b_infrastructure_94a_cli/muz_cli_service.cpp"
+    # 📁 n95a_core_library/n95a95b_infrastructure/n95a95b83c_cli
+    "n95a_core_library/n95a95b_infrastructure/n95a95b83c_cli/muz_cli_service.cpp"
     #
     # 📁 src, その他
     #

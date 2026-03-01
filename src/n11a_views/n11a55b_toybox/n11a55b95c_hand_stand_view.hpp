@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_model.hpp"
+#include "../../n95a_core_library/n95a87b_stationaly_position/n95a87b71c_hand_stand/muz_hand_stand_model.hpp"
 #include <iostream>
 
 /// <summary>

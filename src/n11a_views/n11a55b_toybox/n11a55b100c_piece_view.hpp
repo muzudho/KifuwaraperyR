@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../n95a_core_library/n95a55b_toybox_94c_board/piece.hpp"
+#include "../../n95a_core_library/n95a87b_stationaly_position/n95a87b67c_board/piece.hpp"
 #include <string>
 
 class MuzPieceView

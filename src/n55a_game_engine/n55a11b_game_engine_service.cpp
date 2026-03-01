@@ -2,12 +2,12 @@
 #include "../n11a_views/n11a55b_toybox/n11a55b95c_hand_stand_view.hpp"
 #include "../n11a_views/n11a55b_toybox/n11a55b105c_turn_view.hpp"
 #include "../n95a_core_library/lib_5a_gui/muz_engine_settings_initialize_service.hpp"
-#include "../n95a_core_library/n95a55b_toybox_95c_hand_stand/muz_hand_stand_collection_model.hpp"
-#include "../n95a_core_library/n95a55b_toybox_103c_ply/ply.hpp"
-#include "../n95a_core_library/n95a55b_toybox_103c_ply/muz_ply_model.hpp"
+#include "../n95a_core_library/n95a87b_stationaly_position/n95a87b71c_hand_stand/muz_hand_stand_collection_model.hpp"
+#include "../n95a_core_library/n95a87b_stationaly_position/n95a87b75c_ply/ply.hpp"
+#include "../n95a_core_library/n95a87b_stationaly_position/n95a87b75c_ply/muz_ply_model.hpp"
 #include "../n95a_core_library/n95a87b_stationaly_position/n95a87b79c_turn/color.hpp"
-#include "../n95a_core_library/n95a95b_infrastructure_95c_cpp/muz_string_service.hpp"
-#include "../n95a_core_library/n95a95b_infrastructure_94a_cli/muz_cli_service.hpp"
+#include "../n95a_core_library/n95a95b_infrastructure/n95a95b95c_cpp/muz_string_service.hpp"
+#include "../n95a_core_library/n95a95b_infrastructure/n95a95b83c_cli/muz_cli_service.hpp"
 #include "n55a11b_game_engine_service.hpp"
 #include <span>     // std::span を使うために必要
 
