@@ -306,14 +306,12 @@ void MuzGameEngineService::main_loop_50a(int argc, char* argv[])
             //      - 例： `position sfen lnsgkgsnl/9/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL w - 1 moves 5a6b 7g7f 3a3b`
             else if (tokens[0] == "position")
             {
-
                 // TODO: 局面を設定するコマンド。これが来たら、局面を変更する。
-                //usiOperation.SetPosition(pos, ssCmd);
-                // TODO: tokens[1] ではなくて、 `position` 以降の全ての文字列を渡したい。
-                //this->game_engine_store_->get_position().Set(tokens[1]);
-
-                std::span parameter_tokens{ tokens.begin() + 1, tokens.end() };
-                this->game_engine_store_->get_position().Set(parameter_tokens);
+                if (tokens[1] == "sfen")
+                {
+                    std::span parameter_tokens{ tokens.begin() + 2, tokens.end() };
+                    this->game_engine_store_->get_position().Set(parameter_tokens);
+                }
             }
             else if (tokens[0] == "go")
             {
