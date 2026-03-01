@@ -100,6 +100,12 @@ void MuzPositionModel::Set(std::span<std::string_view> parameter_tokens)
 {
 	auto it = parameter_tokens.begin();
 
+	// 初期化（＾～＾）
+    this->get_board().clear();
+    this->get_turn().clear();
+    this->get_hand_stand_collection().clear();
+    this->get_ply_obj().clear();
+
 	// 1. 盤面部分
 	if (it == parameter_tokens.end() || !this->get_board().update_from_string(*it)) {
 		std::cout << "incorrect SFEN string (Board).\n";
@@ -109,7 +115,7 @@ void MuzPositionModel::Set(std::span<std::string_view> parameter_tokens)
 
 	// 2. 手番
 	if (it == parameter_tokens.end() || !this->get_turn().update_from_string(*it)) {
-		std::cout << "incorrect SFEN string (Turn).\n";
+        std::cout << "incorrect SFEN string (Turn).\n";	// TODO: 読取終わった board を出力して、どこで失敗したのか分かるようにしたいぜ（＾～＾）
 		return;
 	}
 	++it;
