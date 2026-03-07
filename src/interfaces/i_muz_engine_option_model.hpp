@@ -6,7 +6,7 @@
 /// <summary>
 /// エンジン・オプション的☆（＾ｑ＾）
 /// </summary>
-class IMuzEngineOptionAbstractModel
+class IMuzEngineOptionModel
 {
 
 
@@ -23,7 +23,7 @@ public:
 	/// </summary>
 	/// <param name="v"></param>
 	/// <returns></returns>
-	IMuzEngineOptionAbstractModel& operator = (const std::string& v);
+	virtual IMuzEngineOptionModel& operator = (const std::string& v) = 0;
 
 
 	/// <summary>
