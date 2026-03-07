@@ -28,18 +28,6 @@ public:
 
 
 	// ========================================
-	// フィールド
-	// ========================================
-
-
-	/// <summary>
-	/// オプションのマップ☆（＾～＾）
-	/// </summary>
-	std::map<std::string, MuzEngineOptionAbstractModel, MuzCaseInsensitiveLessModel> m_map;
-	std::map<std::string, std::unique_ptr<MuzEngineOptionAbstractModel>, MuzCaseInsensitiveLessModel> m_mapUnique; // XXX: 勉強中
-
-
-	// ========================================
 	// 演算子
 	// ========================================
 
@@ -50,7 +38,7 @@ public:
 	/// <param name=""></param>
 	/// <param name=""></param>
 	/// <returns></returns>
-	friend std::ostream& operator << (std::ostream&, const MuzEngineSettingsModel&);
+	friend std::ostream& operator << (std::ostream&, const IMuzEngineSettingsModel&);
 
 
 	// ========================================

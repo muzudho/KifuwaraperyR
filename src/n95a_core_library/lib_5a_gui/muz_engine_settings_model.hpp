@@ -3,17 +3,18 @@
 #include <string>
 #include "muz_engine_option_abstract_model.hpp"
 #include "muz_engine_option_textbox_model.hpp"
+#include "../../interfaces/i_muz_engine_settings_model.hpp"
 #include <ostream>      // std::ostream のため（普通は iostream で入ってる）
 #include <vector>
 #include <map>
 
 
-/// <summary>
-/// ２つの文字列の並び順の比較☆（＾～＾）
-/// </summary>
-struct MuzCaseInsensitiveLessModel {
-	bool operator() (const std::string&, const std::string&) const;
-};
+///// <summary>
+///// ２つの文字列の並び順の比較☆（＾～＾）
+///// </summary>
+//struct MuzCaseInsensitiveLessModel {
+//	bool operator() (const std::string&, const std::string&) const;
+//};
 
 
 /// <summary>
