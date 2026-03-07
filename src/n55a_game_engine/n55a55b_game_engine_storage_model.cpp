@@ -31,11 +31,11 @@ void MuzGameEngineStorageModel::set_usi()
 
 const MuzEngineSettingsModel& MuzGameEngineStorageModel::get_engine_settings() const
 {
-    return this->m_engineSettings;
+    return this->engine_settings_;
 }
 MuzEngineSettingsModel& MuzGameEngineStorageModel::get_engine_settings()
 {
-    return this->m_engineSettings;
+    return this->engine_settings_;
 }
 
 

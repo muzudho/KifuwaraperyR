@@ -41,7 +41,7 @@ public:
 	/// <summary>
 	/// USIエンジン設定。
 	/// </summary>
-	MuzEngineSettingsModel	m_engineSettings;
+	MuzEngineSettingsModel	engine_settings_;
 
 
     /// <summary>

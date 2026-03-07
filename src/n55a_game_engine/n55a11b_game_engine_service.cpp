@@ -71,7 +71,7 @@ void MuzGameEngineService::initialize_10a()
         32601,  // TODO: SweetnessInfinite,
         32600,  // TODO: SweetnessMate0Ply,
         64,     // TODO: g_MaxThreads,
-        &this->game_engine_store_->m_engineSettings,
+        &this->game_engine_store_->engine_settings_,
         // onHashSizeChanged:
         [](auto opt)    // [this](auto opt)
         {
