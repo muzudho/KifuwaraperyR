@@ -22,7 +22,8 @@
 /// エンジン・オプションのコレクション☆（＾～＾）
 ///		</pre>
 /// </summary>
-struct MuzEngineSettingsModel {
+struct MuzEngineSettingsModel : public IMuzEngineSettingsModel
+{
 
 
 public:
