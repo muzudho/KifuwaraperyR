@@ -35,7 +35,7 @@ add_executable (KifuwaraperyR
     "n95a_core_library/lib_5a_gui/muz_engine_settings_model.cpp"
     #
     # 📁 n95a_core_library/lib_5a_toybox_n2    
-    "n95a_core_library/lib_5a_toybox_n2/piece_types.cpp"
+    "n95a_core_library/lib_5a_toybox_n1/piece_types.cpp"
     #
     # 📁 n95a87b_stationaly_position/n95a87b63c_position/muz_position_model
     "n95a_core_library/n95a87b_stationaly_position/n95a87b63c_position/muz_position_model.cpp"
