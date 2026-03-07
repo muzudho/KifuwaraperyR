@@ -39,7 +39,7 @@ private:
 public:
 
 	/// <summary>
-	/// USIエンジン設定
+	/// USIエンジン設定。
 	/// </summary>
 	MuzEngineSettingsModel	m_engineSettings;
 
@@ -60,6 +60,14 @@ public:
 	/// </summary>
 	bool is_usi() const;
 	void set_usi();
+
+
+	/// <summary>
+	/// USIエンジン設定。
+	/// </summary>
+	/// <returns></returns>
+	const MuzEngineSettingsModel& get_engine_settings() const;
+	MuzEngineSettingsModel& get_engine_settings();
 
 
 	/// <summary>

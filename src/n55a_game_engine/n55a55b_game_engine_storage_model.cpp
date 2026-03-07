@@ -29,6 +29,16 @@ void MuzGameEngineStorageModel::set_usi()
 }
 
 
+const MuzEngineSettingsModel& MuzGameEngineStorageModel::get_engine_settings() const
+{
+    return this->m_engineSettings;
+}
+MuzEngineSettingsModel& MuzGameEngineStorageModel::get_engine_settings()
+{
+    return this->m_engineSettings;
+}
+
+
 const MuzStationalyPositionModel& MuzGameEngineStorageModel::get_position() const
 {
     return this->position_;
