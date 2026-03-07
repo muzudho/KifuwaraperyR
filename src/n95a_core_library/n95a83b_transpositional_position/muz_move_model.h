@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../n95a87b_stationaly_position/n95a87b67c_board/aquare.hpp"
+#include "../n95a87b_stationaly_position/n95a87b67c_board/square.hpp"
 #include "piece_type.hpp"
 
 /// <summary>
