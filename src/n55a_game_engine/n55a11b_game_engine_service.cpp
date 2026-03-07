@@ -25,7 +25,7 @@ using namespace std;
 /// </summary>
 MuzGameEngineService::MuzGameEngineService()
 {
-    this->game_engine_store_ = std::unique_ptr<MuzGameEngineStorageModel>(new MuzGameEngineStorageModel);
+    this->game_engine_store_ = std::unique_ptr<IMuzGameEngineStorageModel>(new MuzGameEngineStorageModel);
 }
 
 
@@ -71,7 +71,7 @@ void MuzGameEngineService::initialize_10a()
         32601,  // TODO: SweetnessInfinite,
         32600,  // TODO: SweetnessMate0Ply,
         64,     // TODO: g_MaxThreads,
-        &this->game_engine_store_->engine_settings_,
+        &this->game_engine_store_->get_engine_settings(),
         // onHashSizeChanged:
         [](auto opt)    // [this](auto opt)
         {

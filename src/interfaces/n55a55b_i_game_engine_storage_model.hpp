@@ -28,6 +28,14 @@ public:
 
 
 	/// <summary>
+	/// USIエンジン設定。
+	/// </summary>
+	/// <returns></returns>
+	virtual const MuzEngineSettingsModel& get_engine_settings() const = 0;
+	virtual MuzEngineSettingsModel& get_engine_settings() = 0;
+
+
+	/// <summary>
 	/// 盤。
 	/// </summary>
 	/// <returns></returns>
