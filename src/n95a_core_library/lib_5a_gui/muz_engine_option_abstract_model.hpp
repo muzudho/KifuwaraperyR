@@ -1,13 +1,15 @@
 ﻿#pragma once
+
+#include "../../interfaces/i_muz_engine_option_model.hpp"
 #include <functional>
 #include <string>
 #include <format>  // C++20
 
-
 /// <summary>
 /// エンジン・オプション的☆（＾ｑ＾）
 /// </summary>
-class MuzEngineOptionAbstractModel {
+class MuzEngineOptionAbstractModel : public IMuzEngineOptionModel 
+{
 
 
 public:
