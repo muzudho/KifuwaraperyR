@@ -1,4 +1,4 @@
-#include "muz_position_model.hpp"
+#include "muz_stationaly_position_model.hpp"
 #include <iostream>	// std::cout を使うために必要
 #include <ranges>	// std::views::split と std::views::transform を使うために必要
 #include <string_view>
@@ -10,7 +10,7 @@
 // ========================================
 
 
-MuzPositionModel::MuzPositionModel()
+MuzStationalyPositionModel::MuzStationalyPositionModel()
 {
     //// 盤上を空っぽにするぜ（＾～＾）
     //this->board_ = MuzBoardModel{};
@@ -22,11 +22,11 @@ MuzPositionModel::MuzPositionModel()
 // ========================================
 
 
-const MuzBoardModel& MuzPositionModel::get_board() const
+const MuzBoardModel& MuzStationalyPositionModel::get_board() const
 {
     return this->board_;
 }
-MuzBoardModel& MuzPositionModel::get_board()
+MuzBoardModel& MuzStationalyPositionModel::get_board()
 {
     return this->board_;
 }
@@ -37,7 +37,7 @@ MuzBoardModel& MuzPositionModel::get_board()
 // ========================================
 
 
-void MuzPositionModel::Set(std::span<std::string_view> parameter_tokens)
+void MuzStationalyPositionModel::Set(std::span<std::string_view> parameter_tokens)
 {
 	auto it = parameter_tokens.begin();
 

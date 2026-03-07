@@ -9,7 +9,7 @@
 #include <string_view>
 #include <span>     // std::span を使うために必要
 
-class MuzPositionModel
+class MuzStationalyPositionModel
 {
 
 
@@ -19,7 +19,7 @@ class MuzPositionModel
 
 
 public:
-    MuzPositionModel();
+    MuzStationalyPositionModel();
 
 
 	// ========================================

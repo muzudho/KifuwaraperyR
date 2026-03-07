@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../n95a_core_library/lib_5a_gui/muz_engine_settings_model.hpp"
-#include "../n95a_core_library/n95a87b_stationaly_position/n95a87b63c_position/muz_position_model.hpp"
+#include "../n95a_core_library/n95a87b_stationaly_position/n95a87b63c_position/muz_stationaly_position_model.hpp"
 #include "../n95a_core_library/n95a87b_stationaly_position/n95a87b71c_hand_stand/muz_hand_stand_model.hpp"
 
 /// <summary>
@@ -46,7 +46,7 @@ public:
     /// <summary>
     /// 局面（＾～＾）
     /// </summary>
-    MuzPositionModel position_;
+    MuzStationalyPositionModel position_;
 
 
 	// ========================================
@@ -65,6 +65,6 @@ public:
 	/// 盤。
 	/// </summary>
 	/// <returns></returns>
-	const MuzPositionModel& get_position() const;
-	MuzPositionModel& get_position();
+	const MuzStationalyPositionModel& get_position() const;
+	MuzStationalyPositionModel& get_position();
 };
