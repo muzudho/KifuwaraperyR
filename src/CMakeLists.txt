@@ -67,7 +67,7 @@ add_executable (KifuwaraperyR
     #
     # 📁 src, その他
     #
-    "main.cpp")
+    "main.cpp" )
 
 
 #if (CMAKE_VERSION VERSION_GREATER 3.12)

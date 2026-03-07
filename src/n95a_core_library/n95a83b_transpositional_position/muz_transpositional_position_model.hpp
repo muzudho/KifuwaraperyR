@@ -27,7 +27,7 @@ private:
 
 public:
 	/// <summary>
-	/// 可動局面。
+	/// 静止局面。
 	/// </summary>
 	/// <returns></returns>
 	const MuzStationalyPositionModel& get_stationaly_position() const;

@@ -29,9 +29,11 @@ public:
 
 
 	/// <summary>
+	///		<pre>
 	///	ゲームエンジン倉庫☆（＾ｑ＾）
 	///
 	///    - ゲームエンジンが１つだけ持つ、局面の探索状態を保存するクラス☆（＾ｑ＾）
+	///		</pre>
 	/// </summary>
 	std::unique_ptr<MuzGameEngineStorageModel> game_engine_store_;
 
