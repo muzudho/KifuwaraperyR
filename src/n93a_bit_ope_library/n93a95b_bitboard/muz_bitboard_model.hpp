@@ -21,7 +21,7 @@
 #include <string>
 #include <string_view>
 
-class MuzPositionBaseModel : public MuzPositionN1Model
+class MuzPositionBaseModel
 {
 
 

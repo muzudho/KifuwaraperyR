@@ -1,7 +1,7 @@
 //
 // 📄 局面の状態を表すクラス
 //
-#include "muz_position_base_model.hpp"
+#include "muz_bitboard_model.hpp"
 
 
 // ========================================
@@ -9,9 +9,10 @@
 // ========================================
 
 
-void MuzPositionBaseModel::SetPiece(const Piece piece, const Square sq)
+void MuzBitboardModel::SetPiece(const Piece piece, const Square sq)
 {
-    MuzPositionN1Model::SetPiece(piece, sq);
+	// XXX: 通常の盤への駒配置は、別のクラスで行ってくれだぜ（＾～＾）
+
 	const Color c = ConvPiece::TO_COLOR10(piece);
 	const PieceType pt = ConvPiece::TO_PIECE_TYPE10(piece);
 
