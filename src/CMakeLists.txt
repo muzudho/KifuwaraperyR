@@ -37,25 +37,32 @@ add_executable (KifuwaraperyR
     # 📁 n95a_core_library/lib_5a_toybox_n2    
     "n95a_core_library/lib_5a_toybox_n1/piece_types.cpp"
     #
-    # 📁 n95a87b_stationaly_position/n95a87b63c_position/muz_position_model
+    # 📁 コアライブラリー／リュックサック
+    "n95a_core_library/n95a79b_rucksack/muz_rucksack_model.cpp"
+    #
+    # 📁 コアライブラリー／可動局面
+    "n95a_core_library/n95a83b_transpositional_position/muz_transpositional_position_model.cpp"
+    #
+    # 📁 コアライブラリー／静止局面
     "n95a_core_library/n95a87b_stationaly_position/n95a87b63c_position/muz_stationaly_position_model.cpp"
     #
-    # 📁 n95a_core_library/n95a87b_stationaly_position/n95a87b67c_board
+    # 📁 コアライブラリー／静止局面／盤
     "n95a_core_library/n95a87b_stationaly_position/n95a87b67c_board/char_to_piece_usi.cpp"
     "n95a_core_library/n95a87b_stationaly_position/n95a87b67c_board/muz_board_model.cpp" 
-    # 📁 n95a_core_library/n95a87b_stationaly_position/n95a87b71c_hand_stand
+    #
+    # 📁 コアライブラリー／静止局面／駒台
     "n95a_core_library/n95a87b_stationaly_position/n95a87b71c_hand_stand/muz_hand_stand_model.cpp"
     "n95a_core_library/n95a87b_stationaly_position/n95a87b71c_hand_stand/muz_hand_stand_collection_model.cpp"
     #
-    # 📁 core_library > turn
+    # 📁 コアライブラリー／静止局面／手番
     "n95a_core_library/n95a87b_stationaly_position/n95a87b79c_turn/muz_turn_model.cpp"
     #
-    # 📁 core_library > ply
+    # 📁 コアライブラリー／静止局面／手数
     "n95a_core_library/n95a87b_stationaly_position/n95a87b75c_ply/muz_ply_model.cpp"
     #
     # [infrastructure]
     #
-    # 📁 n95a_core_library/n95a95b_infrastructure/n95a95b83c_cli
+    # 📁 コアライブラリー／インフラストラクチャー／ＣＬＩ
     "n95a_core_library/n95a95b_infrastructure/n95a95b83c_cli/muz_cli_service.cpp"
     #
     # 📁 src, その他
