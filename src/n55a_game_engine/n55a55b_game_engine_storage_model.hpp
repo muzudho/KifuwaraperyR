@@ -3,7 +3,7 @@
 #include "../n95a_core_library/lib_5a_gui/muz_engine_settings_model.hpp"
 #include "../n95a_core_library/n95a87b_stationaly_position/n95a87b63c_position/muz_stationaly_position_model.hpp"
 #include "../n95a_core_library/n95a87b_stationaly_position/n95a87b71c_hand_stand/muz_hand_stand_model.hpp"
-#include "n55a55b_i_game_engine_storage_model.hpp"
+#include "../interfaces/n55a55b_i_game_engine_storage_model.hpp"
 
 /// <summary>
 ///		<pre>
